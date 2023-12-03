@@ -1,0 +1,1869 @@
+fileFormatVersion: 2
+guid: aef3ae5f50475714e8022411fc32bc70
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 60
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 689
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a7130561e901b40b4b9d1018c31145
+      internalID: -1279257467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 689
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01928a4fb1b235647b8474e4fd7ad33d
+      internalID: 896556487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 689
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc2979b7debf814894bfff8b7c2e7fe
+      internalID: 1344450603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 636
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f753a51657fa4d449d39f1dec1eb93d
+      internalID: -837313100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 636
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55381d262533b6e46897988f8761c992
+      internalID: -1894524715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_5
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 636
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f86386f74130a4a9fa7a9b4892c59c
+      internalID: -2026579213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 636
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5a9940e3e64e442bb3f2d77ddb3111
+      internalID: -48300500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_7
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 636
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd414c09320bd945b4eaa85b40e511a
+      internalID: -1755422983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_8
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 636
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a0ae6332a369a46b21f816840937de
+      internalID: 435558618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_9
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 636
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4a3379672bc7c4e836a0625c51cbcb
+      internalID: 11534248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_10
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 636
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634538ae788668f42872e8c1f9fe1c6a
+      internalID: -233927260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 583
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db628ddf98878b46ba0003746485b44
+      internalID: 1558206171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_12
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 583
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c0612d58e19c1488804554c605470d
+      internalID: 1790576617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_13
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 583
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed77b12d606b9fb4db0c1cb460772ed8
+      internalID: -938894497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_14
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 583
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e36e22bd82c7b4d88a27f81ffdfb7b
+      internalID: 222285179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_15
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 583
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fdcd766e195ed4599bd2dbaa9768ee
+      internalID: -1161312180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 583
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df50ec2a17ede94598c72a4057a1041
+      internalID: 1871531842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_17
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 583
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f820e108791334c9597b0bea079307
+      internalID: -271715571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_18
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 583
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b89eb65b9d0584c9d15157bd6fe5e7
+      internalID: -1109588422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 530
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d78d9c75bd38464aa9d7472846032d6
+      internalID: 1483771192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_20
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 530
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b44047d8d0213479d3db48057e4da2
+      internalID: 182984331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_21
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 530
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a0173a83f3cd6409488f4884f272f4
+      internalID: 632035702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_22
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 530
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20cd81b943368d47a73be3beb405952
+      internalID: -1925834086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_23
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 530
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e39a9c7e9472c64197b2ecbf4f9336f
+      internalID: 239137678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_24
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 530
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4dc8a432fcd624baaee19c572074f4
+      internalID: 808029533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_25
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 530
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429f5fd4c9bee3e4ea24d3d3aeccf049
+      internalID: 589163940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_26
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 530
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148f29b763702044a875763c7bf23b5f
+      internalID: -238477306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 477
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f11702a7536649547ae574dcd0971927
+      internalID: -1698798280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_28
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 477
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f833e7074837549944371415207ba6
+      internalID: 919414043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_29
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 477
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4025d817c3aeba746a97fa9a6edc1c0a
+      internalID: 717174672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_30
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 477
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52b0802d01964b41bded6f96b2d10a2
+      internalID: -102190384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_31
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 477
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c827d67e3a99054387d5bb79b3dc250
+      internalID: -598022619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_32
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 477
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04914ba9483c97545b3ca91ec2d7a767
+      internalID: 1860428001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 424
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8cad3021ba4f84a86da904c44e60c7
+      internalID: -1238373823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_34
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 424
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 639e6abce50610c4897a4d918421b187
+      internalID: -2036513072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_35
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 424
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ff781174448d2488525d91a4c64971
+      internalID: -1504363078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_36
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 424
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6873d082884d99e4bb65d26b05b5e0ca
+      internalID: 601435489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_37
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 424
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b20602d9c29e8c4288cfbdadee1f1af
+      internalID: 252193688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_38
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 424
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e31ab24e9ee204b9094c00e2cee7ac
+      internalID: 190424503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 371
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b615625e846d3f46bbab6c8899539d7
+      internalID: -1993376305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_40
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 371
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6259bd659954a4b90c022ff30ab4b1
+      internalID: 1560588657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_41
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 371
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3d9b9ea08cce24fbbb62a917af688d
+      internalID: 1270403127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_42
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 371
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca726e4443287be4789f7bdd1fc5a52b
+      internalID: 265858258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_43
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 371
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cf150021cfc6c4183362b19704e4f6
+      internalID: -2059161067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 318
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96b986b12e40c64d9c12be1fc9bfda3
+      internalID: -615141107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_45
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 318
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbf3349f22ee0144af76cfb2b20fc10
+      internalID: 1908257668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 265
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1894668a6a8df5d4baf52c6868b7d429
+      internalID: -815299022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_47
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 265
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3862d82c35a2764b9174ffc11b1d7c4
+      internalID: 1369885860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_48
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 265
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca72cb00b5174c646a986a7046e7be80
+      internalID: -2006342627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 212
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e7987261dea79429d91706cd12c814
+      internalID: 740459391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_50
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 212
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfa8edd6d36aa24a82024ba20857821
+      internalID: -1006227080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 159
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95daa5f526c4b384a96a3e507a7fba24
+      internalID: -254852982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_52
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 159
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4fa60e1074bb54aae0ff938383a5cf
+      internalID: -1120660615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_53
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 159
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe770c8f6e8916141a21b4d03ed4795f
+      internalID: 933376963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_54
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 159
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e917ca196611d84088d36ba35eccc4b
+      internalID: 327158257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 106
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8295ed8659a3b6544a1945e338b333c1
+      internalID: 1468100666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_56
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 106
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5dc27232d81c54fa78ec42dd8c9737
+      internalID: -795479519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 53
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df90265e6e436d34b9a5c320ad98f2ab
+      internalID: -878750126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_58
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 53
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe1e4b0d88e46e45b799bd0a4c577b1
+      internalID: 1876205302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_59
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 53
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13129ffff21f69c4eb26c98dbc190d0c
+      internalID: 1735034575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d5ecb77f5e6f94e90b0d45e5636f73
+      internalID: -207277843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_61
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc61313f9b6eea4680679a39519460a
+      internalID: -1279750648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_62
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6b90a3724c5c949be20b466a2b18a2
+      internalID: -330454163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_63
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d65884102a89334c883a0dc8997a7d1
+      internalID: 1971879840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_64
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62901c05121d6f0498abe5ed46c73501
+      internalID: -794479770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_65
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ea3b13b20d2ee4e805043a7f7531e5
+      internalID: 497948759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_66
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b384bddb9e56c0a4abfc6239b78f62e5
+      internalID: 1393968303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_67
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad505aced21c854a8e55bfd7d923da1
+      internalID: -1389718088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_68
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1113d7ea66594504484f260bfd7a3685
+      internalID: -1955285536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_69
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43fe6161da7c7a748a8181f360273192
+      internalID: -1858152641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_70
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa37a587b4b790347b40df81880c6817
+      internalID: -215411470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_71
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af878db5d7e694f4fa5b1854e443dcd8
+      internalID: -1805299214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_72
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758d80100ec14c74dac014cd2dfea857
+      internalID: -1385481752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_73
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a818764dfa4d14cbfa31bfc44b8ad8
+      internalID: 444712103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_74
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2c8e36c30ca9640b9ff0ef496c1184
+      internalID: 1995166472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_75
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2fcef3fbf22ffd4f90275ffc0a7eb8c
+      internalID: -283093550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_76
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19fb5941326f4964196bec7d45e32f59
+      internalID: 1029839583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero Green 54x53 Sprite_77
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 0
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8cc597ff0ec43249a062ae6a735a102
+      internalID: -637331974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Hero Green 54x53 Sprite_0: -1279257467
+      Hero Green 54x53 Sprite_1: 896556487
+      Hero Green 54x53 Sprite_10: -233927260
+      Hero Green 54x53 Sprite_11: 1558206171
+      Hero Green 54x53 Sprite_12: 1790576617
+      Hero Green 54x53 Sprite_13: -938894497
+      Hero Green 54x53 Sprite_14: 222285179
+      Hero Green 54x53 Sprite_15: -1161312180
+      Hero Green 54x53 Sprite_16: 1871531842
+      Hero Green 54x53 Sprite_17: -271715571
+      Hero Green 54x53 Sprite_18: -1109588422
+      Hero Green 54x53 Sprite_19: 1483771192
+      Hero Green 54x53 Sprite_2: 1344450603
+      Hero Green 54x53 Sprite_20: 182984331
+      Hero Green 54x53 Sprite_21: 632035702
+      Hero Green 54x53 Sprite_22: -1925834086
+      Hero Green 54x53 Sprite_23: 239137678
+      Hero Green 54x53 Sprite_24: 808029533
+      Hero Green 54x53 Sprite_25: 589163940
+      Hero Green 54x53 Sprite_26: -238477306
+      Hero Green 54x53 Sprite_27: -1698798280
+      Hero Green 54x53 Sprite_28: 919414043
+      Hero Green 54x53 Sprite_29: 717174672
+      Hero Green 54x53 Sprite_3: -837313100
+      Hero Green 54x53 Sprite_30: -102190384
+      Hero Green 54x53 Sprite_31: -598022619
+      Hero Green 54x53 Sprite_32: 1860428001
+      Hero Green 54x53 Sprite_33: -1238373823
+      Hero Green 54x53 Sprite_34: -2036513072
+      Hero Green 54x53 Sprite_35: -1504363078
+      Hero Green 54x53 Sprite_36: 601435489
+      Hero Green 54x53 Sprite_37: 252193688
+      Hero Green 54x53 Sprite_38: 190424503
+      Hero Green 54x53 Sprite_39: -1993376305
+      Hero Green 54x53 Sprite_4: -1894524715
+      Hero Green 54x53 Sprite_40: 1560588657
+      Hero Green 54x53 Sprite_41: 1270403127
+      Hero Green 54x53 Sprite_42: 265858258
+      Hero Green 54x53 Sprite_43: -2059161067
+      Hero Green 54x53 Sprite_44: -615141107
+      Hero Green 54x53 Sprite_45: 1908257668
+      Hero Green 54x53 Sprite_46: -815299022
+      Hero Green 54x53 Sprite_47: 1369885860
+      Hero Green 54x53 Sprite_48: -2006342627
+      Hero Green 54x53 Sprite_49: 740459391
+      Hero Green 54x53 Sprite_5: -2026579213
+      Hero Green 54x53 Sprite_50: -1006227080
+      Hero Green 54x53 Sprite_51: -254852982
+      Hero Green 54x53 Sprite_52: -1120660615
+      Hero Green 54x53 Sprite_53: 933376963
+      Hero Green 54x53 Sprite_54: 327158257
+      Hero Green 54x53 Sprite_55: 1468100666
+      Hero Green 54x53 Sprite_56: -795479519
+      Hero Green 54x53 Sprite_57: -878750126
+      Hero Green 54x53 Sprite_58: 1876205302
+      Hero Green 54x53 Sprite_59: 1735034575
+      Hero Green 54x53 Sprite_6: -48300500
+      Hero Green 54x53 Sprite_60: -207277843
+      Hero Green 54x53 Sprite_61: -1279750648
+      Hero Green 54x53 Sprite_62: -330454163
+      Hero Green 54x53 Sprite_63: 1971879840
+      Hero Green 54x53 Sprite_64: -794479770
+      Hero Green 54x53 Sprite_65: 497948759
+      Hero Green 54x53 Sprite_66: 1393968303
+      Hero Green 54x53 Sprite_67: -1389718088
+      Hero Green 54x53 Sprite_68: -1955285536
+      Hero Green 54x53 Sprite_69: -1858152641
+      Hero Green 54x53 Sprite_7: -1755422983
+      Hero Green 54x53 Sprite_70: -215411470
+      Hero Green 54x53 Sprite_71: -1805299214
+      Hero Green 54x53 Sprite_72: -1385481752
+      Hero Green 54x53 Sprite_73: 444712103
+      Hero Green 54x53 Sprite_74: 1995166472
+      Hero Green 54x53 Sprite_75: -283093550
+      Hero Green 54x53 Sprite_76: 1029839583
+      Hero Green 54x53 Sprite_77: -637331974
+      Hero Green 54x53 Sprite_8: 435558618
+      Hero Green 54x53 Sprite_9: 11534248
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
