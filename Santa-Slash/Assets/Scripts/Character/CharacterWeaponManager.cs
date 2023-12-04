@@ -8,6 +8,9 @@ namespace TranscendenceStudio.Character
 {
     public class CharacterWeaponManager : MonoBehaviour
     {
+        [SerializeField] GameObject agent;
+        [SerializeField] LayerMask targetLayer;
+
         [Header("Weapon")]
         [SerializeField] SpriteRenderer weaponSpriteRenderer;
         [SerializeField] Animator weaponAnimator;
@@ -16,6 +19,7 @@ namespace TranscendenceStudio.Character
         [Header("Weapon Radius Origin")]
         [SerializeField] Transform weaponRadiusOrigin;
 
+        public float WeaponAttackDelay { get; private set; }
         private Vector3 originalScale;
 
         private void Awake()
@@ -25,7 +29,17 @@ namespace TranscendenceStudio.Character
 
         private void Update()
         {
+            if (WeaponAttackDelay > 0)
+            {
+                WeaponAttackDelay -= Time.deltaTime;
+            }
+
             FlipWeapon();
+        }
+
+        public void SetWeaponAttackDelay()
+        {
+            WeaponAttackDelay = equippedWeapon.delay;
         }
 
         public void EquipWeapon(Weapon weapon)
@@ -35,19 +49,10 @@ namespace TranscendenceStudio.Character
             weaponAnimator.runtimeAnimatorController = weapon.animator;
         }
 
-        public void DetedEnemyArea()
-        {
-            foreach (Collider2D hittableObjects in Physics2D.OverlapCircleAll(weaponRadiusOrigin.position, equippedWeapon.weaponAttackRadius))
-            {
-                if (TryGetComponent(out IHittable hittable))
-                {
-
-                }
-            }
-        }
-
         private void FlipWeapon()
         {
+            if (PlayerManager.Instance.IsAttacking) return;
+
             Vector2 scale = transform.localScale;
             Vector2 direction = (PlayerInputManager.Instance.GetMousePositionValue() - (Vector2)transform.position).normalized;
             transform.right = direction;
@@ -62,6 +67,23 @@ namespace TranscendenceStudio.Character
             }
 
             transform.localScale = scale;
+        }
+
+        public void DetectEnemyArea()
+        {
+            foreach (Collider2D hittableObjects in Physics2D.OverlapCircleAll(weaponRadiusOrigin.position, equippedWeapon.weaponAttackRadius, targetLayer))
+            {
+                if (hittableObjects.TryGetComponent(out IHittable hittable))
+                {
+                    Debug.Log("Has hit something Hittable!");
+                    hittable.Hit(equippedWeapon.weaponDamage, agent);
+                }
+            }
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(weaponRadiusOrigin.position, equippedWeapon.weaponAttackRadius);
         }
     }
 }

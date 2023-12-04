@@ -6,12 +6,11 @@ using UnityEngine.InputSystem;
 
 namespace TranscendenceStudio.Character
 {
-    public class PlayerManager : MonoBehaviour
+    public class PlayerManager : CharacterManager
     {
         public static PlayerManager Instance;
 
         public PlayerCurrency playerCurrency;
-        public PlayerEquipItem playerEquipItem;
         public CharacterAnimatorManager characterAnimatorManager;
         public CharacterWeaponManager characterWeaponManager;
         public WeaponAnimatorManager weaponAnimatorManager;
@@ -19,7 +18,6 @@ namespace TranscendenceStudio.Character
         private bool isOnShop;
         private bool isOnInventory;
         private bool isInteracting = false;
-        private bool isAttacking = false;
 
         private void Awake()
         {
@@ -34,7 +32,6 @@ namespace TranscendenceStudio.Character
             }
 
             playerCurrency = GetComponent<PlayerCurrency>();
-            playerEquipItem = GetComponent<PlayerEquipItem>();
             characterAnimatorManager = GetComponent<CharacterAnimatorManager>();
 
             // PlayerInputManager.Instance.OpenInventoryEvent += OpenInventory;
@@ -73,12 +70,6 @@ namespace TranscendenceStudio.Character
         public void SetIsAttackingToFalse()
         {
             IsAttacking = false;
-        }
-
-        public bool IsAttacking
-        {
-            get => isAttacking;
-            set => isAttacking = value;
         }
 
         public bool IsOnShop

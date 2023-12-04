@@ -4,19 +4,29 @@ using UnityEngine;
 
 namespace TranscendenceStudio.Character
 {
-    public class Health : MonoBehaviour, IHittable
+    public class Health : MonoBehaviour
     {
-        private int maxHealth = 2;
-        private int currentHealth;
+        protected int minimumHealth = 0;
+        protected int maximumHealth = 2;
+        [SerializeField] protected int currentHealth;
+        protected bool isDead;
+        [SerializeField] protected bool shouldTakeKnockback;
 
-        private void Awake()
+        protected bool TakeDamage(int damage)
         {
-            currentHealth = maxHealth;
+            if (currentHealth > 0)
+            {
+                currentHealth -= damage;
+                return true;
+            }
+
+            return false;
         }
 
-        public void Hit()
+        public bool IsDead
         {
-            //
+            get => isDead;
+            set => isDead = value;
         }
     }
 }

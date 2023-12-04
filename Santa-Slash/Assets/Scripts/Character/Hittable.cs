@@ -6,6 +6,6 @@ namespace TranscendenceStudio
 {
     public interface IHittable
     {
-        void Hit();
+        void Hit(int damage, GameObject sender);
     }
 }

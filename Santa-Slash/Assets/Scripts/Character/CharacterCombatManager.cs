@@ -16,18 +16,20 @@ namespace TranscendenceStudio.Character
 
         private void Start()
         {
-            PlayerInputManager.Instance.AttackEvent += PerformAttack;
+            PlayerInputManager.Instance.AttackEvent += AttemptToPerformAttack;
         }
 
-        private void PerformAttack()
+        private void AttemptToPerformAttack()
         {
-            // playerManager.characterAnimatorManager.ChangeCharacterAnimation(CharacterAnimation.Attack);
+            if (playerManager.characterWeaponManager.WeaponAttackDelay > 0) return;
+
+            playerManager.characterWeaponManager.SetWeaponAttackDelay();
             playerManager.weaponAnimatorManager.Attack();
         }
 
         private void OnDestroy()
         {
-            PlayerInputManager.Instance.AttackEvent -= PerformAttack;
+            PlayerInputManager.Instance.AttackEvent -= AttemptToPerformAttack;
         }
     }
 }

@@ -12,6 +12,7 @@ namespace TranscendenceStudio.Items
 
         [Header("Weapon Settings")]
         public float weaponAttackRadius = 1;
+        public float delay = 0.5f;
         public int weaponDamage = 1;
         public ParticleSystem weaponParticleSystem;
     }

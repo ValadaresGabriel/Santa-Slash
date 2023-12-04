@@ -8,10 +8,17 @@ namespace TranscendenceStudio.Character
     {
         [SerializeField] PlayerManager playerManager;
         private Animator animator;
+        private CharacterWeaponManager characterWeaponManager;
 
         private void Awake()
         {
             animator = GetComponent<Animator>();
+            characterWeaponManager = GetComponentInParent<CharacterWeaponManager>();
+        }
+
+        public void DetectEnemyArea()
+        {
+            characterWeaponManager.DetectEnemyArea();
         }
 
         public void Attack()
