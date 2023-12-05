@@ -12,25 +12,21 @@ namespace TranscendenceStudio
         private Rigidbody2D rb;
         [SerializeField] float strength = 10;
         [SerializeField] float delay = 0.2f;
-        [SerializeField] EnemyLocomotion enemyLocomotion;
+        private EnemyManager enemyManager;
 
         private void Awake()
         {
+            enemyManager = GetComponent<EnemyManager>();
             rb = GetComponent<Rigidbody2D>();
         }
 
         public void PlayFeedback(GameObject sender)
         {
             StopAllCoroutines();
-            enemyLocomotion.enabled = false;
-
-            Debug.Log(transform.position);
-            Debug.Log(sender.transform.position);
-            Debug.Log(rb.velocity);
+            enemyManager.enemyLocomotion.enabled = false;
 
             Vector2 direction = (transform.position - sender.transform.position).normalized;
             rb.AddForce(direction * strength, ForceMode2D.Impulse);
-            Debug.Log(rb.velocity);
             StartCoroutine(TimeToStopKnockback());
         }
 
@@ -38,7 +34,7 @@ namespace TranscendenceStudio
         {
             yield return new WaitForSeconds(delay);
             rb.velocity = Vector2.zero;
-            enemyLocomotion.enabled = true;
+            enemyManager.enemyLocomotion.enabled = true;
         }
     }
 }

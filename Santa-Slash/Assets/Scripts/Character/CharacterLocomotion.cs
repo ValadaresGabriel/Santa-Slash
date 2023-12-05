@@ -6,16 +6,23 @@ namespace TranscendenceStudio.Character
 {
     public class CharacterLocomotion : MonoBehaviour
     {
-        [SerializeField] float movementSpeed = 6f;
+        [SerializeField] protected float movementSpeed = 6f;
         protected Rigidbody2D rb;
+        protected CharacterManager characterManager;
         protected CharacterAnimatorManager characterAnimatorManager;
         public Vector2 MovementValue { get; set; }
         public Vector2 Direction { get; set; }
 
-        private void Awake()
+        protected virtual void Awake()
         {
             rb = GetComponent<Rigidbody2D>();
             characterAnimatorManager = GetComponent<CharacterAnimatorManager>();
+            characterManager = GetComponent<CharacterManager>();
+        }
+
+        protected virtual void Start()
+        {
+
         }
 
         protected virtual void Update()
@@ -25,12 +32,18 @@ namespace TranscendenceStudio.Character
 
         protected virtual void FixedUpdate()
         {
+            if (characterManager.health.IsDead)
+            {
+                rb.velocity = Vector2.zero;
+                return;
+            }
+
             rb.velocity = movementSpeed * MovementValue;
 
             HandleAnimation();
         }
 
-        private void HandleAnimation()
+        protected void HandleAnimation()
         {
             if (MovementValue == Vector2.zero)
             {
@@ -38,7 +51,7 @@ namespace TranscendenceStudio.Character
                 return;
             }
 
-            if (MovementValue.x != 0)
+            if (MovementValue.x != 0 || MovementValue.y != 0)
             {
                 characterAnimatorManager.ChangeCharacterAnimation(CharacterAnimation.Run);
             }

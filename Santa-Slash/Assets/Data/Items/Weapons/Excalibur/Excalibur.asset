@@ -18,7 +18,8 @@ MonoBehaviour:
   itemDescription: 
   itemPrice: 0
   animator: {fileID: 9100000, guid: f14f36723e93aa14699b710563061f31, type: 2}
-  weaponAttackRadius: 0.3
+  weaponAttackRadius: 0.4
   delay: 0.5
   weaponDamage: 1
-  weaponParticleSystem: {fileID: 0}
+  knockbackStrength: 10
+  dealDamageFX: {fileID: 2499277236963918258, guid: 5b2189a0bf19c5c478fb8660a514cc46, type: 3}

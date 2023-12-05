@@ -8,14 +8,21 @@ namespace TranscendenceStudio.Character
 {
     public class EnemyHealth : Health, IHittable
     {
+        [SerializeField] EnemyManager enemyManager;
         protected MMHealthBar _targetHealthBar;
         public UnityEvent<GameObject> TakeKnockback;
-        public UnityEvent<GameObject> Death;
+        public UnityEvent Death;
 
         private void Awake()
         {
+            // enemyManager = GetComponent<EnemyManager>();
             _targetHealthBar = GetComponent<MMHealthBar>();
-            currentHealth = maximumHealth;
+        }
+
+        private void Start()
+        {
+            if (enemyManager != null)
+                currentHealth = enemyManager.enemy.maxHealth;
         }
 
         public void Hit(int damage, GameObject sender)
@@ -38,14 +45,23 @@ namespace TranscendenceStudio.Character
                     TakeKnockback?.Invoke(sender);
                 }
 
+                if (currentHealth <= 0)
+                {
+                    IsDead = true;
+                    Death?.Invoke();
+                    enemyManager.characterAnimatorManager.ChangeCharacterAnimation(CharacterAnimation.Dead);
+                }
+                else
+                {
+                    enemyManager.characterAnimatorManager.ChangeCharacterAnimation(CharacterAnimation.Take_Damage);
+                }
+
                 return;
             }
             else
             {
                 IsDead = true;
             }
-
-            Debug.Log("Is Dead");
         }
 
         private void UpdateHealthBar()
@@ -54,6 +70,11 @@ namespace TranscendenceStudio.Character
             {
                 _targetHealthBar.UpdateBar(currentHealth, minimumHealth, maximumHealth, true);
             }
+        }
+
+        public Vector3 TargetPosition()
+        {
+            return transform.position;
         }
     }
 }

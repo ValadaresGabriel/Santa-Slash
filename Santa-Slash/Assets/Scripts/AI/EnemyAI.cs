@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TranscendenceStudio.Character;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,6 +8,7 @@ namespace TranscendenceStudio.AI
 {
     public class EnemyAI : MonoBehaviour
     {
+        [Header("AI Settings")]
         [SerializeField] List<AISteeringBehaviour> steeringBehaviours;
         [SerializeField] List<AIDetector> detectors;
         [SerializeField] AIData aiData;
@@ -14,10 +16,10 @@ namespace TranscendenceStudio.AI
         [Header("Delays")]
         [SerializeField] float detectionDelay = 0.05f;
         [SerializeField] float aiUpdateDelay = 0.06f;
-        [SerializeField] float attackDelay = 1f;
+        [SerializeField] float attackCooldown = 1f;
 
         [Header("Attack Distance")]
-        [SerializeField] float attackDistance = 0.5f;
+        [SerializeField] float attackRange = 0.5f;
 
         [Header("AI Inputs")]
         public UnityEvent<Vector2> OnMovementInput;
@@ -25,7 +27,19 @@ namespace TranscendenceStudio.AI
         [SerializeField] Vector2 movementInput;
         [SerializeField] AIContextSolver movementDirectionSolver;
 
+        private EnemyManager enemyManager;
         private bool following = false;
+
+        private void Awake()
+        {
+            enemyManager = GetComponent<EnemyManager>();
+        }
+
+        private void OnEnable()
+        {
+            attackCooldown = enemyManager.enemy.attackCooldown;
+            attackRange = enemyManager.enemy.attackRange;
+        }
 
         private void Start()
         {
@@ -50,6 +64,17 @@ namespace TranscendenceStudio.AI
 
         private void Update()
         {
+            if (enemyManager.health.IsDead)
+            {
+                if (aiData.currentTarget != null)
+                {
+                    StopAllCoroutines();
+                    aiData.currentTarget = null;
+                }
+
+                return;
+            }
+
             // Enemy AI movement based on Target availability
             if (aiData.currentTarget != null)
             {
@@ -73,6 +98,9 @@ namespace TranscendenceStudio.AI
 
         private IEnumerator ChaseAndAttack()
         {
+            if (enemyManager.health.IsDead)
+                yield break;
+
             if (aiData.currentTarget == null)
             {
                 Debug.Log("Stopping");
@@ -85,11 +113,12 @@ namespace TranscendenceStudio.AI
                 float distance = Vector2.Distance(aiData.currentTarget.position, transform.position);
 
                 // Attack Logic
-                if (distance < attackDistance)
+                if (distance < attackRange)
                 {
                     movementInput = Vector2.zero;
                     // OnAttackPressed?.Invoke();
-                    yield return new WaitForSeconds(attackDelay);
+                    yield return new WaitForSeconds(attackCooldown);
+                    StartCoroutine(ChaseAndAttack());
                 }
                 else
                 {

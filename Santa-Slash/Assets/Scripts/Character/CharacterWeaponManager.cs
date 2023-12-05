@@ -14,7 +14,7 @@ namespace TranscendenceStudio.Character
         [Header("Weapon")]
         [SerializeField] SpriteRenderer weaponSpriteRenderer;
         [SerializeField] Animator weaponAnimator;
-        [SerializeField] Weapon equippedWeapon;
+        public Weapon equippedWeapon;
 
         [Header("Weapon Radius Origin")]
         [SerializeField] Transform weaponRadiusOrigin;

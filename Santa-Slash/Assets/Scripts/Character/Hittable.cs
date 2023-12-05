@@ -7,5 +7,6 @@ namespace TranscendenceStudio
     public interface IHittable
     {
         void Hit(int damage, GameObject sender);
+        Vector3 TargetPosition();
     }
 }

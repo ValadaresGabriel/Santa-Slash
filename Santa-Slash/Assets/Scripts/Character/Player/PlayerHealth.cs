@@ -16,5 +16,10 @@ namespace TranscendenceStudio.Character
 
             Debug.Log("Is Dead");
         }
+
+        public Vector3 TargetPosition()
+        {
+            return transform.position;
+        }
     }
 }

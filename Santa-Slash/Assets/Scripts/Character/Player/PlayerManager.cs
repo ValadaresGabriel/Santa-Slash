@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Feedbacks;
+
 // using TranscendenceStudio.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,15 +13,20 @@ namespace TranscendenceStudio.Character
         public static PlayerManager Instance;
 
         public PlayerCurrency playerCurrency;
-        public CharacterAnimatorManager characterAnimatorManager;
         public CharacterWeaponManager characterWeaponManager;
         public WeaponAnimatorManager weaponAnimatorManager;
+
+        [Space(5)]
+        [Header("Feedbacks")]
+        public MMF_Player playerFeedback;
+        public MMF_Player walkFeedback;
+        [Space(5)]
 
         private bool isOnShop;
         private bool isOnInventory;
         private bool isInteracting = false;
 
-        private void Awake()
+        protected override void Awake()
         {
             if (Instance == null)
             {
@@ -31,8 +38,9 @@ namespace TranscendenceStudio.Character
                 Destroy(gameObject);
             }
 
+            base.Awake();
+
             playerCurrency = GetComponent<PlayerCurrency>();
-            characterAnimatorManager = GetComponent<CharacterAnimatorManager>();
 
             // PlayerInputManager.Instance.OpenInventoryEvent += OpenInventory;
         }

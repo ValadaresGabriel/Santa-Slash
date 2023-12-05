@@ -8,33 +8,37 @@ namespace TranscendenceStudio.Character
     {
         Idle,
         Run,
-        Attack,
+        Take_Damage,
         Dash,
         Dead,
     }
 
     public class CharacterAnimatorManager : MonoBehaviour
     {
-        private CharacterAnimation characterAnimation;
-        [SerializeField] Animator characterAnimator;
+        protected CharacterAnimation characterAnimation;
+        protected Animator animator;
 
-        private readonly Dictionary<CharacterAnimation, string> animations = new()
+        private void Awake()
+        {
+            animator = GetComponent<Animator>();
+        }
+
+        protected readonly Dictionary<CharacterAnimation, string> animations = new()
         {
             { CharacterAnimation.Idle, "Idle" },
             { CharacterAnimation.Run, "Run" },
-            { CharacterAnimation.Attack, "Attack" },
+            { CharacterAnimation.Take_Damage, "Take_Damage" },
             { CharacterAnimation.Dash, "Dash" },
             { CharacterAnimation.Dead, "Dead" },
         };
 
-        public void ChangeCharacterAnimation(CharacterAnimation newAnimation)
+        public virtual void ChangeCharacterAnimation(CharacterAnimation newAnimation)
         {
             if (newAnimation == characterAnimation || PlayerManager.Instance.IsAttacking) return;
 
             characterAnimation = newAnimation;
 
-            Debug.Log(newAnimation);
-            characterAnimator.Play(animations[newAnimation]);
+            animator.Play(animations[newAnimation]);
         }
     }
 }
