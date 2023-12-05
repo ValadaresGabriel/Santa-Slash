@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 319153639}
   - component: {fileID: 319153638}
   m_Layer: 0
-  m_Name: '@Combat Feedbacks'
+  m_Name: ///Combat Feedbacks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4128,7 +4128,7 @@ GameObject:
   - component: {fileID: 1715099581}
   - component: {fileID: 1715099582}
   m_Layer: 0
-  m_Name: '@Walk Feedbacks'
+  m_Name: ///Walk Feedbacks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
