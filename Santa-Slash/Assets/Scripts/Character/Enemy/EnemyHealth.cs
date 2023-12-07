@@ -9,14 +9,15 @@ namespace TranscendenceStudio.Character
     public class EnemyHealth : Health, IHittable
     {
         [SerializeField] EnemyManager enemyManager;
-        protected MMHealthBar _targetHealthBar;
+        [SerializeField] int damage = 1;
+        [SerializeField] int weaponDurabilityDamage = 1;
+        // protected MMHealthBar _targetHealthBar;
         public UnityEvent<GameObject> TakeKnockback;
         public UnityEvent Death;
 
         private void Awake()
         {
-            // enemyManager = GetComponent<EnemyManager>();
-            _targetHealthBar = GetComponent<MMHealthBar>();
+            // _targetHealthBar = GetComponent<MMHealthBar>();
         }
 
         private void Start()
@@ -38,7 +39,7 @@ namespace TranscendenceStudio.Character
 
             if (TakeDamage(damage))
             {
-                UpdateHealthBar();
+                // UpdateHealthBar();
 
                 if (shouldTakeKnockback)
                 {
@@ -64,17 +65,22 @@ namespace TranscendenceStudio.Character
             }
         }
 
-        private void UpdateHealthBar()
-        {
-            if (_targetHealthBar != null)
-            {
-                _targetHealthBar.UpdateBar(currentHealth, minimumHealth, maximumHealth, true);
-            }
-        }
+        // private void UpdateHealthBar()
+        // {
+        //     if (_targetHealthBar != null)
+        //     {
+        //         _targetHealthBar.UpdateBar(currentHealth, minimumHealth, maximumHealth, true);
+        //     }
+        // }
 
         public Vector3 TargetPosition()
         {
             return transform.position;
+        }
+
+        public int GetWeaponDurabilityDamage()
+        {
+            return weaponDurabilityDamage;
         }
     }
 }

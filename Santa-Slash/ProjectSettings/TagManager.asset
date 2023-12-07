@@ -39,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 729278433
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -48,9 +51,9 @@ TagManager:
   - name: NPC
     uniqueID: 3930612511
     locked: 0
-  - name: Player
-    uniqueID: 4220974371
-    locked: 0
   - name: Obstacle
     uniqueID: 3587341257
+    locked: 0
+  - name: Player
+    uniqueID: 4220974371
     locked: 0

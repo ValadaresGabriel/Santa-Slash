@@ -6,6 +6,11 @@ namespace TranscendenceStudio.Character
 {
     public class PlayerHealth : Health, IHittable
     {
+        public int GetWeaponDurabilityDamage()
+        {
+            return 0;
+        }
+
         public void Hit(int damage, GameObject sender)
         {
             if (TakeDamage(damage))

@@ -11,10 +11,8 @@ namespace TranscendenceStudio.Character
         private PlayerManager playerManager;
         private List<IHittable> hittables = new();
 
-        [Header("Collider")]
-        [SerializeField] Collider2D damageCollider;
-
-        private GameObject damageVFXInstance;
+        [Header("Weapon Attack Collider")]
+        [SerializeField] Collider2D weaponDamageCollider;
 
         private void Start()
         {
@@ -45,16 +43,17 @@ namespace TranscendenceStudio.Character
             playerManager.playerFeedback.PlayFeedbacks();
 
             hittable.Hit(playerManager.characterWeaponManager.equippedWeapon.weaponDamage, playerManager.gameObject);
+            playerManager.characterWeaponManager.SetWeaponDurability(hittable.GetWeaponDurabilityDamage());
         }
 
         public virtual void EnableDamageCollider()
         {
-            damageCollider.enabled = true;
+            weaponDamageCollider.enabled = true;
         }
 
         public virtual void DisableDamageCollider()
         {
-            damageCollider.enabled = false;
+            weaponDamageCollider.enabled = false;
             hittables.Clear();
         }
     }

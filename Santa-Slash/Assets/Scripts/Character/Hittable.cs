@@ -8,5 +8,6 @@ namespace TranscendenceStudio
     {
         void Hit(int damage, GameObject sender);
         Vector3 TargetPosition();
+        int GetWeaponDurabilityDamage();
     }
 }

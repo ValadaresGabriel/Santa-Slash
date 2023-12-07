@@ -10,15 +10,19 @@ namespace TranscendenceStudio
         [SerializeField] int health = 1;
         [SerializeField] Collider2D wallCollider;
         [SerializeField] SpriteRenderer spriteRenderer;
-        private bool isDestroyed = false;
+        [SerializeField] int weaponDurabilityDamage = 1;
 
-        private void Update()
+        public int GetWeaponDurabilityDamage()
         {
-            if (isDestroyed) return;
+            return weaponDurabilityDamage;
+        }
+
+        public void Hit(int damage, GameObject sender)
+        {
+            health -= damage;
 
             if (health <= 0)
             {
-                isDestroyed = true;
                 wallCollider.enabled = false;
 
                 Color newColor = Color.black;
@@ -30,11 +34,6 @@ namespace TranscendenceStudio
                 damageVFX.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
                 damageVFX.transform.SetPositionAndRotation(transform.position, Quaternion.identity);
             }
-        }
-
-        public void Hit(int damage, GameObject sender)
-        {
-            health -= damage;
         }
 
         public Vector3 TargetPosition()

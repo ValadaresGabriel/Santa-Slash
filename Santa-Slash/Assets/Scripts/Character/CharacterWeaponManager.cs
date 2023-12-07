@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using MoreMountains.Tools;
 using TranscendenceStudio.Items;
 using UnityEngine;
+using UnityEngine.UIElements.Experimental;
 
 namespace TranscendenceStudio.Character
 {
@@ -15,9 +16,11 @@ namespace TranscendenceStudio.Character
         [SerializeField] SpriteRenderer weaponSpriteRenderer;
         [SerializeField] Animator weaponAnimator;
         public Weapon equippedWeapon;
+        private int weaponDurability = 100;
 
         [Header("Weapon Radius Origin")]
         [SerializeField] Transform weaponRadiusOrigin;
+
 
         public float WeaponAttackDelay { get; private set; }
         private Vector3 originalScale;
@@ -44,6 +47,7 @@ namespace TranscendenceStudio.Character
 
         public void EquipWeapon(Weapon weapon)
         {
+            weaponDurability = weapon.weaponDurability;
             equippedWeapon = weapon;
             weaponSpriteRenderer.sprite = equippedWeapon.itemIcon;
             weaponAnimator.runtimeAnimatorController = weapon.animator;
@@ -67,6 +71,12 @@ namespace TranscendenceStudio.Character
             }
 
             transform.localScale = scale;
+        }
+
+        public void SetWeaponDurability(int damageToWeaponDurability)
+        {
+            weaponDurability -= damageToWeaponDurability;
+            // Atualizar na UI
         }
     }
 }
