@@ -7,6 +7,7 @@ namespace TranscendenceStudio.Character
     public class CharacterLocomotion : MonoBehaviour
     {
         [SerializeField] protected float movementSpeed = 6f;
+        [SerializeField] protected float speedMultiplier = 1f;
         protected Rigidbody2D rb;
         protected CharacterManager characterManager;
         protected CharacterAnimatorManager characterAnimatorManager;
@@ -38,7 +39,7 @@ namespace TranscendenceStudio.Character
                 return;
             }
 
-            rb.velocity = movementSpeed * MovementValue;
+            rb.velocity = movementSpeed * speedMultiplier * MovementValue;
 
             HandleAnimation();
         }
@@ -65,6 +66,11 @@ namespace TranscendenceStudio.Character
             if (Mathf.Abs(currentYAngle - angle) < 0.1f) return;
 
             transform.rotation = Quaternion.Euler(0, angle, 0);
+        }
+
+        public void ApplyMovementSpeedMultiplier(float multiplier)
+        {
+            speedMultiplier = multiplier;
         }
     }
 }

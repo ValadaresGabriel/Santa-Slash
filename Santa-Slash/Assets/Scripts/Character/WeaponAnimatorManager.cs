@@ -16,11 +16,6 @@ namespace TranscendenceStudio.Character
             characterWeaponManager = GetComponentInParent<CharacterWeaponManager>();
         }
 
-        public void DetectEnemyArea()
-        {
-            characterWeaponManager.DetectEnemyArea();
-        }
-
         public void Attack()
         {
             animator.SetTrigger("Attack");

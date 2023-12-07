@@ -15,6 +15,7 @@ namespace TranscendenceStudio.Character
         public PlayerCurrency playerCurrency;
         public CharacterWeaponManager characterWeaponManager;
         public WeaponAnimatorManager weaponAnimatorManager;
+        public PlayerLocomotion playerLocomotion { get; private set; }
 
         [Space(5)]
         [Header("Feedbacks")]
@@ -41,6 +42,7 @@ namespace TranscendenceStudio.Character
             base.Awake();
 
             playerCurrency = GetComponent<PlayerCurrency>();
+            playerLocomotion = GetComponent<PlayerLocomotion>();
 
             // PlayerInputManager.Instance.OpenInventoryEvent += OpenInventory;
         }

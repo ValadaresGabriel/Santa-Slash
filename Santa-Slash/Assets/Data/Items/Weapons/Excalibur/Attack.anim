@@ -289,15 +289,15 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.5
-    functionName: SetIsAttackingToFalse
+  - time: 0.41666666
+    functionName: DisableDamageCollider
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.5
-    functionName: DisableDamageCollider
+    functionName: SetIsAttackingToFalse
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

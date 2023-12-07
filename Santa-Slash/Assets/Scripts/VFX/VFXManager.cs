@@ -46,8 +46,8 @@ namespace TranscendenceStudio.VFX
             for (int i = 0; i < spawnAmount; i++)
             {
                 GameObject vfx = pool.Get();
-                // Configura o VFX conforme necessário aqui
-                pool.Release(vfx); // Devolve imediatamente para o pool
+
+                vfx.SetActive(false);
             }
         }
 

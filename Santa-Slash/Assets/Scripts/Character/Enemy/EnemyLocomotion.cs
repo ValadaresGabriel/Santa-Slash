@@ -20,6 +20,7 @@ namespace TranscendenceStudio.Character
 
         protected override void Update()
         {
+            Direction = (Direction - (Vector2)transform.position).normalized;
             Swap();
         }
     }

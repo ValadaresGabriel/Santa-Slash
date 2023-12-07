@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TranscendenceStudio.VFX;
 using UnityEngine;
 
 namespace TranscendenceStudio.Character
@@ -34,13 +35,11 @@ namespace TranscendenceStudio.Character
 
             hittables.Add(hittable);
 
-            // RE-DO
             if (playerManager.characterWeaponManager.equippedWeapon.dealDamageVFX != null)
             {
-                if (damageVFXInstance == null)
-                {
-                    damageVFXInstance = Instantiate(playerManager.characterWeaponManager.equippedWeapon.dealDamageVFX, hittable.TargetPosition(), Quaternion.identity);
-                }
+                GameObject damageVFX = HitVFXManager.Instance.GetVFX();
+                damageVFX.transform.localScale = new Vector3(0.2f, 0.2f, 1f);
+                damageVFX.transform.SetPositionAndRotation(hittable.TargetPosition(), Quaternion.identity);
             }
 
             playerManager.playerFeedback.PlayFeedbacks();

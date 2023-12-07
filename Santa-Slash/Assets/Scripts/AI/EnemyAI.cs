@@ -44,6 +44,8 @@ namespace TranscendenceStudio.AI
         private void Start()
         {
             InvokeRepeating(nameof(PerformDetection), 0, detectionDelay);
+
+            aiData.currentTarget = PlayerManager.Instance.gameObject.transform;
         }
 
         private void PerformDetection()

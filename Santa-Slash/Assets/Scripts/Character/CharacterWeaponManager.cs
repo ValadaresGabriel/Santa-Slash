@@ -68,22 +68,5 @@ namespace TranscendenceStudio.Character
 
             transform.localScale = scale;
         }
-
-        public void DetectEnemyArea()
-        {
-            foreach (Collider2D hittableObjects in Physics2D.OverlapCircleAll(weaponRadiusOrigin.position, equippedWeapon.weaponAttackRadius, targetLayer))
-            {
-                if (hittableObjects.TryGetComponent(out IHittable hittable))
-                {
-                    Debug.Log("Has hit something Hittable!");
-                    hittable.Hit(equippedWeapon.weaponDamage, agent);
-                }
-            }
-        }
-
-        private void OnDrawGizmos()
-        {
-            Gizmos.DrawWireSphere(weaponRadiusOrigin.position, equippedWeapon.weaponAttackRadius);
-        }
     }
 }

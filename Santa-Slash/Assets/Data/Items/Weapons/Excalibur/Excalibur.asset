@@ -22,4 +22,4 @@ MonoBehaviour:
   delay: 0.5
   weaponDamage: 1
   knockbackStrength: 10
-  dealDamageFX: {fileID: 2499277236963918258, guid: 5b2189a0bf19c5c478fb8660a514cc46, type: 3}
+  dealDamageVFX: {fileID: 2499277236963918256, guid: 5b2189a0bf19c5c478fb8660a514cc46, type: 3}
