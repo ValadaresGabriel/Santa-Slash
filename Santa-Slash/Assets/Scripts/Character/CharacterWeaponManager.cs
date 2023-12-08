@@ -23,6 +23,7 @@ namespace TranscendenceStudio.Character
 
 
         public float WeaponAttackDelay { get; private set; }
+        public float WeaponAbilityDelay { get; private set; }
         private Vector3 originalScale;
 
         private void Awake()
@@ -37,12 +38,22 @@ namespace TranscendenceStudio.Character
                 WeaponAttackDelay -= Time.deltaTime;
             }
 
+            if (WeaponAbilityDelay > 0)
+            {
+                WeaponAbilityDelay -= Time.deltaTime;
+            }
+
             FlipWeapon();
         }
 
         public void SetWeaponAttackDelay()
         {
-            WeaponAttackDelay = equippedWeapon.delay;
+            WeaponAttackDelay = equippedWeapon.attackDelay;
+        }
+
+        public void SetWeaponAbilityDelay()
+        {
+            WeaponAbilityDelay = equippedWeapon.attackDelay;
         }
 
         public void EquipWeapon(Weapon weapon)

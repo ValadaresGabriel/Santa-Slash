@@ -64,6 +64,15 @@ namespace TranscendenceStudio
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Ability"",
+                    ""type"": ""Button"",
+                    ""id"": ""45da6e7e-fd92-420a-b121-8ef659d9593c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -154,6 +163,17 @@ namespace TranscendenceStudio
                     ""action"": ""Mouse Position"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""587c7583-3287-4c9c-92d9-93c9d24948c5"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -166,6 +186,7 @@ namespace TranscendenceStudio
             m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
             m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
             m_Player_MousePosition = m_Player.FindAction("Mouse Position", throwIfNotFound: true);
+            m_Player_Ability = m_Player.FindAction("Ability", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -231,6 +252,7 @@ namespace TranscendenceStudio
         private readonly InputAction m_Player_Attack;
         private readonly InputAction m_Player_Interact;
         private readonly InputAction m_Player_MousePosition;
+        private readonly InputAction m_Player_Ability;
         public struct PlayerActions
         {
             private @PlayerControls m_Wrapper;
@@ -239,6 +261,7 @@ namespace TranscendenceStudio
             public InputAction @Attack => m_Wrapper.m_Player_Attack;
             public InputAction @Interact => m_Wrapper.m_Player_Interact;
             public InputAction @MousePosition => m_Wrapper.m_Player_MousePosition;
+            public InputAction @Ability => m_Wrapper.m_Player_Ability;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -260,6 +283,9 @@ namespace TranscendenceStudio
                 @MousePosition.started += instance.OnMousePosition;
                 @MousePosition.performed += instance.OnMousePosition;
                 @MousePosition.canceled += instance.OnMousePosition;
+                @Ability.started += instance.OnAbility;
+                @Ability.performed += instance.OnAbility;
+                @Ability.canceled += instance.OnAbility;
             }
 
             private void UnregisterCallbacks(IPlayerActions instance)
@@ -276,6 +302,9 @@ namespace TranscendenceStudio
                 @MousePosition.started -= instance.OnMousePosition;
                 @MousePosition.performed -= instance.OnMousePosition;
                 @MousePosition.canceled -= instance.OnMousePosition;
+                @Ability.started -= instance.OnAbility;
+                @Ability.performed -= instance.OnAbility;
+                @Ability.canceled -= instance.OnAbility;
             }
 
             public void RemoveCallbacks(IPlayerActions instance)
@@ -299,6 +328,7 @@ namespace TranscendenceStudio
             void OnAttack(InputAction.CallbackContext context);
             void OnInteract(InputAction.CallbackContext context);
             void OnMousePosition(InputAction.CallbackContext context);
+            void OnAbility(InputAction.CallbackContext context);
         }
     }
 }

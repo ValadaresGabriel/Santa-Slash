@@ -14,6 +14,7 @@ namespace TranscendenceStudio
 
         // Events
         public event Action AttackEvent;
+        public event Action AbilityEvent;
         public event Action InteractEvent;
 
         // Main Camera -> is being used to get the mouse's position
@@ -60,6 +61,14 @@ namespace TranscendenceStudio
             if (context.performed)
             {
                 AttackEvent?.Invoke();
+            }
+        }
+
+        public void OnAbility(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                AbilityEvent?.Invoke();
             }
         }
 

@@ -12,7 +12,8 @@ namespace TranscendenceStudio.Items
 
         [Header("Weapon Settings")]
         public float weaponAttackRadius = 1;
-        public float delay = 0.5f;
+        public float attackDelay = 0.5f;
+        public float abilityDelay = 0.5f;
         public int weaponDamage = 1;
         public int weaponDurability = 100;
         public float knockbackStrength = 10;

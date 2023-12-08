@@ -17,6 +17,7 @@ namespace TranscendenceStudio.Character
         private void Start()
         {
             PlayerInputManager.Instance.AttackEvent += AttemptToPerformAttack;
+            PlayerInputManager.Instance.AbilityEvent += AttemptToPerformAbility;
         }
 
         private void AttemptToPerformAttack()
@@ -24,12 +25,21 @@ namespace TranscendenceStudio.Character
             if (playerManager.characterWeaponManager.WeaponAttackDelay > 0) return;
 
             playerManager.characterWeaponManager.SetWeaponAttackDelay();
-            playerManager.weaponAnimatorManager.Attack();
+            playerManager.weaponAnimatorManager.PerformAttack();
+        }
+
+        private void AttemptToPerformAbility()
+        {
+            if (playerManager.characterWeaponManager.WeaponAbilityDelay > 0) return;
+
+            playerManager.characterWeaponManager.SetWeaponAbilityDelay();
+            playerManager.weaponAnimatorManager.PerformAbility();
         }
 
         private void OnDestroy()
         {
             PlayerInputManager.Instance.AttackEvent -= AttemptToPerformAttack;
+            PlayerInputManager.Instance.AbilityEvent -= AttemptToPerformAbility;
         }
     }
 }

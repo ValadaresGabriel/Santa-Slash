@@ -16,9 +16,14 @@ namespace TranscendenceStudio.Character
             characterWeaponManager = GetComponentInParent<CharacterWeaponManager>();
         }
 
-        public void Attack()
+        public void PerformAttack()
         {
             animator.SetTrigger("Attack");
+        }
+
+        public void PerformAbility()
+        {
+            animator.SetTrigger("Ability");
         }
 
         public void SetIsAttackingToTrue()
