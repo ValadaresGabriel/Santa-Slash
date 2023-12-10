@@ -6,7 +6,7 @@ namespace TranscendenceStudio.UI
 {
     public class UIManager : MonoBehaviour
     {
-        private UIManager Instance;
+        public static UIManager Instance { get; private set; }
 
         public PlayerUIManager playerUIManager;
 
@@ -15,13 +15,12 @@ namespace TranscendenceStudio.UI
             if (Instance == null)
             {
                 Instance = this;
+                DontDestroyOnLoad(gameObject);
             }
             else
             {
                 Destroy(gameObject);
             }
         }
-
-
     }
 }

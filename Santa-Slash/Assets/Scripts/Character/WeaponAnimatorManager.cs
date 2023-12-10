@@ -24,6 +24,7 @@ namespace TranscendenceStudio.Character
         public void PerformAbility()
         {
             animator.SetTrigger("Ability");
+            playerManager.playerStatsManager.Stamina -= characterWeaponManager.equippedWeapon.staminaCost;
         }
 
         public void FireWeaponAbilityVFX()

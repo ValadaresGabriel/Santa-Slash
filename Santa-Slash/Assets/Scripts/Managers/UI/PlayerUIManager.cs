@@ -23,6 +23,16 @@ namespace TranscendenceStudio.UI
             staminaSlider.value = 10;
         }
 
+        public void SetMaxHealth(int value)
+        {
+            healthSlider.maxValue = value;
+        }
+
+        public void SetMaxStamina(int value)
+        {
+            staminaSlider.maxValue = value;
+        }
+
         public void UpdateHealthBar(int value)
         {
             healthSlider.value -= value;

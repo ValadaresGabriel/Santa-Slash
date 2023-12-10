@@ -1,11 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Feedbacks;
-using MoreMountains.Tools;
 using TranscendenceStudio.Items;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.UIElements.Experimental;
 
 namespace TranscendenceStudio.Character
 {
@@ -58,7 +55,7 @@ namespace TranscendenceStudio.Character
 
         public void SetWeaponAbilityDelay()
         {
-            WeaponAbilityDelay = equippedWeapon.attackDelay;
+            WeaponAbilityDelay = equippedWeapon.abilityDelay;
         }
 
         public void EquipWeapon(Weapon weapon)
