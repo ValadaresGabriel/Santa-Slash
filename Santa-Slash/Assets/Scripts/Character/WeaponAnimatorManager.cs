@@ -26,6 +26,11 @@ namespace TranscendenceStudio.Character
             animator.SetTrigger("Ability");
         }
 
+        public void FireWeaponAbilityVFX()
+        {
+            //
+        }
+
         public void SetIsAttackingToTrue()
         {
             playerManager.IsAttacking = true;

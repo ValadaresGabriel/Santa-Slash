@@ -30,7 +30,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: -1
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -707626039
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1110342861, guid: 95239e2fa5fa6804ba6ea6118d7dfaba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -174,3 +174,4 @@ MonoBehaviour:
   health: 1
   wallCollider: {fileID: 467046749659086166}
   spriteRenderer: {fileID: 2059643498188467646}
+  weaponDurabilityDamage: 1

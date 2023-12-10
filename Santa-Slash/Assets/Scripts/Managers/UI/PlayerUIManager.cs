@@ -14,6 +14,7 @@ namespace TranscendenceStudio.UI
         [SerializeField] Slider staminaSlider;
         [SerializeField] float delayToStartToRecoverStamina = 3f;
         [SerializeField] float timeToFullyRecoverStamina = 6f;
+
         private Coroutine staminaRecoveryCoroutine;
 
         private void Awake()

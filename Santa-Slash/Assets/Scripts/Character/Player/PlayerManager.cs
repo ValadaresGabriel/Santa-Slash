@@ -1,10 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Feedbacks;
-
-// using TranscendenceStudio.UI;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace TranscendenceStudio.Character
 {
@@ -15,6 +12,7 @@ namespace TranscendenceStudio.Character
         public PlayerCurrency playerCurrency;
         public CharacterWeaponManager characterWeaponManager;
         public WeaponAnimatorManager weaponAnimatorManager;
+        public PlayerStatsManager playerStatsManager { get; private set; }
         public PlayerLocomotion playerLocomotion { get; private set; }
 
         [Space(5)]
@@ -42,6 +40,7 @@ namespace TranscendenceStudio.Character
             base.Awake();
 
             playerCurrency = GetComponent<PlayerCurrency>();
+            playerStatsManager = GetComponent<PlayerStatsManager>();
             playerLocomotion = GetComponent<PlayerLocomotion>();
 
             // PlayerInputManager.Instance.OpenInventoryEvent += OpenInventory;

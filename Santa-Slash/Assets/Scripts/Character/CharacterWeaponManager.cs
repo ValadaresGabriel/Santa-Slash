@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Feedbacks;
 using MoreMountains.Tools;
 using TranscendenceStudio.Items;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements.Experimental;
 
@@ -9,6 +11,7 @@ namespace TranscendenceStudio.Character
 {
     public class CharacterWeaponManager : MonoBehaviour
     {
+        [SerializeField] PlayerManager playerManager;
         [SerializeField] GameObject agent;
         [SerializeField] LayerMask targetLayer;
 
@@ -18,9 +21,6 @@ namespace TranscendenceStudio.Character
         public Weapon equippedWeapon;
         private int weaponDurability = 100;
 
-        [Header("Weapon Radius Origin")]
-        [SerializeField] Transform weaponRadiusOrigin;
-
 
         public float WeaponAttackDelay { get; private set; }
         public float WeaponAbilityDelay { get; private set; }
@@ -29,6 +29,11 @@ namespace TranscendenceStudio.Character
         private void Awake()
         {
             originalScale = transform.localScale;
+        }
+
+        private void Start()
+        {
+            EquipWeapon(equippedWeapon);
         }
 
         private void Update()
@@ -58,8 +63,9 @@ namespace TranscendenceStudio.Character
 
         public void EquipWeapon(Weapon weapon)
         {
-            weaponDurability = weapon.weaponDurability;
             equippedWeapon = weapon;
+            playerManager.playerFeedback.GetFeedbackOfType<MMF_MMSoundManagerSound>().RandomSfx = weapon.sfxs;
+            weaponDurability = weapon.weaponDurability;
             weaponSpriteRenderer.sprite = equippedWeapon.itemIcon;
             weaponAnimator.runtimeAnimatorController = weapon.animator;
         }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 namespace TranscendenceStudio.Items
@@ -17,6 +18,14 @@ namespace TranscendenceStudio.Items
         public int weaponDamage = 1;
         public int weaponDurability = 100;
         public float knockbackStrength = 10;
+
+        [Header("Stamina Cost")]
+        public int staminaCost = 1;
+
+        [Header("Weapon SFXs")]
+        public AudioClip[] sfxs;
+
+        [Header("Damage VFX")]
         public GameObject dealDamageVFX;
     }
 }
