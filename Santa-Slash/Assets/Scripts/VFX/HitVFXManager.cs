@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TranscendenceStudio.Pooling;
 using UnityEngine;
 
 namespace TranscendenceStudio.VFX
 {
-    public class HitVFXManager : VFXManager
+    public class HitVFXManager : ObjectPoolingManager
     {
         public static HitVFXManager Instance { get; private set; }
 
