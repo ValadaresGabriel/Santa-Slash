@@ -61,10 +61,10 @@ namespace TranscendenceStudio.Character
         public void EquipWeapon(Weapon weapon)
         {
             equippedWeapon = weapon;
+            weaponAnimator.runtimeAnimatorController = weapon.animator;
+            weaponSpriteRenderer.sprite = equippedWeapon.itemIcon;
             playerManager.playerFeedback.GetFeedbackOfType<MMF_MMSoundManagerSound>().RandomSfx = weapon.sfxs;
             weaponDurability = weapon.weaponDurability;
-            weaponSpriteRenderer.sprite = equippedWeapon.itemIcon;
-            weaponAnimator.runtimeAnimatorController = weapon.animator;
         }
 
         private void FlipWeapon()

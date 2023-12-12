@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TranscendenceStudio.Pooling;
 using UnityEngine;
 
 namespace TranscendenceStudio.VFX
 {
-    public class DustVFXManager : VFXManager
+    public class DustVFXManager : ObjectPoolingManager
     {
         public static DustVFXManager Instance { get; private set; }
 

@@ -12,6 +12,7 @@ namespace TranscendenceStudio.Items
         public RuntimeAnimatorController animator;
 
         [Header("Weapon Settings")]
+        public bool isRangedWeapon = false;
         public float weaponAttackRadius = 1;
         public float attackDelay = 0.5f;
         public float abilityDelay = 0.5f;

@@ -30,7 +30,7 @@ namespace TranscendenceStudio
 
                 spriteRenderer.color = newColor;
 
-                GameObject damageVFX = DustVFXManager.Instance.GetVFX();
+                GameObject damageVFX = DustVFXManager.Instance.GetObject();
                 damageVFX.transform.localScale = new Vector3(0.6f, 0.6f, 1f);
                 damageVFX.transform.SetPositionAndRotation(transform.position, Quaternion.identity);
             }
