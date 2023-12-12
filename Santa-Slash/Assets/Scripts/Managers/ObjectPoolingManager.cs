@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TranscendenceStudio.Character;
+using TranscendenceStudio.VFX;
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace TranscendenceStudio.VFX
+namespace TranscendenceStudio.Pooling
 {
-    public class VFXManager : MonoBehaviour
+    public class ObjectPoolingManager : MonoBehaviour
     {
-        [SerializeField] GameObject vfxPrefab;
+        [SerializeField] GameObject objectPrefab;
         [SerializeField] int spawnAmount;
         private ObjectPool<GameObject> pool;
 
@@ -15,14 +17,18 @@ namespace TranscendenceStudio.VFX
         {
             pool = new ObjectPool<GameObject>(() =>
             {
-                GameObject obj = Instantiate(vfxPrefab);
+                GameObject obj = Instantiate(objectPrefab);
                 obj.transform.SetParent(transform, false); // Configura o parent aqui
                 obj.SetActive(false); // Inicialmente desativa
 
-                VFXController vfxController = obj.GetComponent<VFXController>();
-                if (vfxController != null)
+                if (obj.TryGetComponent(out VFXController vfxController))
                 {
-                    vfxController.SetReleaseCallback(ReleaseVFX);
+                    vfxController.SetReleaseCallback(ReleaseObject);
+                }
+
+                if (obj.TryGetComponent(out ThrowableWeaponController throwableWeaponController))
+                {
+                    throwableWeaponController.SetReleaseCallback(ReleaseObject);
                 }
 
                 return obj;
@@ -38,10 +44,10 @@ namespace TranscendenceStudio.VFX
             },
             false, 10, 20);
 
-            PreSpawnVFX();
+            PreSpawnObject();
         }
 
-        private void PreSpawnVFX()
+        private void PreSpawnObject()
         {
             for (int i = 0; i < spawnAmount; i++)
             {
@@ -51,14 +57,14 @@ namespace TranscendenceStudio.VFX
             }
         }
 
-        public GameObject GetVFX()
+        public GameObject GetObject()
         {
             GameObject vfx = pool.Get();
             // Configurações adicionais do VFX, se necessário
             return vfx;
         }
 
-        public void ReleaseVFX(GameObject vfx)
+        public void ReleaseObject(GameObject vfx)
         {
             pool.Release(vfx);
         }

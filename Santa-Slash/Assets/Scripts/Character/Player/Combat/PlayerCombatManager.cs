@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace TranscendenceStudio.Character
 {
-    public class CharacterCombatManager : MonoBehaviour
+    public class PlayerCombatManager : MonoBehaviour
     {
         private PlayerManager playerManager;
 

@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using TranscendenceStudio.Pooling;
+using TranscendenceStudio.VFX;
 using UnityEngine;
 
-namespace TranscendenceStudio.VFX
+namespace TranscendenceStudio.Character
 {
-    public class DustVFXManager : ObjectPoolingManager
+    public class SkillsPoolingManager : ObjectPoolingManager
     {
-        public static DustVFXManager Instance { get; private set; }
+        public static SkillsPoolingManager Instance { get; private set; }
 
         private void Awake()
         {

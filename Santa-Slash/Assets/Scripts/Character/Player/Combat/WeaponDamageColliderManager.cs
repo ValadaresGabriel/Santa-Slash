@@ -12,7 +12,7 @@ namespace TranscendenceStudio.Character
         private List<IHittable> hittables = new();
 
         [Header("Weapon Attack Collider")]
-        [SerializeField] Collider2D weaponDamageCollider;
+        [SerializeField] protected Collider2D weaponDamageCollider;
 
         private void Start()
         {
@@ -27,7 +27,7 @@ namespace TranscendenceStudio.Character
             }
         }
 
-        private void DamageTarget(IHittable hittable)
+        protected virtual void DamageTarget(IHittable hittable)
         {
             if (hittables.Contains(hittable)) return;
 
@@ -35,7 +35,7 @@ namespace TranscendenceStudio.Character
 
             if (playerManager.characterWeaponManager.equippedWeapon.dealDamageVFX != null)
             {
-                GameObject damageVFX = HitVFXManager.Instance.GetVFX();
+                GameObject damageVFX = HitVFXManager.Instance.GetObject();
                 damageVFX.transform.localScale = new Vector3(0.2f, 0.2f, 1f);
                 damageVFX.transform.SetPositionAndRotation(hittable.TargetPosition(), Quaternion.identity);
             }

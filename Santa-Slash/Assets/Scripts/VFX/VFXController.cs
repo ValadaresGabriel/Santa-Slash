@@ -19,7 +19,7 @@ namespace TranscendenceStudio.VFX
             releaseCallback = callback;
         }
 
-        void Update()
+        private void Update()
         {
             if (!vfx.IsAlive(true))
             {
