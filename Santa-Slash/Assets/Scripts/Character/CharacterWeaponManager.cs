@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Feedbacks;
@@ -18,6 +19,9 @@ namespace TranscendenceStudio.Character
         public Weapon equippedWeapon;
         private int weaponDurability = 100;
 
+        [Header("Attack Area")]
+        [SerializeField] GameObject rangedWeaponTrajectoryArrow;
+        public GameObject spellArea;
 
         public float WeaponAttackDelay { get; private set; }
         public float WeaponAbilityDelay { get; private set; }
@@ -46,6 +50,7 @@ namespace TranscendenceStudio.Character
             }
 
             FlipWeapon();
+            SetSpellAreaPosition();
         }
 
         public void SetWeaponAttackDelay()
@@ -65,6 +70,26 @@ namespace TranscendenceStudio.Character
             weaponSpriteRenderer.sprite = equippedWeapon.itemIcon;
             playerManager.playerFeedback.GetFeedbackOfType<MMF_MMSoundManagerSound>().RandomSfx = weapon.sfxs;
             weaponDurability = weapon.weaponDurability;
+
+            if (weapon.isRangedWeapon)
+            {
+                if (spellArea.activeInHierarchy)
+                    spellArea.SetActive(false);
+
+                rangedWeaponTrajectoryArrow.SetActive(true);
+            }
+            else if (weapon.isMagicWeapon)
+            {
+                if (rangedWeaponTrajectoryArrow.activeInHierarchy)
+                    rangedWeaponTrajectoryArrow.SetActive(false);
+
+                spellArea.SetActive(true);
+            }
+            else
+            {
+                rangedWeaponTrajectoryArrow.SetActive(false);
+                spellArea.SetActive(false);
+            }
         }
 
         private void FlipWeapon()
@@ -85,6 +110,13 @@ namespace TranscendenceStudio.Character
             }
 
             transform.localScale = scale;
+        }
+
+        private void SetSpellAreaPosition()
+        {
+            if (!spellArea.activeInHierarchy) return;
+
+            spellArea.transform.SetPositionAndRotation(PlayerInputManager.Instance.GetMousePositionValue(), Quaternion.identity);
         }
 
         public void SetWeaponDurability(int damageToWeaponDurability)

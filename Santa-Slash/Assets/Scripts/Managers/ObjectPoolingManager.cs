@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TranscendenceStudio.Character;
@@ -10,51 +11,44 @@ namespace TranscendenceStudio.Pooling
     public class ObjectPoolingManager : MonoBehaviour
     {
         [SerializeField] GameObject objectPrefab;
-        [SerializeField] int spawnAmount;
         private ObjectPool<GameObject> pool;
 
         private void Start()
         {
-            pool = new ObjectPool<GameObject>(() =>
-            {
-                GameObject obj = Instantiate(objectPrefab);
-                obj.transform.SetParent(transform, false); // Configura o parent aqui
-                obj.SetActive(false); // Inicialmente desativa
-
-                if (obj.TryGetComponent(out VFXController vfxController))
-                {
-                    vfxController.SetReleaseCallback(ReleaseObject);
-                }
-
-                if (obj.TryGetComponent(out ThrowableWeaponController throwableWeaponController))
-                {
-                    throwableWeaponController.SetReleaseCallback(ReleaseObject);
-                }
-
-                return obj;
-            }, vfx =>
-            {
-                vfx.SetActive(true);
-            }, vfx =>
-            {
-                vfx.SetActive(false);
-            }, vfx =>
-            {
-                Destroy(vfx);
-            },
-            false, 10, 20);
-
-            PreSpawnObject();
+            pool = new ObjectPool<GameObject>(CreateObject, OnGetFromPool, OnReturnToPool, OnDestroyGameObject, false, 10, 40);
         }
 
-        private void PreSpawnObject()
+        private GameObject CreateObject()
         {
-            for (int i = 0; i < spawnAmount; i++)
-            {
-                GameObject vfx = pool.Get();
+            GameObject obj = Instantiate(objectPrefab);
+            obj.transform.SetParent(transform, false); // Configura o parent aqui
 
-                vfx.SetActive(false);
+            if (obj.TryGetComponent(out VFXController vfxController))
+            {
+                vfxController.SetReleaseCallback(ReleaseObject);
             }
+
+            if (obj.TryGetComponent(out ThrowableWeaponDamageCollider throwableWeaponDamageCollider))
+            {
+                throwableWeaponDamageCollider.SetReleaseCallback(ReleaseObject);
+            }
+
+            return obj;
+        }
+
+        private void OnGetFromPool(GameObject @object)
+        {
+            @object.SetActive(true);
+        }
+
+        private void OnReturnToPool(GameObject @object)
+        {
+            @object.SetActive(false);
+        }
+
+        private void OnDestroyGameObject(GameObject @object)
+        {
+            Destroy(@object);
         }
 
         public GameObject GetObject()

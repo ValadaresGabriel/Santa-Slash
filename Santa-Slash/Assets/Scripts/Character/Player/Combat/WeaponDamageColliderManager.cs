@@ -23,6 +23,7 @@ namespace TranscendenceStudio.Character
         {
             if (other.TryGetComponent(out IHittable hittable))
             {
+                Debug.Log("Entrou");
                 DamageTarget(hittable);
             }
         }

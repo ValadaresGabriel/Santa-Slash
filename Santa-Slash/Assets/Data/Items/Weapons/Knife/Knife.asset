@@ -18,6 +18,8 @@ MonoBehaviour:
   itemDescription: 
   itemPrice: 0
   animator: {fileID: 9100000, guid: 9b8b90410bc2fda459e8083a7380ceb1, type: 2}
+  isRangedWeapon: 0
+  isMagicWeapon: 1
   weaponAttackRadius: 1
   attackDelay: 0.25
   abilityDelay: 0.5

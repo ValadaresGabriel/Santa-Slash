@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4272840015554831405}
   - component: {fileID: 4624595671433598407}
   - component: {fileID: 577039078412083289}
+  - component: {fileID: 5643780290767249384}
+  - component: {fileID: 4558242401872921892}
   m_Layer: 6
   m_Name: Pooling Manager
   m_TagString: Untagged
@@ -31,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4624595671433598407
 MonoBehaviour:
@@ -45,8 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad41a521e7d0ebb4c94c8631d9edd806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 0}
-  spawnAmount: 20
+  objectPrefab: {fileID: 2499277236963918256, guid: d3b5fec7329fa4d408f661eb58109aa2, type: 3}
 --- !u!114 &577039078412083289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,5 +60,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c209a6a5a8803024a8d9b12482464c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 0}
-  spawnAmount: 5
+  objectPrefab: {fileID: 165672, guid: ac86a9696c3b73e4e8f006cd9d8f2fb6, type: 3}
+--- !u!114 &5643780290767249384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780587090707184195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53fea65c8a9dbc7488da80c6ffd7d04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 1003228234107178687, guid: 4521eb7d7010d054aa18fe63b65125c9, type: 3}
+--- !u!114 &4558242401872921892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780587090707184195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f7f48c750c79b4492c55c1d40650aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 4672578959799385271, guid: 73aec0d6c57a81d4d80a6a84448c6fd1, type: 3}

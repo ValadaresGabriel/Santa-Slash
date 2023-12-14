@@ -17,27 +17,41 @@ namespace TranscendenceStudio.Character
                 return;
             }
 
-            Debug.Log("Passou");
+            if (characterWeaponManager.equippedWeapon.isRangedWeapon)
+            {
+                Vector3 difference = PlayerInputManager.Instance.GetMousePositionValue() - (Vector2)characterWeaponManager.transform.position;
+                float distance = difference.magnitude;
 
-            Vector3 difference = PlayerInputManager.Instance.GetMousePositionValue() - (Vector2)characterWeaponManager.transform.position;
-            float distance = difference.magnitude;
-
-            Vector2 direction = difference / distance;
-            direction.Normalize();
+                Vector2 direction = difference / distance;
+                direction.Normalize();
 
 
-            Fire(direction);
+                ThrowWeapon(direction);
+                return;
+            }
+
+            if (characterWeaponManager.equippedWeapon.isMagicWeapon)
+            {
+                CastSpell();
+            }
         }
 
-        private void Fire(Vector2 direction)
+        private void ThrowWeapon(Vector2 direction)
         {
-            GameObject weapon = SkillsPoolingManager.Instance.GetObject();
+            GameObject weapon = ThrowableKnifePoolingManager.Instance.GetObject();
 
             Vector3 rotationZ = (Vector2)weapon.transform.position - PlayerInputManager.Instance.GetMousePositionValue();
             float rotation = Mathf.Atan2(rotationZ.y, rotationZ.x) * Mathf.Rad2Deg;
 
             weapon.transform.SetPositionAndRotation(characterWeaponManager.transform.position, Quaternion.Euler(0, 0, rotation + 80f));
             weapon.GetComponent<Rigidbody2D>().velocity = direction * 10f;
+        }
+
+        private void CastSpell()
+        {
+            GameObject skill = SkillsPoolingManager.Instance.GetObject();
+
+            skill.transform.SetPositionAndRotation(characterWeaponManager.spellArea.transform.position, Quaternion.identity);
         }
     }
 }
