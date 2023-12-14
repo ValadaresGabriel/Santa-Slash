@@ -23,7 +23,6 @@ namespace TranscendenceStudio.Character
         {
             if (other.TryGetComponent(out IHittable hittable))
             {
-                Debug.Log("Entrou");
                 DamageTarget(hittable);
             }
         }
@@ -44,7 +43,7 @@ namespace TranscendenceStudio.Character
             playerManager.playerFeedback.PlayFeedbacks();
 
             hittable.Hit(playerManager.characterWeaponManager.equippedWeapon.weaponDamage, playerManager.gameObject);
-            playerManager.characterWeaponManager.SetWeaponDurability(hittable.GetWeaponDurabilityDamage());
+            playerManager.characterWeaponManager.WeaponDurability -= hittable.GetWeaponDurabilityDamage();
         }
 
         public virtual void EnableDamageCollider()

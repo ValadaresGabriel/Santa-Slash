@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Feedbacks;
 using TranscendenceStudio.Items;
+using TranscendenceStudio.UI;
 using UnityEngine;
 
 namespace TranscendenceStudio.Character
@@ -66,19 +67,26 @@ namespace TranscendenceStudio.Character
         public void EquipWeapon(Weapon weapon)
         {
             equippedWeapon = weapon;
+
             weaponAnimator.runtimeAnimatorController = weapon.animator;
             weaponSpriteRenderer.sprite = equippedWeapon.itemIcon;
-            playerManager.playerFeedback.GetFeedbackOfType<MMF_MMSoundManagerSound>().RandomSfx = weapon.sfxs;
             weaponDurability = weapon.weaponDurability;
 
-            if (weapon.isRangedWeapon)
+            playerManager.playerFeedback.GetFeedbackOfType<MMF_MMSoundManagerSound>().RandomSfx = weapon.sfxs;
+
+            SetupAttackArea(weapon);
+        }
+
+        private void SetupAttackArea(Weapon weapon)
+        {
+            if (weapon.weaponAttackType == WeaponAttackType.Ranged)
             {
                 if (spellArea.activeInHierarchy)
                     spellArea.SetActive(false);
 
                 rangedWeaponTrajectoryArrow.SetActive(true);
             }
-            else if (weapon.isMagicWeapon)
+            else if (weapon.weaponAttackType == WeaponAttackType.Magic)
             {
                 if (rangedWeaponTrajectoryArrow.activeInHierarchy)
                     rangedWeaponTrajectoryArrow.SetActive(false);
@@ -87,8 +95,11 @@ namespace TranscendenceStudio.Character
             }
             else
             {
-                rangedWeaponTrajectoryArrow.SetActive(false);
-                spellArea.SetActive(false);
+                if (rangedWeaponTrajectoryArrow.activeInHierarchy)
+                    rangedWeaponTrajectoryArrow.SetActive(false);
+
+                if (!spellArea.activeInHierarchy)
+                    spellArea.SetActive(false);
             }
         }
 
@@ -119,10 +130,14 @@ namespace TranscendenceStudio.Character
             spellArea.transform.SetPositionAndRotation(PlayerInputManager.Instance.GetMousePositionValue(), Quaternion.identity);
         }
 
-        public void SetWeaponDurability(int damageToWeaponDurability)
+        public int WeaponDurability
         {
-            weaponDurability -= damageToWeaponDurability;
-            // Atualizar na UI
+            get => weaponDurability;
+            set
+            {
+                weaponDurability = value;
+                UIManager.Instance.playerUIManager.UpdateWeaponDurabilitySlider(weaponDurability);
+            }
         }
     }
 }

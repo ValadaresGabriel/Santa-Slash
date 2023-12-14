@@ -7,21 +7,14 @@ namespace TranscendenceStudio.UI
 {
     public class PlayerUIManager : MonoBehaviour
     {
-        [Header("Health Settings")]
+        [Header("Health")]
         [SerializeField] Slider healthSlider;
 
-        [Header("Stamina Settings")]
+        [Header("Stamina")]
         [SerializeField] Slider staminaSlider;
-        [SerializeField] float delayToStartToRecoverStamina = 3f;
-        [SerializeField] float timeToFullyRecoverStamina = 6f;
 
-        private Coroutine staminaRecoveryCoroutine;
-
-        private void Awake()
-        {
-            healthSlider.value = 10;
-            staminaSlider.value = 10;
-        }
+        [Header("Weapon Durability")]
+        [SerializeField] Slider weaponDurabilitySlider;
 
         public void SetMaxHealth(int value)
         {
@@ -33,32 +26,24 @@ namespace TranscendenceStudio.UI
             staminaSlider.maxValue = value;
         }
 
-        public void UpdateHealthBar(int value)
+        public void SetMaxWeaponDurability(int value)
         {
-            healthSlider.value -= value;
+            weaponDurabilitySlider.maxValue = value;
         }
 
-        public void UpdateStaminaBar(int value)
+        public void UpdateHealthSlider(int value)
         {
-            staminaSlider.value -= value;
-
-            StopCoroutine(staminaRecoveryCoroutine);
-            staminaRecoveryCoroutine = StartCoroutine(AttemptToRecoverStamina());
+            healthSlider.value = value;
         }
 
-        private IEnumerator AttemptToRecoverStamina()
+        public void UpdateStaminaSlider(int value)
         {
-            yield return new WaitForSeconds(delayToStartToRecoverStamina);
+            staminaSlider.value = value;
+        }
 
-            float currentTime = 0f;
-
-            while (currentTime < timeToFullyRecoverStamina)
-            {
-                currentTime += Time.deltaTime;
-                float fraction = currentTime / timeToFullyRecoverStamina;
-                staminaSlider.value += fraction;
-                yield return null;
-            }
+        public void UpdateWeaponDurabilitySlider(int value)
+        {
+            weaponDurabilitySlider.value = value;
         }
     }
 }

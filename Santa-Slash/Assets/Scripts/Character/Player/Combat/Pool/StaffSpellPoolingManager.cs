@@ -1,14 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using TranscendenceStudio.Pooling;
-using TranscendenceStudio.VFX;
-using UnityEngine;
 
 namespace TranscendenceStudio.Character
 {
-    public class SkillsPoolingManager : ObjectPoolingManager
+    public class StaffSpellPoolingManager : ObjectPoolingManager
     {
-        public static SkillsPoolingManager Instance { get; private set; }
+        public static StaffSpellPoolingManager Instance { get; private set; }
 
         private void Awake()
         {

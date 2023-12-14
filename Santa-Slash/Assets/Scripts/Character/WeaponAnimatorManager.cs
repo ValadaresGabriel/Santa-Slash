@@ -8,12 +8,10 @@ namespace TranscendenceStudio.Character
     {
         [SerializeField] PlayerManager playerManager;
         private Animator animator;
-        private CharacterWeaponManager characterWeaponManager;
 
         private void Awake()
         {
             animator = GetComponent<Animator>();
-            characterWeaponManager = GetComponentInParent<CharacterWeaponManager>();
         }
 
         public void PerformAttack()
@@ -24,12 +22,7 @@ namespace TranscendenceStudio.Character
         public void PerformAbility()
         {
             animator.SetTrigger("Ability");
-            playerManager.playerStatsManager.Stamina -= characterWeaponManager.equippedWeapon.staminaCost;
-        }
-
-        public void FireWeaponAbilityVFX()
-        {
-            //
+            playerManager.playerStatsManager.Stamina -= playerManager.characterWeaponManager.equippedWeapon.staminaCost;
         }
 
         public void SetIsAttackingToTrue()

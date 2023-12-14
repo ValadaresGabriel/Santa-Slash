@@ -7,13 +7,24 @@ namespace TranscendenceStudio.Character
 {
     public class PlayerStatsManager : MonoBehaviour
     {
-        [SerializeField] int health;
-        [SerializeField] int stamina;
+        [SerializeField] int maxHealth;
+        private int health;
 
-        private void Awake()
+        [Header("Stamina Settings")]
+        [SerializeField] int maxStamina;
+        private int stamina;
+        [SerializeField] float delayToStartToRecoverStamina = 3f;
+        [SerializeField] float staminaRecoverModifier = 6f;
+        private bool isRecoveringStamina = false;
+        private Coroutine staminaRecoveryCoroutine;
+
+        private void Start()
         {
-            UIManager.Instance.playerUIManager.SetMaxHealth(health);
-            UIManager.Instance.playerUIManager.SetMaxStamina(stamina);
+            Health = maxHealth;
+            Stamina = maxStamina;
+
+            UIManager.Instance.playerUIManager.SetMaxHealth(maxHealth);
+            UIManager.Instance.playerUIManager.SetMaxStamina(maxStamina);
         }
 
         public int Health
@@ -22,7 +33,7 @@ namespace TranscendenceStudio.Character
             set
             {
                 health = value;
-                UIManager.Instance.playerUIManager.UpdateHealthBar(stamina);
+                UIManager.Instance.playerUIManager.UpdateHealthSlider(health);
             }
         }
 
@@ -32,8 +43,41 @@ namespace TranscendenceStudio.Character
             set
             {
                 stamina = value;
-                UIManager.Instance.playerUIManager.UpdateStaminaBar(stamina);
+                UIManager.Instance.playerUIManager.UpdateStaminaSlider(stamina);
+
+                if (isRecoveringStamina)
+                {
+                    StopCoroutine(staminaRecoveryCoroutine);
+                }
+
+                staminaRecoveryCoroutine = StartCoroutine(AttemptToRecoverStamina());
             }
+        }
+
+        private IEnumerator AttemptToRecoverStamina()
+        {
+            isRecoveringStamina = true;
+
+            yield return new WaitForSeconds(delayToStartToRecoverStamina);
+
+            float currentTime = 0f;
+
+            while (Stamina < maxStamina)
+            {
+                currentTime += Time.deltaTime;
+
+                int staminaToAdd = Mathf.FloorToInt(currentTime);
+                if (staminaToAdd > 0)
+                {
+                    stamina += staminaToAdd;
+                    UIManager.Instance.playerUIManager.UpdateStaminaSlider(stamina);
+                    currentTime = 0;
+                }
+
+                yield return null;
+            }
+
+            isRecoveringStamina = false;
         }
     }
 }

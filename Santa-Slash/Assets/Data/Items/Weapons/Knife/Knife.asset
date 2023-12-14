@@ -17,13 +17,13 @@ MonoBehaviour:
   itemName: Knife
   itemDescription: 
   itemPrice: 0
+  weaponType: 1
+  weaponAttackType: 0
   animator: {fileID: 9100000, guid: 9b8b90410bc2fda459e8083a7380ceb1, type: 2}
-  isRangedWeapon: 0
-  isMagicWeapon: 1
-  weaponAttackRadius: 1
+  weaponDamage: 1
+  weaponAttackArea: {x: 0, y: 0}
   attackDelay: 0.25
   abilityDelay: 0.5
-  weaponDamage: 1
   weaponDurability: 100
   knockbackStrength: 10
   staminaCost: 1
