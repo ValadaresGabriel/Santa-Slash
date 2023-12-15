@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5910881610284939881}
   - component: {fileID: 6745865474658660379}
   m_Layer: 0
-  m_Name: vertical wall
+  m_Name: forest vertical wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
