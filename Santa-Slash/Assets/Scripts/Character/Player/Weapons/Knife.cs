@@ -7,7 +7,7 @@ namespace TranscendenceStudio.Items
 {
     public class Knife : IWeapon
     {
-        public void AttemptToPerformAttack(CharacterWeaponManager characterWeaponManager)
+        public void AttemptToPerformAttack(PlayerWeaponManager characterWeaponManager)
         {
             if (characterWeaponManager == null)
             {
@@ -24,14 +24,11 @@ namespace TranscendenceStudio.Items
             PerformAttack(characterWeaponManager, direction);
         }
 
-        public void PerformAttack(CharacterWeaponManager characterWeaponManager, Vector2 direction)
+        public void PerformAttack(PlayerWeaponManager characterWeaponManager, Vector2 direction)
         {
             GameObject weapon = ThrowableKnifePoolingManager.Instance.GetObject();
 
-            Vector3 rotationZ = (Vector2)weapon.transform.position - PlayerInputManager.Instance.GetMousePositionValue();
-            float rotation = Mathf.Atan2(rotationZ.y, rotationZ.x) * Mathf.Rad2Deg;
-
-            weapon.transform.SetPositionAndRotation(characterWeaponManager.transform.position, Quaternion.Euler(0, 0, rotation + 80f));
+            weapon.transform.SetPositionAndRotation(characterWeaponManager.transform.position, characterWeaponManager.transform.rotation);
             weapon.GetComponent<Rigidbody2D>().velocity = direction * 10f;
         }
 

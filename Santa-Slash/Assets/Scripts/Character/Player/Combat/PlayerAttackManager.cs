@@ -11,6 +11,7 @@ namespace TranscendenceStudio.Character
         private readonly Dictionary<WeaponType, IWeapon> weapons = new()
         {
             { WeaponType.Knife, new Knife() },
+            { WeaponType.Staff, new Staff() },
         };
 
         public void RequestAttack()

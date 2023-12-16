@@ -13,5 +13,6 @@ namespace TranscendenceStudio.Character
         public float speed = 3;
         public float attackCooldown = 1;
         public float attackRange = 0.5f;
+        public float chasePlayerArea = 3;
     }
 }

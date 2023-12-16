@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8648917626552490514}
   - component: {fileID: 2214911857268822207}
   - component: {fileID: 8694117077519539527}
-  - component: {fileID: 8767194012067388391}
+  - component: {fileID: 4154629810834073693}
   m_Layer: 0
   m_Name: Explosion Blue 1
   m_TagString: Untagged
@@ -5092,8 +5092,8 @@ MonoBehaviour:
         SequentialOrderHoldCooldownDuration: 2
         RandomUnique: 0
         SoundDataSO: {fileID: 0}
-        MinVolume: 1
-        MaxVolume: 1
+        MinVolume: 0.5
+        MaxVolume: 0.5
         MinPitch: 1
         MaxPitch: 1
         MmSoundManagerTrack: 0
@@ -5889,7 +5889,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.04
---- !u!114 &8767194012067388391
+--- !u!114 &4154629810834073693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5898,7 +5898,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4672578959799385271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cecc1134ab5d17a44b9d7c842be191c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 830268c73c59fbc42a2e367a8861eefa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponDamageCollider: {fileID: 8694117077519539527}

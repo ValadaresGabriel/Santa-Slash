@@ -22,7 +22,7 @@ namespace TranscendenceStudio.Character
         public void PerformAbility()
         {
             animator.SetTrigger("Ability");
-            playerManager.playerStatsManager.Stamina -= playerManager.characterWeaponManager.equippedWeapon.staminaCost;
+            playerManager.playerStatsManager.Stamina -= playerManager.characterWeaponManager.equippedWeapon.abilityStaminaCost;
         }
 
         public void SetIsAttackingToTrue()

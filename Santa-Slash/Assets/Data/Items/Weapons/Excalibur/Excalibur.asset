@@ -17,17 +17,18 @@ MonoBehaviour:
   itemName: Excalibur
   itemDescription: 
   itemPrice: 0
+  weaponType: 4
+  weaponAttackType: 0
   animator: {fileID: 9100000, guid: f14f36723e93aa14699b710563061f31, type: 2}
-  weaponAttackRadius: 0.4
+  weaponDamage: 1
+  weaponAttackArea: {x: 0, y: 0}
   attackDelay: 0.5
   abilityDelay: 0.5
-  weaponDamage: 1
   weaponDurability: 100
   knockbackStrength: 10
-  staminaCost: 1
+  abilityStaminaCost: 1
   sfxs:
   - {fileID: 8300000, guid: b0bab8cb0fb974476b0ded2812f7393d, type: 3}
   - {fileID: 8300000, guid: 6d9b60ed9f0fe40edaf990fec18c77b5, type: 3}
   - {fileID: 8300000, guid: 509b07aeff81c4ebe94f5558345f1ada, type: 3}
   dealDamageVFX: {fileID: 2499277236963918256, guid: 5b2189a0bf19c5c478fb8660a514cc46, type: 3}
-  isStaticWhenUsingAbility: 1

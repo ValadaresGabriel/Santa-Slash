@@ -27,7 +27,6 @@ namespace TranscendenceStudio.VFX
 
         public void SetReleaseCallback(System.Action<GameObject> callback)
         {
-            Debug.Log("SetReleaseCallback");
             releaseCallback = callback;
         }
 

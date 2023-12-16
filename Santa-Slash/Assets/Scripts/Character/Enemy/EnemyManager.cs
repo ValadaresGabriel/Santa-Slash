@@ -1,24 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using TranscendenceStudio.AI;
 using UnityEngine;
 
 namespace TranscendenceStudio.Character
 {
     public class EnemyManager : CharacterManager
     {
+        [Header("Settings")]
         public Enemy enemy;
-        public EnemyLocomotion enemyLocomotion { get; private set; }
-        private Rigidbody2D rb;
-        private Animator animator;
+        public LayerMask playerLayerMask;
+
+        public EnemyAI EnemyAI { get; private set; }
+        public EnemyLocomotion EnemyLocomotion { get; private set; }
+        public Rigidbody2D Rb { get; private set; }
+        public Animator Animator { get; private set; }
 
         protected override void Awake()
         {
             base.Awake();
 
-            enemyLocomotion = GetComponent<EnemyLocomotion>();
-            rb = GetComponent<Rigidbody2D>();
-            animator = GetComponent<Animator>();
             health = GetComponent<EnemyHealth>();
+            EnemyAI = GetComponent<EnemyAI>();
+            EnemyLocomotion = GetComponent<EnemyLocomotion>();
+            Rb = GetComponent<Rigidbody2D>();
+            Animator = GetComponent<Animator>();
         }
     }
 }

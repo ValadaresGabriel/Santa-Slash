@@ -10,7 +10,7 @@ namespace TranscendenceStudio.Character
         public static PlayerManager Instance;
 
         public PlayerCurrency playerCurrency;
-        public CharacterWeaponManager characterWeaponManager;
+        public PlayerWeaponManager characterWeaponManager;
         public WeaponAnimatorManager weaponAnimatorManager;
         public PlayerStatsManager playerStatsManager { get; private set; }
         public PlayerLocomotion playerLocomotion { get; private set; }

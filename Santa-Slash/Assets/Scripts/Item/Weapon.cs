@@ -14,6 +14,7 @@ namespace TranscendenceStudio.Items
         Excalibur,
         Axe,
         Mass,
+        Bow,
     }
 
     public enum WeaponAttackType
@@ -43,8 +44,8 @@ namespace TranscendenceStudio.Items
         public int weaponDurability = 100;
         public float knockbackStrength = 10;
 
-        [Header("Stamina Cost")]
-        public int staminaCost = 1;
+        [Header("Ability Stamina Cost")]
+        public int abilityStaminaCost = 1;
 
         [Header("Weapon SFXs")]
         public AudioClip[] sfxs;

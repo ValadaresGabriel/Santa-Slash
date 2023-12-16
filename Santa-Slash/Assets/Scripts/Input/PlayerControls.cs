@@ -73,6 +73,105 @@ namespace TranscendenceStudio
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""1"",
+                    ""type"": ""Button"",
+                    ""id"": ""723ac171-b494-4ce9-a69f-f9a0b8b12fd7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""2"",
+                    ""type"": ""Button"",
+                    ""id"": ""42273d3d-7b38-41a0-9b73-5f8999b04cfe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""3"",
+                    ""type"": ""Button"",
+                    ""id"": ""d791c29b-013e-4332-8adb-d73e9a612d90"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""4"",
+                    ""type"": ""Button"",
+                    ""id"": ""4d08d68b-0497-4af3-ba36-97c0205a6f42"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""5"",
+                    ""type"": ""Button"",
+                    ""id"": ""1c9f78a4-a37c-4b09-8b79-bccb227b9659"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""6"",
+                    ""type"": ""Button"",
+                    ""id"": ""8c821146-660a-451d-a358-98f31ea35860"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""7"",
+                    ""type"": ""Button"",
+                    ""id"": ""1f77faf3-ed20-4aa4-8c41-f8347d51e67f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""8"",
+                    ""type"": ""Button"",
+                    ""id"": ""f3599d43-886a-4802-8216-5b222b1ee5fa"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""9"",
+                    ""type"": ""Button"",
+                    ""id"": ""8bdd01f0-e98b-46ee-8824-68945b9d1139"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""0"",
+                    ""type"": ""Button"",
+                    ""id"": ""4162c454-f7bd-45e8-8f00-f5ccb4234a32"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Mouse Wheel"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""56b45dba-c6ee-4400-8264-3435579e5527"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -174,6 +273,127 @@ namespace TranscendenceStudio
                     ""action"": ""Ability"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bfcef08c-0f49-42c6-8e91-55a92d739eee"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2ce2169-8f19-4c1b-b7b6-d824d48d4d30"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a76b607a-c7b7-4135-a35b-e5be4d7d2fb8"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dfe1a790-5b7c-4753-bf45-0c27ce6f6deb"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0b3c1d8a-e983-454b-8a14-32e73e552799"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6dc709fc-ee06-4605-bfb6-7c625d91c0eb"",
+                    ""path"": ""<Keyboard>/6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""06c7b573-d0a6-4b88-840e-b5dbba60b9d1"",
+                    ""path"": ""<Keyboard>/7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""7"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dd27667e-94c6-4a25-9e44-a1983555b6fa"",
+                    ""path"": ""<Keyboard>/8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""8"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d53dd1a6-e8db-4a3b-94ba-1b4cf8b43f6c"",
+                    ""path"": ""<Keyboard>/9"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""9"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1c73ab0c-b274-4c1c-b0bb-52d7424fc91b"",
+                    ""path"": ""<Keyboard>/0"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""0"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e5c843ff-c94d-44ca-b8c7-b50f6f51d331"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mouse Wheel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -187,6 +407,17 @@ namespace TranscendenceStudio
             m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
             m_Player_MousePosition = m_Player.FindAction("Mouse Position", throwIfNotFound: true);
             m_Player_Ability = m_Player.FindAction("Ability", throwIfNotFound: true);
+            m_Player__1 = m_Player.FindAction("1", throwIfNotFound: true);
+            m_Player__2 = m_Player.FindAction("2", throwIfNotFound: true);
+            m_Player__3 = m_Player.FindAction("3", throwIfNotFound: true);
+            m_Player__4 = m_Player.FindAction("4", throwIfNotFound: true);
+            m_Player__5 = m_Player.FindAction("5", throwIfNotFound: true);
+            m_Player__6 = m_Player.FindAction("6", throwIfNotFound: true);
+            m_Player__7 = m_Player.FindAction("7", throwIfNotFound: true);
+            m_Player__8 = m_Player.FindAction("8", throwIfNotFound: true);
+            m_Player__9 = m_Player.FindAction("9", throwIfNotFound: true);
+            m_Player__0 = m_Player.FindAction("0", throwIfNotFound: true);
+            m_Player_MouseWheel = m_Player.FindAction("Mouse Wheel", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -253,6 +484,17 @@ namespace TranscendenceStudio
         private readonly InputAction m_Player_Interact;
         private readonly InputAction m_Player_MousePosition;
         private readonly InputAction m_Player_Ability;
+        private readonly InputAction m_Player__1;
+        private readonly InputAction m_Player__2;
+        private readonly InputAction m_Player__3;
+        private readonly InputAction m_Player__4;
+        private readonly InputAction m_Player__5;
+        private readonly InputAction m_Player__6;
+        private readonly InputAction m_Player__7;
+        private readonly InputAction m_Player__8;
+        private readonly InputAction m_Player__9;
+        private readonly InputAction m_Player__0;
+        private readonly InputAction m_Player_MouseWheel;
         public struct PlayerActions
         {
             private @PlayerControls m_Wrapper;
@@ -262,6 +504,17 @@ namespace TranscendenceStudio
             public InputAction @Interact => m_Wrapper.m_Player_Interact;
             public InputAction @MousePosition => m_Wrapper.m_Player_MousePosition;
             public InputAction @Ability => m_Wrapper.m_Player_Ability;
+            public InputAction @_1 => m_Wrapper.m_Player__1;
+            public InputAction @_2 => m_Wrapper.m_Player__2;
+            public InputAction @_3 => m_Wrapper.m_Player__3;
+            public InputAction @_4 => m_Wrapper.m_Player__4;
+            public InputAction @_5 => m_Wrapper.m_Player__5;
+            public InputAction @_6 => m_Wrapper.m_Player__6;
+            public InputAction @_7 => m_Wrapper.m_Player__7;
+            public InputAction @_8 => m_Wrapper.m_Player__8;
+            public InputAction @_9 => m_Wrapper.m_Player__9;
+            public InputAction @_0 => m_Wrapper.m_Player__0;
+            public InputAction @MouseWheel => m_Wrapper.m_Player_MouseWheel;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -286,6 +539,39 @@ namespace TranscendenceStudio
                 @Ability.started += instance.OnAbility;
                 @Ability.performed += instance.OnAbility;
                 @Ability.canceled += instance.OnAbility;
+                @_1.started += instance.On_1;
+                @_1.performed += instance.On_1;
+                @_1.canceled += instance.On_1;
+                @_2.started += instance.On_2;
+                @_2.performed += instance.On_2;
+                @_2.canceled += instance.On_2;
+                @_3.started += instance.On_3;
+                @_3.performed += instance.On_3;
+                @_3.canceled += instance.On_3;
+                @_4.started += instance.On_4;
+                @_4.performed += instance.On_4;
+                @_4.canceled += instance.On_4;
+                @_5.started += instance.On_5;
+                @_5.performed += instance.On_5;
+                @_5.canceled += instance.On_5;
+                @_6.started += instance.On_6;
+                @_6.performed += instance.On_6;
+                @_6.canceled += instance.On_6;
+                @_7.started += instance.On_7;
+                @_7.performed += instance.On_7;
+                @_7.canceled += instance.On_7;
+                @_8.started += instance.On_8;
+                @_8.performed += instance.On_8;
+                @_8.canceled += instance.On_8;
+                @_9.started += instance.On_9;
+                @_9.performed += instance.On_9;
+                @_9.canceled += instance.On_9;
+                @_0.started += instance.On_0;
+                @_0.performed += instance.On_0;
+                @_0.canceled += instance.On_0;
+                @MouseWheel.started += instance.OnMouseWheel;
+                @MouseWheel.performed += instance.OnMouseWheel;
+                @MouseWheel.canceled += instance.OnMouseWheel;
             }
 
             private void UnregisterCallbacks(IPlayerActions instance)
@@ -305,6 +591,39 @@ namespace TranscendenceStudio
                 @Ability.started -= instance.OnAbility;
                 @Ability.performed -= instance.OnAbility;
                 @Ability.canceled -= instance.OnAbility;
+                @_1.started -= instance.On_1;
+                @_1.performed -= instance.On_1;
+                @_1.canceled -= instance.On_1;
+                @_2.started -= instance.On_2;
+                @_2.performed -= instance.On_2;
+                @_2.canceled -= instance.On_2;
+                @_3.started -= instance.On_3;
+                @_3.performed -= instance.On_3;
+                @_3.canceled -= instance.On_3;
+                @_4.started -= instance.On_4;
+                @_4.performed -= instance.On_4;
+                @_4.canceled -= instance.On_4;
+                @_5.started -= instance.On_5;
+                @_5.performed -= instance.On_5;
+                @_5.canceled -= instance.On_5;
+                @_6.started -= instance.On_6;
+                @_6.performed -= instance.On_6;
+                @_6.canceled -= instance.On_6;
+                @_7.started -= instance.On_7;
+                @_7.performed -= instance.On_7;
+                @_7.canceled -= instance.On_7;
+                @_8.started -= instance.On_8;
+                @_8.performed -= instance.On_8;
+                @_8.canceled -= instance.On_8;
+                @_9.started -= instance.On_9;
+                @_9.performed -= instance.On_9;
+                @_9.canceled -= instance.On_9;
+                @_0.started -= instance.On_0;
+                @_0.performed -= instance.On_0;
+                @_0.canceled -= instance.On_0;
+                @MouseWheel.started -= instance.OnMouseWheel;
+                @MouseWheel.performed -= instance.OnMouseWheel;
+                @MouseWheel.canceled -= instance.OnMouseWheel;
             }
 
             public void RemoveCallbacks(IPlayerActions instance)
@@ -329,6 +648,17 @@ namespace TranscendenceStudio
             void OnInteract(InputAction.CallbackContext context);
             void OnMousePosition(InputAction.CallbackContext context);
             void OnAbility(InputAction.CallbackContext context);
+            void On_1(InputAction.CallbackContext context);
+            void On_2(InputAction.CallbackContext context);
+            void On_3(InputAction.CallbackContext context);
+            void On_4(InputAction.CallbackContext context);
+            void On_5(InputAction.CallbackContext context);
+            void On_6(InputAction.CallbackContext context);
+            void On_7(InputAction.CallbackContext context);
+            void On_8(InputAction.CallbackContext context);
+            void On_9(InputAction.CallbackContext context);
+            void On_0(InputAction.CallbackContext context);
+            void OnMouseWheel(InputAction.CallbackContext context);
         }
     }
 }

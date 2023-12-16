@@ -7,8 +7,8 @@ namespace TranscendenceStudio.Items
 {
     public interface IWeapon
     {
-        void AttemptToPerformAttack(CharacterWeaponManager characterWeaponManager);
+        void AttemptToPerformAttack(PlayerWeaponManager characterWeaponManager);
 
-        void PerformAttack(CharacterWeaponManager characterWeaponManager, Vector2 direction);
+        void PerformAttack(PlayerWeaponManager characterWeaponManager, Vector2 direction);
     }
 }
