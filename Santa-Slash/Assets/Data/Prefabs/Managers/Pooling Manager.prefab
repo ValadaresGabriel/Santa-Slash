@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 577039078412083289}
   - component: {fileID: 5643780290767249384}
   - component: {fileID: 4558242401872921892}
+  - component: {fileID: 1682576879145169345}
   m_Layer: 6
   m_Name: Pooling Manager
   m_TagString: Untagged
@@ -87,3 +88,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 4672578959799385271, guid: 73aec0d6c57a81d4d80a6a84448c6fd1, type: 3}
+--- !u!114 &1682576879145169345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780587090707184195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a2a1407cc3d7c14d8c18a3343c1790a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 0}

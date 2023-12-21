@@ -6,12 +6,13 @@ namespace TranscendenceStudio.Character
 {
     public class CharacterManager : MonoBehaviour
     {
-        public CharacterAnimatorManager characterAnimatorManager { get; private set; }
-        public Health health;
+        public CharacterAnimatorManager CharacterAnimatorManager { get; private set; }
+        public CharacterLocomotion characterLocomotion;
 
         protected virtual void Awake()
         {
-            characterAnimatorManager = GetComponent<CharacterAnimatorManager>();
+            CharacterAnimatorManager = GetComponent<CharacterAnimatorManager>();
+            characterLocomotion = GetComponent<CharacterLocomotion>();
         }
 
         public bool isAttacking = false;

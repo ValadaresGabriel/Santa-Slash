@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-// using TranscendenceStudio.UI;
+using TranscendenceStudio.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -25,7 +25,7 @@ namespace TranscendenceStudio.Character
         {
             base.OnPointerClick(eventData);
 
-            if (!isInTheInteractionArea) return;
+            if (!PlayerManager.Instance.IsInInteractionArea) return;
 
             if (npc == null)
             {
@@ -39,12 +39,22 @@ namespace TranscendenceStudio.Character
                 return;
             }
 
-            // UIManager.Interact(UI.Interaction.Dialog, npc: npc);
+            // UIManager.Instance.shopManager.OpenShop(npc.npcShop.itemsToSell);
+
+            if (npc.dialog != null)
+            {
+                UIManager.Interact(UI.Interaction.Dialog, npc: npc);
+                return;
+            }
+
+            UIManager.Interact(UI.Interaction.Shop, items: npc.npcShop.itemsToSell);
         }
 
         protected override void OnTriggerEnter2D(Collider2D other)
         {
             base.OnTriggerEnter2D(other);
+
+            if (dialogueGameObject == null) return;
 
             if (other.transform.CompareTag("Player"))
                 dialogueGameObject.SetActive(true);
@@ -53,6 +63,8 @@ namespace TranscendenceStudio.Character
         protected override void OnTriggerExit2D(Collider2D other)
         {
             base.OnTriggerExit2D(other);
+
+            if (dialogueGameObject == null) return;
 
             if (other.transform.CompareTag("Player"))
                 dialogueGameObject.SetActive(true);

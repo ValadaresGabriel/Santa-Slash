@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TranscendenceStudio.Character;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -7,18 +8,16 @@ namespace TranscendenceStudio
 {
     public class Interaction : MonoBehaviour, IPointerClickHandler
     {
-        protected bool isInTheInteractionArea = false;
-
         public virtual void OnPointerClick(PointerEventData eventData)
         {
-            if (!isInTheInteractionArea) return;
+            if (!PlayerManager.Instance.IsInInteractionArea) return;
         }
 
         protected virtual void OnTriggerEnter2D(Collider2D other)
         {
             if (other.transform.CompareTag("Player"))
             {
-                isInTheInteractionArea = true;
+                PlayerManager.Instance.IsInInteractionArea = true;
             }
         }
 
@@ -26,7 +25,7 @@ namespace TranscendenceStudio
         {
             if (other.transform.CompareTag("Player"))
             {
-                isInTheInteractionArea = false;
+                PlayerManager.Instance.IsInInteractionArea = false;
             }
         }
     }

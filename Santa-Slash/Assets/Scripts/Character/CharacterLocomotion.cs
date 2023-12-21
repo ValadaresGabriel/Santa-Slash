@@ -9,7 +9,6 @@ namespace TranscendenceStudio.Character
         [SerializeField] protected float movementSpeed = 6f;
         [SerializeField] protected float speedMultiplier = 1f;
         protected Rigidbody2D rb;
-        protected CharacterManager characterManager;
         protected CharacterAnimatorManager characterAnimatorManager;
         public Vector2 MovementValue { get; set; }
         public Vector2 Direction { get; set; }
@@ -18,7 +17,6 @@ namespace TranscendenceStudio.Character
         {
             rb = GetComponent<Rigidbody2D>();
             characterAnimatorManager = GetComponent<CharacterAnimatorManager>();
-            characterManager = GetComponent<CharacterManager>();
         }
 
         protected virtual void Start()
@@ -33,12 +31,6 @@ namespace TranscendenceStudio.Character
 
         protected virtual void FixedUpdate()
         {
-            if (characterManager.health.IsDead)
-            {
-                rb.velocity = Vector2.zero;
-                return;
-            }
-
             rb.velocity = movementSpeed * speedMultiplier * MovementValue;
 
             HandleAnimation();

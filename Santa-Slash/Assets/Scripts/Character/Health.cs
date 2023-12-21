@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace TranscendenceStudio.Character
 {
     public class Health : MonoBehaviour
     {
-        protected int minimumHealth = 0;
-        protected int maximumHealth = 2;
+        [SerializeField] protected int maximumHealth = 2;
         [SerializeField] protected int currentHealth;
         protected bool isDead;
         [SerializeField] protected bool shouldTakeKnockback;
+        public UnityEvent Death;
 
-        protected bool TakeDamage(int damage)
+        protected virtual void Awake()
+        {
+
+        }
+
+        public bool TakeDamage(int damage)
         {
             if (currentHealth > 0)
             {

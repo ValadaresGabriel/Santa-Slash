@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Excalibur
   m_EditorClassIdentifier: 
   itemType: 3
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: -645778807, guid: 1530ff7af9e7c334aa5c97a8f5be2531, type: 3}
   itemName: Excalibur
-  itemDescription: 
+  itemDescription: afsdgfwsg
   itemPrice: 0
   weaponType: 4
   weaponAttackType: 0

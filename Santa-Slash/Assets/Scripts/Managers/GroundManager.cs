@@ -13,7 +13,7 @@ namespace TranscendenceStudio
         {
             if (other.transform.CompareTag("Player"))
             {
-                PlayerManager.Instance.playerLocomotion.ApplyMovementSpeedMultiplier(velocityMultiplier);
+                PlayerManager.Instance.PlayerLocomotion.ApplyMovementSpeedMultiplier(velocityMultiplier);
             }
         }
 
@@ -21,7 +21,7 @@ namespace TranscendenceStudio
         {
             if (other.transform.CompareTag("Player"))
             {
-                PlayerManager.Instance.playerLocomotion.ApplyMovementSpeedMultiplier(1);
+                PlayerManager.Instance.PlayerLocomotion.ApplyMovementSpeedMultiplier(1);
             }
         }
     }

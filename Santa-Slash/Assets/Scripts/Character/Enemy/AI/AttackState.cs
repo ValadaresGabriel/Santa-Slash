@@ -7,13 +7,11 @@ namespace TranscendenceStudio.AI
 {
     public class AttackState : EnemyState
     {
-        private Vector3 targetPosition = Vector3.zero;
-
         public override void EnterState(EnemyManager enemyManager)
         {
             base.EnterState(enemyManager);
 
-            targetPosition = PlayerManager.Instance.transform.position;
+            enemyManager.EnemyAI.StartAttack();
         }
 
         public override void Update()
@@ -23,19 +21,13 @@ namespace TranscendenceStudio.AI
 
         public override void FixedUpdate()
         {
-            enemy.Rb.MovePosition(2 * enemy.enemy.speed * targetPosition);
 
-            enemy.Animator.SetInteger("Velocity", 1);
-
-            if (Vector3.Distance(enemy.transform.position, targetPosition) <= enemy.enemy.attackRange)
-            {
-                enemy.EnemyAI.ChangeState(new DefaultIdleState());
-            }
+            enemy.EnemyAI.ChangeState(new SleepAfterAttackState());
         }
 
         public override void ExitState()
         {
-            enemy.Animator.SetInteger("Velocity", 1);
+            enemy.Animator.SetInteger("Velocity", 0);
         }
     }
 }

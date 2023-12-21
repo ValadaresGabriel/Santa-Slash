@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.InputSystem.UI;
 using TranscendenceStudio;
 
-namespace ClothGravity.UI
+namespace TranscendenceStudio.UI
 {
     public class Tooltip : MonoBehaviour
     {
@@ -16,12 +15,6 @@ namespace ClothGravity.UI
         [SerializeField] LayoutElement layoutElement;
         [SerializeField] int descriptionCharacterWrapLimit;
         [SerializeField] RectTransform rectTransform;
-        [SerializeField] InputSystemUIInputModule inputModule;
-
-        private void Awake()
-        {
-            rectTransform = GetComponent<RectTransform>();
-        }
 
         private void OnEnable()
         {
@@ -30,7 +23,8 @@ namespace ClothGravity.UI
 
         private void Update()
         {
-            Vector2 mousePosition = PlayerInputManager.Instance.GetMousePositionValue();
+            // Vector2 mousePosition = PlayerInputManager.Instance.GetMousePositionValue();
+            Vector2 mousePosition = MouseManager.MousePosition;
 
             // Calculating the horizontal/vertical proportion of the pivot point
             // in relation to the screen width/height

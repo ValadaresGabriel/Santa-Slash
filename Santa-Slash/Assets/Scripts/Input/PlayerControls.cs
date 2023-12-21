@@ -396,6 +396,98 @@ namespace TranscendenceStudio
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Dialog"",
+            ""id"": ""f267aac9-e1ae-4ca5-9b2f-8daac017ee3d"",
+            ""actions"": [
+                {
+                    ""name"": ""Next Dialog"",
+                    ""type"": ""Button"",
+                    ""id"": ""1988f158-6207-4bc4-9954-81bb8a986014"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""d20dffd8-15b4-4ead-9ab5-2a34113f725f"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""7b77e480-2aae-47e6-b3ff-ee6499a2c4e7"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Next Dialog"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Values"",
+                    ""id"": ""31c7ef50-504a-48b4-85c5-94895868b19f"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""f6e4fd45-c665-4c4e-beeb-4466d619b67b"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""9a1756d5-d58c-45c7-919c-9bfc06d20254"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""d39cb504-86f8-4869-a3fd-1d82cd37d2e0"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""2948b855-7285-4f70-8390-b9eb6a9ec853"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -418,6 +510,10 @@ namespace TranscendenceStudio
             m_Player__9 = m_Player.FindAction("9", throwIfNotFound: true);
             m_Player__0 = m_Player.FindAction("0", throwIfNotFound: true);
             m_Player_MouseWheel = m_Player.FindAction("Mouse Wheel", throwIfNotFound: true);
+            // Dialog
+            m_Dialog = asset.FindActionMap("Dialog", throwIfNotFound: true);
+            m_Dialog_NextDialog = m_Dialog.FindAction("Next Dialog", throwIfNotFound: true);
+            m_Dialog_Movement = m_Dialog.FindAction("Movement", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -641,6 +737,60 @@ namespace TranscendenceStudio
             }
         }
         public PlayerActions @Player => new PlayerActions(this);
+
+        // Dialog
+        private readonly InputActionMap m_Dialog;
+        private List<IDialogActions> m_DialogActionsCallbackInterfaces = new List<IDialogActions>();
+        private readonly InputAction m_Dialog_NextDialog;
+        private readonly InputAction m_Dialog_Movement;
+        public struct DialogActions
+        {
+            private @PlayerControls m_Wrapper;
+            public DialogActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+            public InputAction @NextDialog => m_Wrapper.m_Dialog_NextDialog;
+            public InputAction @Movement => m_Wrapper.m_Dialog_Movement;
+            public InputActionMap Get() { return m_Wrapper.m_Dialog; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(DialogActions set) { return set.Get(); }
+            public void AddCallbacks(IDialogActions instance)
+            {
+                if (instance == null || m_Wrapper.m_DialogActionsCallbackInterfaces.Contains(instance)) return;
+                m_Wrapper.m_DialogActionsCallbackInterfaces.Add(instance);
+                @NextDialog.started += instance.OnNextDialog;
+                @NextDialog.performed += instance.OnNextDialog;
+                @NextDialog.canceled += instance.OnNextDialog;
+                @Movement.started += instance.OnMovement;
+                @Movement.performed += instance.OnMovement;
+                @Movement.canceled += instance.OnMovement;
+            }
+
+            private void UnregisterCallbacks(IDialogActions instance)
+            {
+                @NextDialog.started -= instance.OnNextDialog;
+                @NextDialog.performed -= instance.OnNextDialog;
+                @NextDialog.canceled -= instance.OnNextDialog;
+                @Movement.started -= instance.OnMovement;
+                @Movement.performed -= instance.OnMovement;
+                @Movement.canceled -= instance.OnMovement;
+            }
+
+            public void RemoveCallbacks(IDialogActions instance)
+            {
+                if (m_Wrapper.m_DialogActionsCallbackInterfaces.Remove(instance))
+                    UnregisterCallbacks(instance);
+            }
+
+            public void SetCallbacks(IDialogActions instance)
+            {
+                foreach (var item in m_Wrapper.m_DialogActionsCallbackInterfaces)
+                    UnregisterCallbacks(item);
+                m_Wrapper.m_DialogActionsCallbackInterfaces.Clear();
+                AddCallbacks(instance);
+            }
+        }
+        public DialogActions @Dialog => new DialogActions(this);
         public interface IPlayerActions
         {
             void OnMovement(InputAction.CallbackContext context);
@@ -659,6 +809,11 @@ namespace TranscendenceStudio
             void On_9(InputAction.CallbackContext context);
             void On_0(InputAction.CallbackContext context);
             void OnMouseWheel(InputAction.CallbackContext context);
+        }
+        public interface IDialogActions
+        {
+            void OnNextDialog(InputAction.CallbackContext context);
+            void OnMovement(InputAction.CallbackContext context);
         }
     }
 }

@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using TranscendenceStudio.AI;
 using TranscendenceStudio.Character;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace TranscendenceStudio
 {
@@ -11,20 +9,30 @@ namespace TranscendenceStudio
     {
         private Rigidbody2D rb;
         [SerializeField] float delay = 0.2f;
-        private EnemyManager enemyManager;
+        public float strength = 2;
+        private CharacterManager characterManager;
 
         private void Awake()
         {
-            enemyManager = GetComponent<EnemyManager>();
+            characterManager = GetComponent<CharacterManager>();
             rb = GetComponent<Rigidbody2D>();
         }
 
         public void PlayFeedback(GameObject sender)
         {
             StopAllCoroutines();
-            enemyManager.EnemyLocomotion.enabled = false;
+            characterManager.characterLocomotion.enabled = false;
 
-            float strength = PlayerManager.Instance.characterWeaponManager.equippedWeapon.knockbackStrength;
+            float strength;
+
+            if (sender.transform.CompareTag("Player"))
+            {
+                strength = PlayerManager.Instance.characterWeaponManager.equippedWeapon.knockbackStrength;
+            }
+            else
+            {
+                strength = sender.GetComponent<KnockbackManager>().strength;
+            }
 
             Vector2 direction = (transform.position - sender.transform.position).normalized;
             rb.AddForce(direction * strength, ForceMode2D.Impulse);
@@ -35,7 +43,7 @@ namespace TranscendenceStudio
         {
             yield return new WaitForSeconds(delay);
             rb.velocity = Vector2.zero;
-            enemyManager.EnemyLocomotion.enabled = true;
+            characterManager.characterLocomotion.enabled = true;
         }
     }
 }

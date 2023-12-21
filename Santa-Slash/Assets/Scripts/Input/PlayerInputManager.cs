@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 namespace TranscendenceStudio
 {
-    public class PlayerInputManager : MonoBehaviour, PlayerControls.IPlayerActions
+    public class PlayerInputManager : MonoBehaviour, PlayerControls.IPlayerActions, PlayerControls.IDialogActions
     {
         public static PlayerInputManager Instance { get; private set; }
 
@@ -29,10 +29,16 @@ namespace TranscendenceStudio
         public event Action EquipEvent9;
         public event Action EquipEvent0;
 
+        // Dialog
+        public event Action NextDialogEvent;
+
         // Main Camera -> is being used to get the mouse's position
         private Camera mainCamera;
 
         private PlayerControls playerControls;
+
+        private bool enablePlayerActions;
+        private bool enableUIActions;
 
         private void Awake()
         {
@@ -54,6 +60,37 @@ namespace TranscendenceStudio
 
             playerControls.Player.SetCallbacks(this);
             playerControls.Enable();
+        }
+
+        private void Update()
+        {
+            if (enableUIActions)
+            {
+                enableUIActions = false;
+                playerControls.Player.RemoveCallbacks(this);
+
+                playerControls.Dialog.SetCallbacks(this);
+            }
+
+            if (enablePlayerActions)
+            {
+                enablePlayerActions = false;
+                playerControls.Dialog.RemoveCallbacks(this);
+
+                playerControls.Player.SetCallbacks(this);
+            }
+        }
+
+        public void EnableUIActions()
+        {
+            enablePlayerActions = false;
+            enableUIActions = true;
+        }
+
+        public void EnablePlayerActions()
+        {
+            enablePlayerActions = true;
+            enableUIActions = false;
         }
 
         public Vector2 GetMousePositionValue()
@@ -97,6 +134,7 @@ namespace TranscendenceStudio
             MousePositionValue = context.ReadValue<Vector2>();
         }
 
+        #region Inventory Events
         public void On_1(InputAction.CallbackContext context)
         {
             if (context.performed)
@@ -176,12 +214,22 @@ namespace TranscendenceStudio
                 EquipEvent0?.Invoke();
             }
         }
+        #endregion
 
         public void OnMouseWheel(InputAction.CallbackContext context)
         {
             if (context.performed)
             {
                 MouseWheelValue = context.ReadValue<Vector2>();
+            }
+        }
+
+        // Dialog
+        public void OnNextDialog(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                NextDialogEvent?.Invoke();
             }
         }
     }

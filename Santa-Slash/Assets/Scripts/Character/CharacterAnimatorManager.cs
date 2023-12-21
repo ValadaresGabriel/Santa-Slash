@@ -16,7 +16,7 @@ namespace TranscendenceStudio.Character
     public class CharacterAnimatorManager : MonoBehaviour
     {
         protected CharacterAnimation characterAnimation;
-        protected Animator animator;
+        public Animator animator;
 
         private void Awake()
         {

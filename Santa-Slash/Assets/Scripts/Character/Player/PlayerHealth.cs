@@ -1,11 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using TranscendenceStudio.UI;
 using UnityEngine;
 
 namespace TranscendenceStudio.Character
 {
     public class PlayerHealth : Health, IHittable
     {
+        protected override void Awake()
+        {
+            currentHealth = maximumHealth;
+        }
+
+        private void Start()
+        {
+            UIManager.Instance.playerUIManager.SetMaxHealth(maximumHealth);
+        }
+
         public int GetWeaponDurabilityDamage()
         {
             return 0;
@@ -15,11 +26,23 @@ namespace TranscendenceStudio.Character
         {
             if (TakeDamage(damage))
             {
-                Debug.Log("Took damage");
+                UIManager.Instance.playerUIManager.UpdateHealthSlider(currentHealth);
+
+                if (currentHealth <= 0)
+                {
+                    IsDead = true;
+                    Death?.Invoke();
+                    PlayerManager.Instance.CharacterAnimatorManager.ChangeCharacterAnimation(CharacterAnimation.Dead);
+                }
+                else
+                {
+                    PlayerManager.Instance.takeDamageFeedback.PlayFeedbacks();
+                    PlayerManager.Instance.CharacterAnimatorManager.animator.SetTrigger("Take_Damage");
+                    // PlayerManager.Instance.characterAnimatorManager.ChangeCharacterAnimation(CharacterAnimation.Take_Damage);
+                }
+
                 return;
             }
-
-            Debug.Log("Is Dead");
         }
 
         public Vector3 TargetPosition()

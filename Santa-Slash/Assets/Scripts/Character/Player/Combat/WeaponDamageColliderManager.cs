@@ -40,7 +40,7 @@ namespace TranscendenceStudio.Character
                 damageVFX.transform.SetPositionAndRotation(hittable.TargetPosition(), Quaternion.identity);
             }
 
-            playerManager.playerFeedback.PlayFeedbacks();
+            playerManager.dealDamageFeedback.PlayFeedbacks();
 
             hittable.Hit(playerManager.characterWeaponManager.equippedWeapon.weaponDamage, playerManager.gameObject);
             playerManager.characterWeaponManager.WeaponDurability -= hittable.GetWeaponDurabilityDamage();

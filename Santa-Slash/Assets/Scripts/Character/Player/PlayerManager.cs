@@ -12,15 +12,18 @@ namespace TranscendenceStudio.Character
         public PlayerCurrency playerCurrency;
         public PlayerWeaponManager characterWeaponManager;
         public WeaponAnimatorManager weaponAnimatorManager;
-        public PlayerStatsManager playerStatsManager { get; private set; }
-        public PlayerLocomotion playerLocomotion { get; private set; }
+        public PlayerHealth PlayerHealth { get; private set; }
+        public PlayerStatsManager PlayerStatsManager { get; private set; }
+        public PlayerLocomotion PlayerLocomotion { get; private set; }
 
         [Space(5)]
         [Header("Feedbacks")]
-        public MMF_Player playerFeedback;
+        public MMF_Player dealDamageFeedback;
+        public MMF_Player takeDamageFeedback;
         public MMF_Player walkFeedback;
         [Space(5)]
 
+        private bool isInInteractionArea = false;
         private bool isOnShop;
         private bool isOnInventory;
         private bool isInteracting = false;
@@ -39,21 +42,22 @@ namespace TranscendenceStudio.Character
 
             base.Awake();
 
+            PlayerHealth = GetComponent<PlayerHealth>();
             playerCurrency = GetComponent<PlayerCurrency>();
-            playerStatsManager = GetComponent<PlayerStatsManager>();
-            playerLocomotion = GetComponent<PlayerLocomotion>();
+            PlayerStatsManager = GetComponent<PlayerStatsManager>();
+            PlayerLocomotion = GetComponent<PlayerLocomotion>();
 
             // PlayerInputManager.Instance.OpenInventoryEvent += OpenInventory;
         }
 
         public void EnableUIActions()
         {
-            // PlayerInputManager.Instance.EnableUIActions();
+            PlayerInputManager.Instance.EnableUIActions();
         }
 
         public void EnablePlayerActions()
         {
-            // PlayerInputManager.Instance.EnablePlayerActions();
+            PlayerInputManager.Instance.EnablePlayerActions();
         }
 
         private void OpenInventory()
@@ -79,6 +83,12 @@ namespace TranscendenceStudio.Character
         public void SetIsAttackingToFalse()
         {
             IsAttacking = false;
+        }
+
+        public bool IsInInteractionArea
+        {
+            get => isInInteractionArea;
+            set => isInInteractionArea = value;
         }
 
         public bool IsOnShop

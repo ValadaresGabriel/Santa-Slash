@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ClothGravity.UI
+namespace TranscendenceStudio.UI
 {
     public class TooltipManager : MonoBehaviour
     {

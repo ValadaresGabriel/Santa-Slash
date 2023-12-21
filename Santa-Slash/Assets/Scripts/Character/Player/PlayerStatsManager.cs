@@ -7,34 +7,18 @@ namespace TranscendenceStudio.Character
 {
     public class PlayerStatsManager : MonoBehaviour
     {
-        [SerializeField] int maxHealth;
-        private int health;
-
         [Header("Stamina Settings")]
         [SerializeField] int maxStamina;
         private int stamina;
         [SerializeField] float delayToStartToRecoverStamina = 3f;
-        [SerializeField] float staminaRecoverModifier = 6f;
         private bool isRecoveringStamina = false;
         private Coroutine staminaRecoveryCoroutine;
 
         private void Start()
         {
-            Health = maxHealth;
             Stamina = maxStamina;
 
-            UIManager.Instance.playerUIManager.SetMaxHealth(maxHealth);
             UIManager.Instance.playerUIManager.SetMaxStamina(maxStamina);
-        }
-
-        public int Health
-        {
-            get => health;
-            set
-            {
-                health = value;
-                UIManager.Instance.playerUIManager.UpdateHealthSlider(health);
-            }
         }
 
         public int Stamina

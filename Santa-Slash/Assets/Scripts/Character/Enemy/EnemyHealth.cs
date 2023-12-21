@@ -9,16 +9,8 @@ namespace TranscendenceStudio.Character
     public class EnemyHealth : Health, IHittable
     {
         [SerializeField] EnemyManager enemyManager;
-        [SerializeField] int damage = 1;
         [SerializeField] int weaponDurabilityDamage = 1;
-        // protected MMHealthBar _targetHealthBar;
         public UnityEvent<GameObject> TakeKnockback;
-        public UnityEvent Death;
-
-        private void Awake()
-        {
-            // _targetHealthBar = GetComponent<MMHealthBar>();
-        }
 
         private void Start()
         {
@@ -39,8 +31,6 @@ namespace TranscendenceStudio.Character
 
             if (TakeDamage(damage))
             {
-                // UpdateHealthBar();
-
                 if (shouldTakeKnockback)
                 {
                     TakeKnockback?.Invoke(sender);
@@ -50,11 +40,11 @@ namespace TranscendenceStudio.Character
                 {
                     IsDead = true;
                     Death?.Invoke();
-                    enemyManager.characterAnimatorManager.ChangeCharacterAnimation(CharacterAnimation.Dead);
+                    enemyManager.CharacterAnimatorManager.ChangeCharacterAnimation(CharacterAnimation.Dead);
                 }
                 else
                 {
-                    enemyManager.characterAnimatorManager.ChangeCharacterAnimation(CharacterAnimation.Take_Damage);
+                    enemyManager.CharacterAnimatorManager.ChangeCharacterAnimation(CharacterAnimation.Take_Damage);
                 }
 
                 return;

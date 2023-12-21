@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using MoreMountains.Feedbacks;
 using TranscendenceStudio.Items;
 using TranscendenceStudio.UI;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace TranscendenceStudio.Character
@@ -35,9 +36,11 @@ namespace TranscendenceStudio.Character
 
         private void Start()
         {
-            UIManager.Instance.InventoryManager.EquipItemEvent += EquipWeapon;
-            UIManager.Instance.InventoryManager.AddItemToInventory(equippedWeapon);
-            UIManager.Instance.InventoryManager.EquipItem(1);
+            Debug.Log(UIManager.Instance.inventoryManager);
+
+            UIManager.Instance.inventoryManager.EquipItemEvent += EquipWeapon;
+            UIManager.Instance.inventoryManager.AddItemToInventory(equippedWeapon);
+            UIManager.Instance.inventoryManager.EquipItem(1);
         }
 
         private void Update()
@@ -80,7 +83,7 @@ namespace TranscendenceStudio.Character
             weaponSpriteRenderer.sprite = equippedWeapon.itemIcon;
             weaponDurability = equippedWeapon.weaponDurability;
 
-            playerManager.playerFeedback.GetFeedbackOfType<MMF_MMSoundManagerSound>().RandomSfx = equippedWeapon.sfxs;
+            playerManager.dealDamageFeedback.GetFeedbackOfType<MMF_MMSoundManagerSound>().RandomSfx = equippedWeapon.sfxs;
 
             SetupAttackArea(equippedWeapon);
         }
@@ -106,7 +109,7 @@ namespace TranscendenceStudio.Character
                 if (rangedWeaponTrajectoryArrow.activeInHierarchy)
                     rangedWeaponTrajectoryArrow.SetActive(false);
 
-                if (!spellArea.activeInHierarchy)
+                if (spellArea.activeInHierarchy)
                     spellArea.SetActive(false);
             }
         }
@@ -150,7 +153,7 @@ namespace TranscendenceStudio.Character
 
         private void OnDestroy()
         {
-            UIManager.Instance.InventoryManager.EquipItemEvent -= EquipWeapon;
+            UIManager.Instance.inventoryManager.EquipItemEvent -= EquipWeapon;
         }
     }
 }

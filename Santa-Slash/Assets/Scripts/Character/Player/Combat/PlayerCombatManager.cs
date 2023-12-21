@@ -22,6 +22,12 @@ namespace TranscendenceStudio.Character
 
         private void AttemptToPerformAttack()
         {
+            if (playerManager.IsInInteractionArea)
+            {
+                Debug.Log("<color=yellow>Is In Interaction Area -> Cannot Perform Attack</color>");
+                return;
+            }
+
             if (playerManager.characterWeaponManager.WeaponAttackDelay > 0) return;
 
             playerManager.characterWeaponManager.SetWeaponAttackDelay();
@@ -30,6 +36,12 @@ namespace TranscendenceStudio.Character
 
         private void AttemptToPerformAbility()
         {
+            if (playerManager.IsInInteractionArea)
+            {
+                Debug.Log("<color=blue>Is In Interaction Area -> Cannot Perform Ability</color>");
+                return;
+            }
+
             if (playerManager.characterWeaponManager.WeaponAbilityDelay > 0) return;
 
             playerManager.characterWeaponManager.SetWeaponAbilityDelay();

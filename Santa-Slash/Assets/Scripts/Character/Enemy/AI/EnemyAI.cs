@@ -8,21 +8,19 @@ namespace TranscendenceStudio.AI
 {
     public class EnemyAI : MonoBehaviour
     {
-        [Space(5)]
-
-        [Header("States Settings")]
-        [Space(5)]
-        [Header("Walk Around Settings")]
-        public float walkAroundCooldown = 4;
-        public bool canWalkAround = true;
+        [SerializeField] EnemyManager enemyManager;
         public EnemyState currentState;
-        private EnemyManager enemyManager;
         private bool isChangingState = false;
 
-        private void Awake()
-        {
-            enemyManager = GetComponent<EnemyManager>();
-        }
+        [Space(5)]
+        [Header("---- States Settings ----")]
+        [Space(5)]
+        [Header("Walk Around")]
+        public float walkAroundCooldown = 4;
+        [SerializeField] bool canWalkAround = true;
+
+        [Header("Attack")]
+        [SerializeField] bool canAttack = true;
 
         private void Start()
         {
@@ -81,6 +79,7 @@ namespace TranscendenceStudio.AI
             currentState.FixedUpdate();
         }
 
+        // Walk Around State
         public void StartWalkAround()
         {
             StartCoroutine(SetWalkAroundCooldown());
@@ -94,6 +93,33 @@ namespace TranscendenceStudio.AI
 
             canWalkAround = true;
         }
+
+        // Attack State
+        public void StartAttack()
+        {
+            if (!canAttack)
+            {
+                Debug.Log("<color=yellow>Cannot attack player -> attack is in cooldown</color>");
+                return;
+            }
+
+            StartCoroutine(SetAttackCooldown());
+        }
+
+        private IEnumerator SetAttackCooldown()
+        {
+            canAttack = false;
+
+            // Deal damage 
+            PlayerManager.Instance.PlayerHealth.Hit(enemyManager.enemy.damage, gameObject);
+
+            enemyManager.KnockbackManager.PlayFeedback(PlayerManager.Instance.gameObject);
+
+            yield return new WaitForSeconds(enemyManager.enemy.attackCooldown);
+
+            canAttack = true;
+        }
+
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.blue;
@@ -101,6 +127,16 @@ namespace TranscendenceStudio.AI
 
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(transform.position, enemyManager.enemy.attackRange);
+        }
+
+        public bool CanAttack
+        {
+            get => canAttack;
+        }
+
+        public bool CanWalkAround
+        {
+            get => canWalkAround;
         }
     }
 }

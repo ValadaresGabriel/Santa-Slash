@@ -1,11 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TranscendenceStudio.Character;
 using TranscendenceStudio.Items;
 using UnityEngine;
 
-namespace TranscendenceStudio.Inventory
+namespace TranscendenceStudio.UI.Inventory
 {
     public class InventoryManager : MonoBehaviour
     {
@@ -56,13 +55,13 @@ namespace TranscendenceStudio.Inventory
 
             if (itemSlotIndex - 1 == equippedItemIndex || (itemSlotIndex == 0 && equippedItemIndex == 9))
             {
-                Debug.LogWarning("Avoid to equip the same item");
+                Debug.LogWarning("<color=yellow>Avoid to equip the same item</color>");
                 return;
             }
 
             if (inventorySlots[itemSlotIndex - 1].item == null || (itemSlotIndex == 0 && inventorySlots[9].item == null))
             {
-                Debug.LogWarning("The item is NULL, cannot equip it");
+                Debug.LogWarning("<color=yellow>The item is NULL, cannot equip it</color>");
                 return;
             }
 

@@ -36,7 +36,7 @@ namespace TranscendenceStudio.AI
                 return;
             }
 
-            if (Vector3.Distance(enemy.transform.position, targetPosition) <= enemy.enemy.attackRange)
+            if (Vector3.Distance(enemy.transform.position, targetPosition) <= enemy.enemy.attackRange && enemy.EnemyAI.CanAttack)
             {
                 enemy.EnemyAI.ChangeState(new AttackState());
             }
@@ -44,7 +44,7 @@ namespace TranscendenceStudio.AI
 
         public override void ExitState()
         {
-            //
+            enemy.Animator.SetInteger("Velocity", 0);
         }
     }
 }

@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using ClothGravity;
 using TMPro;
 using TranscendenceStudio.Items;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TranscendenceStudio.Inventory
+namespace TranscendenceStudio.UI.Inventory
 {
     public class InventorySlot : MonoBehaviour, ITooltip
     {
@@ -26,6 +25,11 @@ namespace TranscendenceStudio.Inventory
         {
             item = itemToAdd;
             itemIcon.sprite = item.itemIcon;
+
+            Color color = Color.white;
+            color.a = 1;
+
+            itemIcon.color = color;
         }
 
         public void EquipItem()
@@ -40,7 +44,7 @@ namespace TranscendenceStudio.Inventory
         {
             isEquipped = false;
             background.color = originalColor;
-            itemIcon.color = new Color32(255, 255, 255, 0);
+            // itemIcon.color = new Color32(255, 255, 255, 255);
             equippedTag.SetText("");
         }
 

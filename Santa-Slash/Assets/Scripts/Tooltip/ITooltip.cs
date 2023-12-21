@@ -1,4 +1,4 @@
-namespace ClothGravity
+namespace TranscendenceStudio
 {
     public interface ITooltip
     {

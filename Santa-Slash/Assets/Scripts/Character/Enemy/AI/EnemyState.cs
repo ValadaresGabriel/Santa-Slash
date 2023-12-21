@@ -14,9 +14,22 @@ namespace TranscendenceStudio.AI
             enemy = enemyManager;
         }
 
-        public abstract void Update();
+        public virtual void Update()
+        {
+            if (enemy.EnemyHealth.IsDead)
+            {
+                enemy.EnemyAI.ChangeState(new DefaultIdleState());
+                return;
+            }
+        }
 
-        public abstract void FixedUpdate();
+        public virtual void FixedUpdate()
+        {
+            if (enemy.EnemyHealth.IsDead)
+            {
+                return;
+            }
+        }
 
         public abstract void ExitState();
 
