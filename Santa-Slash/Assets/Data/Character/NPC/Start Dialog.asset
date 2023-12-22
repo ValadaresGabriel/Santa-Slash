@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b27daea6e1e4b4bba4b2838f0f7409, type: 3}
+  m_Name: Start Dialog
+  m_EditorClassIdentifier: 
+  initialDialogMessages:
+  - message: ... Very well, it seems I managed to escape. However, I don't quite
+      understand what's going on here.
+  - message: Suddenly, out of nowhere, a curse befell my people.
+  - message: People started turning into monsters, and now, against my will, I have
+      to defend myself against those who once were loyal to me.
+  - message: At first, I should explore a bit... all I know is that my only clue
+      is that I need to reach the castle of an ancient mage who once saved the world
+      from a catastrophe.
+  - message: I would really like her to save me from mine this time, but I guess
+      it wouldn't be that easy...
+  metDialogMessages: []
+  hasMet: 0

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b27daea6e1e4b4bba4b2838f0f7409, type: 3}
+  m_Name: Bandit 2 Dialog
+  m_EditorClassIdentifier: 
+  initialDialogMessages:
+  - message: Oh, great king, good to see you again.
+  - message: ... I can recognize my people.
+  - message: And criminals aren't people now?
+  - message: ...
+  - message: Hey, answer...
+  - message: They are...
+  - message: Alright then, here, take this. Just don't arrest me now; it's not the
+      time for that.
+  metDialogMessages:
+  - message: I don't have more weapons...
+  hasMet: 0

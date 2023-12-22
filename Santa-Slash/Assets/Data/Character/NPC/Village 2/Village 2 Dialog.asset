@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b27daea6e1e4b4bba4b2838f0f7409, type: 3}
+  m_Name: Village 2 Dialog
+  m_EditorClassIdentifier: 
+  initialDialogMessages:
+  - message: Well, what a surprise! My good king! I can't believe you found me here.
+  - message: ' Thank God, a survivor.'
+  - message: What are you doing here, my king? Now that everything is over... I...
+      I don't know what to do. I've lost everything.
+  - message: ... I haven't given up yet.
+  - message: ' What?'
+  - message: ' I haven''t given up yet. I have to go to the castle; maybe there are
+      some answers there.'
+  - message: But, my king, there are many monsters everywhere, and the worst part
+      is... they're ours...
+  - message: ... Even in the face of our tragedies, we have no right to give up.
+  - message: This is for everyone who once trusted us.
+  - message: ' ... Very well. The castle is within the boundaries of these areas,
+      right? It''s impossible to get lost like this; when in doubt, walk in a straight
+      line following the boundaries.'
+  - message: ' I know that very well.'
+  - message: Of course, my king, before you go!
+  - message: I'm thinking about which part of the beach is the easiest to cross to
+      the other side.
+  - message: ' I wouldn''t recommend swimming... those waters are deep and full of
+      secrets. It''s never good to enter the water unprepared. Get a boat! I will
+      return soon to gather the rest of the population.'
+  - message: Alright, until we meet again, my king.
+  metDialogMessages:
+  - message: Alright, until we meet again, my king.
+  hasMet: 0

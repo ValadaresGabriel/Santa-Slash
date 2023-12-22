@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b27daea6e1e4b4bba4b2838f0f7409, type: 3}
+  m_Name: Village 4 Dialog
+  m_EditorClassIdentifier: 
+  initialDialogMessages:
+  - message: My King... why did you destroy the walls... and now where can I hide??
+  - message: It's okay... anyway, the monsters could jump down from there. It's not
+      completely safe.
+  - message: Well, at least now you're here.
+  - message: But not for long...
+  - message: What? Are you leaving? You can't do that.
+  - message: You already abandoned us once; everything fell apart. Our families and
+      friends were cursed, and now you think you can fix your mistake?
+  - message: ' It wasn''t my fault. I don''t even know what happened.'
+  - message: ' It doesn''t matter. You''re a ruler, and rulers bear the weight of
+      their nation.'
+  - message: That's exactly why I can't stay here.
+  - message: It can't just end like this; I need to go.
+  - message: ' Please, my king, don''t go, don''t leave me alone in this snow, with
+      these monsters.'
+  - message: ... Farewell. I will come back for you; I will seek more survivors.
+  - message: (He was right... this is my responsibility, and something I must face
+      the consequences of, so I can't give up. It's not about losing less this time.)
+  - message: (It's about creating the best possible outcome for this tragedy.)
+  metDialogMessages:
+  - message: '...
+
+'
+  hasMet: 0

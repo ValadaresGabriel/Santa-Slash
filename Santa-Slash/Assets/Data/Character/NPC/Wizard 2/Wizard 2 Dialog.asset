@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b27daea6e1e4b4bba4b2838f0f7409, type: 3}
+  m_Name: Wizard 2 Dialog
+  m_EditorClassIdentifier: 
+  initialDialogMessages:
+  - message: " \u2026."
+  - message: ' Ah, a wizard, I finally found you.'
+  - message: Oh great king, seeking trouble?
+  - message: Not trouble, but solutions.
+  - message: I too am searching for solutions.
+  - message: ... About the curse?
+  - message: No... I've been trying for 756 days to break that mysterious rock over
+      there, but it doesn't seem like I can even hit it. How mysterious...
+  - message: ' It''s not about that... what I want to know is the secrets behind
+      this curse.'
+  - message: My noble king, only the ancient heroes know about that.
+  - message: Are they to blame?
+  - message: ' No, but they have fought against what you are going through. It''s
+      an enemy they once had in common...'
+  - message: ... What should I do?
+  - message: ' I can sell you some items, but I can''t give you answers.'
+  - message: ' ... The other wizard, do you know the other wizard? Does he know something?'
+  - message: Ah, yes, the other wizard. If you follow the course of the river, eventually,
+      you will find him.
+  - message: And the castle?
+  - message: ' You will likely find your way to the castle.'
+  - message: ' I see, thank you very much for your wisdom.'
+  - message: Oh, and remember one thing, if you encounter the other wizard, tell
+      him.
+  - message: Making water in the desert is much more useful than freezing water in
+      a cold place.
+  - message: ' ... I don''t know why, but I have a feeling he''ll disagree with you.'
+  metDialogMessages:
+  - message: ...
+  hasMet: 0

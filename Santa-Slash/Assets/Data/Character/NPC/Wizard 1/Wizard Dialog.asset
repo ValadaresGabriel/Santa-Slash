@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b27daea6e1e4b4bba4b2838f0f7409, type: 3}
+  m_Name: Wizard Dialog
+  m_EditorClassIdentifier: 
+  initialDialogMessages:
+  - message: Oh, if it isn't the great King.
+  - message: ... Finally found you.
+  - message: Unfortunately, King, I also don't have knowledge of how to reverse this
+      problem...
+  - message: ...
+  - message: ' But I do know that this problem is reversible.'
+  - message: How?
+  - message: Isn't this much ice? It's my rather large crystal ball, right?
+  - message: Are you kidding me?...
+  - message: Yes, but I really do know about this.
+  - message: ' The former King once claimed to have the ability to talk to souls.'
+  - message: ... And what does that have to do with it?
+  - message: ' But, in reality, it was a big lie. The souls that could speak to him...'
+  - message: ' ...'
+  - message: ' There are great heroes who protect this region; they wouldn''t let
+      the souls of their people escape to other planes.'
+  - message: Are you sure there's still hope?
+  - message: ' Yes, yes. I just don''t know the correct path, but I believe following
+      in your father''s footsteps is a good start.'
+  - message: ' I see... so the castle was indeed a good decision. Thank you, wizard.'
+  - message: No problem. In fact, if you want, I can provide you with some precious
+      items for your journey, hehe, just pay the price.
+  metDialogMessages:
+  - message: '...
+
+'
+  hasMet: 0

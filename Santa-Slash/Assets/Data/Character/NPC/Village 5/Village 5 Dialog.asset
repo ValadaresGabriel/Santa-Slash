@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b27daea6e1e4b4bba4b2838f0f7409, type: 3}
+  m_Name: Village 5 Dialog
+  m_EditorClassIdentifier: 
+  initialDialogMessages:
+  - message: ... If I enter the midst of all these cacti, can the monsters still
+      get me?
+  - message: ' I don''t think that''s a good idea...'
+  - message: My king! Good to see you, well... it's good to see anyone who isn't
+      a monster.
+  - message: Haha... well, you seem fine for now. How can you smile in the face of
+      despair?
+  - message: ' Smiling is the easiest way to lie to oneself in a situation like this,
+      my lord.'
+  - message: ... Very well, it won't continue being a lie. I'm looking for the castle
+      of the ancient hero; do you know which way it is?
+  - message: ... Very well, it won't continue being a lie. I'm looking for the castle
+      of the ancient hero; do you know which way it is?
+  - message: Like... is there a way to return people to normal? Maybe we can save
+      more lives.
+  - message: King - Very well, thank you for informing me. I will look for him sooner
+      or later.
+  - message: Listen, do you have the strength to walk?
+  - message: Do you have the courage to continue?
+  - message: Yes! I'll do anything for you, my king!
+  - message: Very well... gather other people, assemble them to the WEST. I will
+      find you, and together we will fight for a better future.
+  - message: ' Understood. Farewell, my king! I wish you a safe journey, and we''ll
+      be waiting for you.'
+  metDialogMessages:
+  - message: I will do my best, for my king!
+  hasMet: 0
