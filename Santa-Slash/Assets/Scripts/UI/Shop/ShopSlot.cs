@@ -6,15 +6,22 @@ using UnityEngine.EventSystems;
 using TranscendenceStudio.Items;
 using TranscendenceStudio.Character;
 using UnityEngine.UI;
+using MoreMountains.Feedbacks;
 
 namespace TranscendenceStudio.UI.ShopSystem
 {
     public class ShopSlot : MonoBehaviour, IPointerClickHandler, ITooltip
     {
+        [Header("Item")]
         [SerializeField] Item item;
         [SerializeField] Image itemIcon;
+
+        [Header("Text")]
         [SerializeField] TextMeshProUGUI itemNameText;
         [SerializeField] TextMeshProUGUI itemPriceText;
+
+        [Header("Feedback On Buy Item")]
+        [SerializeField] MMF_Player buyItemFeedback;
 
         public void SetTitleAndPriceText()
         {
@@ -40,6 +47,8 @@ namespace TranscendenceStudio.UI.ShopSystem
             if (PlayerManager.Instance.playerCurrency.Currency >= Item.itemPrice)
             {
                 PlayerManager.Instance.playerCurrency.Currency -= Item.itemPrice;
+
+                buyItemFeedback.PlayFeedbacks();
 
                 UIManager.Instance.inventoryManager.AddItemToInventory(Item);
             }

@@ -32,12 +32,18 @@ namespace TranscendenceStudio.UI.Inventory
             PlayerInputManager.Instance.EquipEvent6 += () => EquipItem(6);
             PlayerInputManager.Instance.EquipEvent7 += () => EquipItem(7);
             PlayerInputManager.Instance.EquipEvent8 += () => EquipItem(8);
-            PlayerInputManager.Instance.EquipEvent9 += () => EquipItem(9);
-            PlayerInputManager.Instance.EquipEvent0 += () => EquipItem(0);
+            // PlayerInputManager.Instance.EquipEvent9 += () => EquipItem(9);
+            // PlayerInputManager.Instance.EquipEvent0 += () => EquipItem(0);
         }
 
         public void AddItemToInventory(Item item)
         {
+            if (VerifyIfHasItemAlready(item))
+            {
+                Debug.Log($"<color=yellow>Player already have {item.itemName} in Inventory</color>");
+                return;
+            }
+
             foreach (InventorySlot inventorySlot in inventorySlots)
             {
                 if (inventorySlot.item == null)
@@ -47,6 +53,19 @@ namespace TranscendenceStudio.UI.Inventory
                     break;
                 }
             }
+        }
+
+        private bool VerifyIfHasItemAlready(Item item)
+        {
+            foreach (InventorySlot inventorySlot in inventorySlots)
+            {
+                if (inventorySlot.item == item)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public void EquipItem(int itemSlotIndex)

@@ -14,7 +14,7 @@ namespace TranscendenceStudio.Character
 
         private void Start()
         {
-            UIManager.Instance.playerUIManager.SetMaxHealth(maximumHealth);
+            UIManager.Instance.playerUIManager.playerStatsUIManager.SetMaxHealth(maximumHealth);
         }
 
         public int GetWeaponDurabilityDamage()
@@ -26,7 +26,7 @@ namespace TranscendenceStudio.Character
         {
             if (TakeDamage(damage))
             {
-                UIManager.Instance.playerUIManager.UpdateHealthSlider(currentHealth);
+                UIManager.Instance.playerUIManager.playerStatsUIManager.UpdateHealthSlider(currentHealth);
 
                 if (currentHealth <= 0)
                 {

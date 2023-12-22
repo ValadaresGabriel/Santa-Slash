@@ -18,7 +18,7 @@ namespace TranscendenceStudio.Character
         {
             Stamina = maxStamina;
 
-            UIManager.Instance.playerUIManager.SetMaxStamina(maxStamina);
+            UIManager.Instance.playerUIManager.playerStatsUIManager.SetMaxStamina(maxStamina);
         }
 
         public int Stamina
@@ -27,7 +27,7 @@ namespace TranscendenceStudio.Character
             set
             {
                 stamina = value;
-                UIManager.Instance.playerUIManager.UpdateStaminaSlider(stamina);
+                UIManager.Instance.playerUIManager.playerStatsUIManager.UpdateStaminaSlider(stamina);
 
                 if (isRecoveringStamina)
                 {
@@ -54,7 +54,7 @@ namespace TranscendenceStudio.Character
                 if (staminaToAdd > 0)
                 {
                     stamina += staminaToAdd;
-                    UIManager.Instance.playerUIManager.UpdateStaminaSlider(stamina);
+                    UIManager.Instance.playerUIManager.playerStatsUIManager.UpdateStaminaSlider(stamina);
                     currentTime = 0;
                 }
 

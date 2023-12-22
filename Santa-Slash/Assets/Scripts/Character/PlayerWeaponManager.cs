@@ -147,7 +147,7 @@ namespace TranscendenceStudio.Character
             set
             {
                 weaponDurability = value;
-                UIManager.Instance.playerUIManager.UpdateWeaponDurabilitySlider(weaponDurability);
+                UIManager.Instance.playerUIManager.playerStatsUIManager.UpdateWeaponDurabilitySlider(weaponDurability);
             }
         }
 

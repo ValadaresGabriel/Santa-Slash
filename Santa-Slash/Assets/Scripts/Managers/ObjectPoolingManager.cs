@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TranscendenceStudio.Character;
+using TranscendenceStudio.Character.Coin;
 using TranscendenceStudio.VFX;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -31,6 +32,11 @@ namespace TranscendenceStudio.Pooling
             if (obj.TryGetComponent(out ThrowableWeaponDamageCollider throwableWeaponDamageCollider))
             {
                 throwableWeaponDamageCollider.SetReleaseCallback(ReleaseObject);
+            }
+
+            if (obj.TryGetComponent(out CoinController coinController))
+            {
+                coinController.SetReleaseCallback(ReleaseObject);
             }
 
             return obj;

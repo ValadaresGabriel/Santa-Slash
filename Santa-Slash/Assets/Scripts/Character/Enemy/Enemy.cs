@@ -20,5 +20,8 @@ namespace TranscendenceStudio.Character
         public float attackRange = 0.5f;
         public float chasePlayerArea = 3;
         public float sleepAfterAttackTime = 0.5f;
+
+        [Header("Drop Quantity")]
+        public int dropQuantity = 2;
     }
 }

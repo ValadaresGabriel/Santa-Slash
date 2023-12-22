@@ -46,8 +46,6 @@ namespace TranscendenceStudio.Character
             playerCurrency = GetComponent<PlayerCurrency>();
             PlayerStatsManager = GetComponent<PlayerStatsManager>();
             PlayerLocomotion = GetComponent<PlayerLocomotion>();
-
-            // PlayerInputManager.Instance.OpenInventoryEvent += OpenInventory;
         }
 
         public void EnableUIActions()
@@ -58,26 +56,6 @@ namespace TranscendenceStudio.Character
         public void EnablePlayerActions()
         {
             PlayerInputManager.Instance.EnablePlayerActions();
-        }
-
-        private void OpenInventory()
-        {
-            if (IsInteracting && !isOnInventory) return;
-
-            if (!isOnInventory)
-            {
-                IsInteracting = true;
-                // UIManager.OpenInventory();
-                return;
-            }
-
-            // UIManager.CloseInventory();
-            IsInteracting = false;
-        }
-
-        private void OnDestroy()
-        {
-            // PlayerInputManager.Instance.OpenInventoryEvent -= OpenInventory;
         }
 
         public void SetIsAttackingToFalse()

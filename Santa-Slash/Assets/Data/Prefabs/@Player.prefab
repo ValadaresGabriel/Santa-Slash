@@ -1999,7 +1999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b50df3fc65da10d499f96d79398cdfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency: 100
+  currency: 0
 --- !u!114 &6327858122988918755
 MonoBehaviour:
   m_ObjectHideFlags: 0
