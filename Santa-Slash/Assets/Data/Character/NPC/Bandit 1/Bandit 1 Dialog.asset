@@ -10,13 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33b27daea6e1e4b4bba4b2838f0f7409, type: 3}
-  m_Name: Wizard Dialog
+  m_Name: Bandit 1 Dialog
   m_EditorClassIdentifier: 
   initialDialogMessages:
-  - message: hgrethreth
-  - message: erthrejtyrkjyukytuik
-  - message: zzzzzzzzzzzzzzzzzzzzzzzzzz
+  - message: ' Wait, wait, wait.'
+  - message: '? It seems the curse didn''t get you.'
+  - message: You know how it is, nothing ever happens to the bad guys, hehe.
+  - message: ' ...'
+  - message: Look, I don't want any trouble. Let me stay hidden here. I'll be a good
+      boy from now on.
+  - message: Here, take this weapon. It'll help you.
   metDialogMessages:
-  - message: qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-  - message: aaaaaaaaaaaaaa
+  - message: I don't have more weapons...
   hasMet: 0

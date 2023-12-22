@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b27daea6e1e4b4bba4b2838f0f7409, type: 3}
+  m_Name: Warrior 1 Dialog
+  m_EditorClassIdentifier: 
+  initialDialogMessages:
+  - message: Take a seat, my king. Rest, for your journey is still long.
+  - message: I didn't expect to see a formidable warrior here...
+  - message: Well... unfortunately, the curse didn't catch up to me. Now we are alone
+      in this cursed world.
+  - message: ' Don''t say that. The world needs strong individuals.'
+  - message: When there are no strong people, weak people with strong determination
+      arise...
+  - message: ' ...'
+  - message: But with a determination that is necessary for us to grow and move forward.
+  - message: I am on a quest to unravel this mystery.
+  - message: ' About the tragedy?'
+  - message: Yes... something has to be done.
+  - message: ' You haven''t lost hope yet, so repair your items with me. I''ll be
+      happy to continue the hope.'
+  - message: ' Haha, very well, soldier. Please help those who remain. I plan to
+      gather everyone at my camp, and then we will march to the castle.'
+  - message: ' To the castle? But is it safe there? There are monsters everywhere,
+      and wasn''t it cursed or something?'
+  - message: ' I will find out more from now on. Maybe it''s a good starting point...
+      if it''s dangerous, I''ll make sure it''s not after my passage.'
+  - message: Very well, seek the mages, my king. They should know how to guide you.
+      I... I will do what you asked me to. Besides, it's a plea from the king himself.
+      A warrior cannot refuse an opportunity like this.
+  metDialogMessages: []
+  hasMet: 0

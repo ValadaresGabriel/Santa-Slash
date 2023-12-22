@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b27daea6e1e4b4bba4b2838f0f7409, type: 3}
+  m_Name: Tombstone Dialog
+  m_EditorClassIdentifier: 
+  initialDialogMessages:
+  - message: To find the tombs of the heroes, one must traverse the same path that
+      a noble King once walked; their souls still illuminate our people. And always
+      will.
+  - message: ' ...?'
+  - message: Would this noble king be my father? The tombs are not here? ... I see.
+  - message: ' So... my journey has only resulted in more questions.'
+  - message: However... it was not in vain. The legends did not come true, but it
+      was enough. I believe it's still possible to converse with the heroes of old.
+      Perhaps with that, we can solve our problems... I hope there is a solution.
+      Very well...
+  - message: My work is not yet done. I will make this castle our new stronghold.
+  - message: First, I will cleanse this place, making it a safe haven for my people.
+  - message: After that, I will embark on another journey... one to uncover the truth
+      behind all of this.
+  - message: ... Well, I better get started. There's no time to waste.
+  metDialogMessages:
+  - message: To find the tombs of the heroes, one must traverse the same path that
+      a noble King once walked; their souls still illuminate our people. And always
+      will.
+  hasMet: 0

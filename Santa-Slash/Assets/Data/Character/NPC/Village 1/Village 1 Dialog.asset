@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b27daea6e1e4b4bba4b2838f0f7409, type: 3}
+  m_Name: Village 1 Dialog
+  m_EditorClassIdentifier: 
+  initialDialogMessages:
+  - message: My good king! I can't believe you survived.
+  - message: A survivor?
+  - message: ' Yes, for some reason the curse didn''t affect me.'
+  - message: ... I see. You can return along my path; it's safer to walk where I've
+      cleared the monsters than to wander aimlessly for now.
+  - message: Once I complete my mission, I'll return, and we'll seek a new home for
+      our people.
+  - message: Thank you very much, my king. Take this with you; it may help you on
+      your journey.
+  - message: Lastly, I believe a mage who passed by me headed to the cold lands,
+      which lie to the NORTH.
+  - message: Thank you. Take care, and I will return soon.
+  - message: (Not all of my people turned into monsters, it seems... Some have survived.)
+  - message: (I must keep searching; I hope to find more people.)
+  - message: (Apparently, my purpose has not completely faded away.)
+  metDialogMessages:
+  - message: I will be waiting for your return!
+  hasMet: 0
