@@ -16,17 +16,17 @@ MonoBehaviour:
   itemIcon: {fileID: -645778807, guid: 1530ff7af9e7c334aa5c97a8f5be2531, type: 3}
   itemName: Excalibur
   itemDescription: afsdgfwsg
-  itemPrice: 0
+  itemPrice: 500
   weaponType: 4
   weaponAttackType: 0
   animator: {fileID: 9100000, guid: f14f36723e93aa14699b710563061f31, type: 2}
-  weaponDamage: 1
+  weaponDamage: 6
   weaponAttackArea: {x: 0, y: 0}
   attackDelay: 0.5
   abilityDelay: 0.5
   weaponDurability: 100
-  knockbackStrength: 10
-  abilityStaminaCost: 1
+  knockbackStrength: 14
+  abilityStaminaCost: 5
   sfxs:
   - {fileID: 8300000, guid: b0bab8cb0fb974476b0ded2812f7393d, type: 3}
   - {fileID: 8300000, guid: 6d9b60ed9f0fe40edaf990fec18c77b5, type: 3}

@@ -7,24 +7,50 @@ namespace TranscendenceStudio.Pooling
 {
     public class EnemySpawner : MonoBehaviour
     {
-        [SerializeField] float time = 0;
+        [SerializeField] int enemiesToSpawn = 5;
         [SerializeField] float repeatRate = 50f;
-        [SerializeField] int spawnQuantity;
         [SerializeField] Transform[] spawnLocation;
-
-        private void Awake()
-        {
-            InvokeRepeating(nameof(SpawnEnemy), time, repeatRate);
-        }
+        private bool playerEnteredArea = false;
 
         private void SpawnEnemy()
         {
-            GameObject enemyInstance = EnemySpawnerManager.Instance.GetObject();
+            int enemyChoice = Random.Range(1, 4);
+            GameObject enemyInstance = null;
 
-            int spawnIndex = Random.Range(0, spawnLocation.Length);
-            Transform selectedSpawn = spawnLocation[spawnIndex];
+            for (int i = 0; i < enemiesToSpawn; i++)
+            {
+                switch (enemyChoice)
+                {
+                    case 1:
+                        enemyInstance = SlimeSpawnerManager.Instance.GetObject();
+                        break;
+                    case 2:
+                        enemyInstance = GolemSpawnerManager.Instance.GetObject();
+                        break;
+                    case 3:
+                        enemyInstance = DemonSpawnerManager.Instance.GetObject();
+                        break;
+                    case 4:
+                        enemyInstance = DinosaurSpawnerManager.Instance.GetObject();
+                        break;
+                }
 
-            enemyInstance.transform.SetPositionAndRotation(selectedSpawn.position, Quaternion.identity);
+                int spawnIndex = Random.Range(0, spawnLocation.Length);
+                Transform selectedSpawn = spawnLocation[spawnIndex];
+
+                enemyInstance.transform.SetPositionAndRotation(selectedSpawn.position, Quaternion.identity);
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (playerEnteredArea) return;
+
+            if (other.transform.CompareTag("Player"))
+            {
+                playerEnteredArea = true;
+                InvokeRepeating(nameof(SpawnEnemy), 0, repeatRate);
+            }
         }
     }
 }
