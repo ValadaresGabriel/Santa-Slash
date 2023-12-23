@@ -21,7 +21,7 @@ MonoBehaviour:
   - message: Just take a little then...
   - message: ' I can''t. If I take a little, that other bandit over there will steal
       it from me.'
-  - message: "And I hate fighting. In fact, take this; I don't need it.\t"
+  - message: And I hate fighting. In fact, take this; I don't need it.
   metDialogMessages:
   - message: How long is that guy over there going to watch me?
   hasMet: 0
