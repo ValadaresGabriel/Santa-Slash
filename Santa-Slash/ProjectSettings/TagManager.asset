@@ -48,11 +48,14 @@ TagManager:
   - name: Enemy
     uniqueID: 2900309789
     locked: 0
-  - name: NPC
-    uniqueID: 3930612511
+  - name: Enemy VFX
+    uniqueID: 3883727089
     locked: 0
   - name: Obstacle
     uniqueID: 3587341257
+    locked: 0
+  - name: NPC
+    uniqueID: 3930612511
     locked: 0
   - name: Player
     uniqueID: 4220974371
