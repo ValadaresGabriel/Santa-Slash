@@ -84,7 +84,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1394657507
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1241342069, guid: 33024c0e0014ca74b97fadb1b3ef3e57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 1551258265024969497}
   - component: {fileID: 4663766712152519793}
   m_Layer: 7
-  m_Name: Eye Light
+  m_Name: Eye Light Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 7313938572487871294}
   - component: {fileID: 747948200017814153}
   m_Layer: 7
-  m_Name: Eye Light
+  m_Name: Eye Light Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

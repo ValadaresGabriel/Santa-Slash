@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4063076361524369653}
   - component: {fileID: 8729710193175687287}
   m_Layer: 7
-  m_Name: Eye Light
+  m_Name: Eye Light Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5094529116959814075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.183, y: 0.029, z: 0}
+  m_LocalPosition: {x: 0.185, y: 0.029, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -166,7 +166,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1394657507
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1340401764, guid: 0536ab6894196e14c979056b469fde3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 5498263234265580669}
   - component: {fileID: 4370257560944617750}
   m_Layer: 7
-  m_Name: Eye Light
+  m_Name: Eye Light Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &92393554980634456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9043188557357970175}
+  - component: {fileID: 6256923094959717368}
+  m_Layer: 6
+  m_Name: Enemy Detection Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9043188557357970175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92393554980634456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3378145914857373469}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6256923094959717368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92393554980634456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4cb4916b9f8e184f92f14dade2617cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  radius: 5
 --- !u!1 &1505461854826969967
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +201,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -73992925
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: -1
   m_Sprite: {fileID: 1381456615, guid: f24c30a0ebe47104a8394c09b2f328d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -688,7 +736,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -73992925
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: -645778807, guid: 1530ff7af9e7c334aa5c97a8f5be2531, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -711,7 +759,7 @@ Animator:
   m_GameObject: {fileID: 4910673065556968299}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ad495b252fcd6ca4494392de2632dbfa, type: 2}
+  m_Controller: {fileID: 9100000, guid: 95b9fdaf3d326f94c845465668277553, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1677,7 +1725,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -73992925
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: -1
   m_Sprite: {fileID: 1358993021, guid: f24c30a0ebe47104a8394c09b2f328d4, type: 3}
   m_Color: {r: 0.3254717, g: 0.8762036, b: 1, a: 1}
@@ -1744,7 +1792,7 @@ MonoBehaviour:
     m_Bits: 640
   weaponSpriteRenderer: {fileID: 347102115525761415}
   weaponAnimator: {fileID: 3582552542032838336}
-  equippedWeapon: {fileID: 11400000, guid: 0919ce4f2276f904181b4e02395fc7ec, type: 2}
+  equippedWeapon: {fileID: 11400000, guid: 8694465bf305d174b9c8445e97ca5c15, type: 2}
   rangedWeaponTrajectoryArrow: {fileID: 9178882012180332808}
   spellArea: {fileID: 3861311587177810172}
 --- !u!1 &9090997398582828767
@@ -1794,6 +1842,7 @@ Transform:
   - {fileID: 932979078298525258}
   - {fileID: 4106253298889697080}
   - {fileID: 1508522595259694507}
+  - {fileID: 9043188557357970175}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1836,7 +1885,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -73992925
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -2132592751, guid: ae61b8920be47dd4eb8b3f4b7d6dd887, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

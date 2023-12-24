@@ -27,6 +27,7 @@ namespace TranscendenceStudio.Character
         private bool isOnShop;
         private bool isOnInventory;
         private bool isInteracting = false;
+        private bool isInBattle = false;
 
         protected override void Awake()
         {
@@ -85,6 +86,24 @@ namespace TranscendenceStudio.Character
         {
             get => isInteracting;
             set => isInteracting = value;
+        }
+
+        public bool IsInBattle
+        {
+            get => isInBattle;
+            set
+            {
+                isInBattle = value;
+
+                if (isInBattle)
+                {
+                    SoundManager.Instance.TransitionFromBackgroundMusicToBattleMusic();
+                }
+                else
+                {
+                    SoundManager.Instance.TransitionFromBattleMusicToBackgroundMusic();
+                }
+            }
         }
     }
 }

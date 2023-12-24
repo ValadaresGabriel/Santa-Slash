@@ -28,7 +28,7 @@ namespace TranscendenceStudio.Pooling
                         enemyInstance = GolemSpawnerManager.Instance.GetObject();
                         break;
                     case 3:
-                        enemyInstance = DemonSpawnerManager.Instance.GetObject();
+                        enemyInstance = GoblinSpawnerManager.Instance.GetObject();
                         break;
                     case 4:
                         enemyInstance = DinosaurSpawnerManager.Instance.GetObject();
