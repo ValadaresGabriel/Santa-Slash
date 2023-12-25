@@ -15,15 +15,19 @@ namespace TranscendenceStudio.Character.DialogSystem
         [SerializeField] AudioClip[] dialogTypeSFX;
         private int dialogIndex = 0;
         private bool isTypingMessage = false;
+        private NPCManager currentNPCManager;
         private NPC currentNPC;
         private Coroutine typeMessageCoroutine;
         private List<DialogMessage> dialogMessage = new();
 
-        public void OpenDialog(NPC npc)
+        public void OpenDialog(NPCManager npcManager)
         {
             PlayerInputManager.Instance.NextDialogEvent += NextDialog;
 
-            currentNPC = npc;
+            Debug.Log("Open Dialog");
+
+            currentNPCManager = npcManager;
+            currentNPC = npcManager.npc;
 
             dialogGameObject.SetActive(true);
             ConfigureDialog();
@@ -99,7 +103,12 @@ namespace TranscendenceStudio.Character.DialogSystem
 
             if (currentNPC.hasShop)
             {
-                UIManager.Interact(UI.Interaction.Shop, items: currentNPC.npcShop.itemsToSell);
+                UIManager.Interact(UI.Interaction.Shop, npcManager: currentNPCManager);
+            }
+            else
+            {
+                // Play NPC's Bye feedback if there is no shop
+                currentNPCManager.PlayByeFeedback();
             }
 
             currentNPC = null;

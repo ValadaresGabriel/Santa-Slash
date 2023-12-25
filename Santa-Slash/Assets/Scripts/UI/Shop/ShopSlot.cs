@@ -46,6 +46,12 @@ namespace TranscendenceStudio.UI.ShopSystem
 
             if (PlayerManager.Instance.playerCurrency.Currency >= Item.itemPrice)
             {
+                // Play NPC's Satisfied feedback
+                if (UIManager.Instance.shopManager.CurrentNPCManager != null)
+                {
+                    UIManager.Instance.shopManager.CurrentNPCManager.PlaySatisfiedFeedback();
+                }
+
                 PlayerManager.Instance.playerCurrency.Currency -= Item.itemPrice;
 
                 buyItemFeedback.PlayFeedbacks();

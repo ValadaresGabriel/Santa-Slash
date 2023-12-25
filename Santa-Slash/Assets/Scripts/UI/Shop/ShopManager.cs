@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TranscendenceStudio.Character;
 using TranscendenceStudio.Items;
 using UnityEngine;
 
@@ -15,9 +16,14 @@ namespace TranscendenceStudio.UI.ShopSystem
         [SerializeField] GameObject shopSlotPrefab;
         [SerializeField] ScrollManager scrollManager;
 
-        public void OpenShop(List<Item> items)
+        public NPCManager CurrentNPCManager { get; private set; }
+
+        public void OpenShop(NPCManager npcManager)
         {
             shopGameObject.SetActive(true);
+
+            CurrentNPCManager = npcManager;
+            List<Item> items = npcManager.npc.npcShop.itemsToSell;
 
             foreach (Item item in items)
             {
@@ -41,6 +47,11 @@ namespace TranscendenceStudio.UI.ShopSystem
         public void CloseShop()
         {
             shopGameObject.SetActive(false);
+
+            // Play NPC's Bye feedback
+            CurrentNPCManager.PlayByeFeedback();
+
+            CurrentNPCManager = null;
 
             foreach (Transform item in content)
             {

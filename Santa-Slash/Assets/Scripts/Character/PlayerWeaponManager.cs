@@ -36,8 +36,6 @@ namespace TranscendenceStudio.Character
 
         private void Start()
         {
-            Debug.Log(UIManager.Instance.inventoryManager);
-
             UIManager.Instance.inventoryManager.EquipItemEvent += EquipWeapon;
             UIManager.Instance.inventoryManager.AddItemToInventory(equippedWeapon);
             UIManager.Instance.inventoryManager.EquipItem(1);

@@ -9,15 +9,18 @@ namespace TranscendenceStudio.Character
     public class NPCInteraction : Interaction
     {
         [SerializeField] GameObject dialogueGameObject;
+        private NPCManager npcManager;
         private NPC npc;
 
         private void Awake()
         {
-            npc = GetComponent<NPCManager>().npc;
+            npcManager = GetComponentInParent<NPCManager>();
+            npc = npcManager.npc;
 
             if (npc == null)
             {
                 Debug.LogError("The NPC does not have a NPC in the NPC Manager!");
+                return;
             }
         }
 
@@ -25,8 +28,17 @@ namespace TranscendenceStudio.Character
         {
             base.OnPointerClick(eventData);
 
-            if (!PlayerManager.Instance.IsInInteractionArea) return;
-            if (!PlayerManager.Instance.IsMouseOnInteractableObject) return;
+            if (!PlayerManager.Instance.IsInInteractionArea)
+            {
+                Debug.Log("Is not in interaction area");
+                return;
+            }
+
+            if (!PlayerManager.Instance.IsMouseOnInteractableObject)
+            {
+                Debug.Log("Mouse is not on NPC");
+                return;
+            }
 
             if (npc == null)
             {
@@ -40,15 +52,24 @@ namespace TranscendenceStudio.Character
                 return;
             }
 
+            Debug.Log($"On Pointer Click {name}");
+
             // UIManager.Instance.shopManager.OpenShop(npc.npcShop.itemsToSell);
+
+            // Play NPC's Hi feedback
+            npcManager.PlayHiFeedback();
 
             if (npc.dialog != null)
             {
-                UIManager.Interact(UI.Interaction.Dialog, npc: npc);
+                Debug.Log("Enter Dialog");
+                UIManager.Interact(UI.Interaction.Dialog, npcManager: npcManager);
                 return;
             }
 
-            UIManager.Interact(UI.Interaction.Shop, items: npc.npcShop.itemsToSell);
+            if (npc.hasShop)
+            {
+                UIManager.Interact(UI.Interaction.Shop, npcManager: npcManager);
+            }
         }
 
         protected override void OnTriggerEnter2D(Collider2D other)

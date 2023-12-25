@@ -44,7 +44,7 @@ namespace TranscendenceStudio.UI
             }
         }
 
-        public static void Interact(Interaction interaction, NPC npc = null, List<Item> items = null)
+        public static void Interact(Interaction interaction, NPCManager npcManager = null)
         {
             if (PlayerManager.Instance.IsInteracting)
             {
@@ -52,23 +52,25 @@ namespace TranscendenceStudio.UI
                 return;
             }
 
+            Debug.Log("Interact");
+
             switch (interaction)
             {
                 case Interaction.Dialog:
                     PlayerManager.Instance.EnableUIActions();
-                    OpenDialog(npc);
+                    OpenDialog(npcManager);
                     break;
                 case Interaction.Shop:
-                    OpenShop(items);
+                    OpenShop(npcManager);
                     break;
             }
 
             PlayerManager.Instance.IsInteracting = true;
         }
 
-        public static void OpenDialog(NPC npc)
+        public static void OpenDialog(NPCManager npcManager)
         {
-            Instance.dialogManager.OpenDialog(npc);
+            Instance.dialogManager.OpenDialog(npcManager);
         }
 
         public static void CloseDialog()
@@ -78,9 +80,9 @@ namespace TranscendenceStudio.UI
             PlayerManager.Instance.IsInteracting = false;
         }
 
-        public static void OpenShop(List<Item> items)
+        public static void OpenShop(NPCManager npcManager)
         {
-            Instance.shopManager.OpenShop(items);
+            Instance.shopManager.OpenShop(npcManager);
         }
 
         public static void CloseShop()
