@@ -33,7 +33,6 @@ namespace TranscendenceStudio
         // Battle Music -> Background Music
         public void TransitionFromBattleMusicToBackgroundMusic()
         {
-            Debug.Log("Battle Music -> Background Music");
             backgroundPlayer.PlayFeedbacks();
         }
     }

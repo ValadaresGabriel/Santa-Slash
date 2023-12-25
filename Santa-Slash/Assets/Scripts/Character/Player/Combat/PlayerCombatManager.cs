@@ -22,7 +22,7 @@ namespace TranscendenceStudio.Character
 
         private void AttemptToPerformAttack()
         {
-            if (playerManager.IsInInteractionArea)
+            if (playerManager.IsInInteractionArea && PlayerManager.Instance.IsMouseOnInteractableObject)
             {
                 Debug.Log("<color=yellow>Is In Interaction Area -> Cannot Perform Attack</color>");
                 return;
@@ -36,7 +36,7 @@ namespace TranscendenceStudio.Character
 
         private void AttemptToPerformAbility()
         {
-            if (playerManager.IsInInteractionArea)
+            if (playerManager.IsInInteractionArea && PlayerManager.Instance.IsMouseOnInteractableObject)
             {
                 Debug.Log("<color=blue>Is In Interaction Area -> Cannot Perform Ability</color>");
                 return;

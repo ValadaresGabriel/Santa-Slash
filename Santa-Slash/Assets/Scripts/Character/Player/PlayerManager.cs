@@ -27,6 +27,7 @@ namespace TranscendenceStudio.Character
         private bool isOnShop;
         private bool isOnInventory;
         private bool isInteracting = false;
+        private bool isMouseOnInteractableObject = false;
         private bool isInBattle = false;
 
         protected override void Awake()
@@ -104,6 +105,12 @@ namespace TranscendenceStudio.Character
                     SoundManager.Instance.TransitionFromBattleMusicToBackgroundMusic();
                 }
             }
+        }
+
+        public bool IsMouseOnInteractableObject
+        {
+            get => isMouseOnInteractableObject;
+            set => isMouseOnInteractableObject = value;
         }
     }
 }

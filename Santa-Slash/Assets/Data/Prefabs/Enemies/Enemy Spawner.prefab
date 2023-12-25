@@ -283,6 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c6cf1e16a1779b498c3be7ef0dccd93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstPlayerDetectionArea: {fileID: 618205439017320682}
   enemiesToSpawn: 5
   repeatRate: 50
   spawnLocation:

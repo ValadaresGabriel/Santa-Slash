@@ -7,6 +7,7 @@ namespace TranscendenceStudio.Pooling
 {
     public class EnemySpawner : MonoBehaviour
     {
+        [SerializeField] BoxCollider2D firstPlayerDetectionArea;
         [SerializeField] int enemiesToSpawn = 5;
         [SerializeField] float repeatRate = 50f;
         [SerializeField] Transform[] spawnLocation;
@@ -50,6 +51,7 @@ namespace TranscendenceStudio.Pooling
             {
                 playerEnteredArea = true;
                 InvokeRepeating(nameof(SpawnEnemy), 0, repeatRate);
+                firstPlayerDetectionArea.enabled = false;
             }
         }
     }

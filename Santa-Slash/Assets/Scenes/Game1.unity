@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 11346194}
   - component: {fileID: 11346193}
   - component: {fileID: 11346195}
+  - component: {fileID: 11346196}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -185,7 +186,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -364354785
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1875990045, guid: ae60f7d61d7a85d4e9314a494698010f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -368,6 +369,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4020371, y: 1.701019}
   m_EdgeRadius: 0
+--- !u!114 &11346196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11346187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3729b3598fbce499e176fb8e06a329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &16432412
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +544,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086aa577c5699f54cb6e0801f90a71c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 0}
 --- !u!1001 &124010737
 PrefabInstance:
   m_ObjectHideFlags: 0

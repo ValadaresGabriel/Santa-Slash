@@ -26,6 +26,7 @@ namespace TranscendenceStudio.Character
             base.OnPointerClick(eventData);
 
             if (!PlayerManager.Instance.IsInInteractionArea) return;
+            if (!PlayerManager.Instance.IsMouseOnInteractableObject) return;
 
             if (npc == null)
             {
@@ -67,7 +68,7 @@ namespace TranscendenceStudio.Character
             if (dialogueGameObject == null) return;
 
             if (other.transform.CompareTag("Player"))
-                dialogueGameObject.SetActive(true);
+                dialogueGameObject.SetActive(false);
         }
     }
 }

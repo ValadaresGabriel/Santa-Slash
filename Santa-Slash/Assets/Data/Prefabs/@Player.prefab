@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Intensity: 1.07
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: e1e7772b000000001d37dfac1f6348eac97bd2d53b985bb4
+  m_ApplyToSortingLayers: e1e7772b000000001d37dfac1f6348eac97bd2d53b985bb42df98345
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 7
+  m_PointLightOuterRadius: 4.68
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2839754982197241063}
   - component: {fileID: 6764953007410593471}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -73992925
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_Sprite: {fileID: 1381456615, guid: f24c30a0ebe47104a8394c09b2f328d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -223,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6154435131034914369}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Spell Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 330827468662875958}
   - component: {fileID: 7869875357572043059}
   - component: {fileID: 5512903671400154375}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -735,8 +735,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -73992925
-  m_SortingLayer: 5
+  m_SortingLayerID: 1166276909
+  m_SortingLayer: 6
   m_SortingOrder: 1
   m_Sprite: {fileID: -645778807, guid: 1530ff7af9e7c334aa5c97a8f5be2531, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1664,7 +1664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8311826045885922733}
   - component: {fileID: 7313671261722212710}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1725,7 +1725,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -73992925
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_Sprite: {fileID: 1358993021, guid: f24c30a0ebe47104a8394c09b2f328d4, type: 3}
   m_Color: {r: 0.3254717, g: 0.8762036, b: 1, a: 1}
@@ -1748,7 +1748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4106253298889697080}
   - component: {fileID: 1105210824317267693}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Weapon Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1885,7 +1885,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -73992925
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -2132592751, guid: ae61b8920be47dd4eb8b3f4b7d6dd887, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2570,7 +2570,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9151048197560177575}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Ranged Weapon Trajectory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
