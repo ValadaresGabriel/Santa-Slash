@@ -14,13 +14,5 @@ namespace TranscendenceStudio.Character
             CharacterAnimatorManager = GetComponent<CharacterAnimatorManager>();
             characterLocomotion = GetComponent<CharacterLocomotion>();
         }
-
-        public bool isAttacking = false;
-
-        public bool IsAttacking
-        {
-            get => isAttacking;
-            set => isAttacking = value;
-        }
     }
 }

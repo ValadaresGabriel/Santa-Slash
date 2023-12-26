@@ -114,7 +114,11 @@ namespace TranscendenceStudio.Character
 
         private void FlipWeapon()
         {
-            if (PlayerManager.Instance.IsAttacking) return;
+            if (PlayerManager.Instance.IsAttacking)
+            {
+                Debug.Log("FlipWeapon cannot happen, the player IsAttacking!");
+                return;
+            }
 
             Vector2 scale = transform.localScale;
             Vector2 direction = (PlayerInputManager.Instance.GetMousePositionValue() - (Vector2)transform.position).normalized;

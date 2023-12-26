@@ -29,6 +29,7 @@ namespace TranscendenceStudio.Character
         private bool isInteracting = false;
         private bool isMouseOnInteractableObject = false;
         private bool isInBattle = false;
+        public bool isAttacking = false;
 
         protected override void Awake()
         {
@@ -60,9 +61,10 @@ namespace TranscendenceStudio.Character
             PlayerInputManager.Instance.EnablePlayerActions();
         }
 
-        public void SetIsAttackingToFalse()
+        public bool IsAttacking
         {
-            IsAttacking = false;
+            get => isAttacking;
+            set => isAttacking = value;
         }
 
         public bool IsInInteractionArea
