@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4559086505164651364}
   - component: {fileID: 1616613943537975150}
   m_Layer: 0
-  m_Name: Forest_tree pink
+  m_Name: Forest_tree Pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
