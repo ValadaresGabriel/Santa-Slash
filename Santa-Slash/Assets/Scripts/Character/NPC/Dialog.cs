@@ -7,6 +7,8 @@ namespace TranscendenceStudio.Character.DialogSystem
     [System.Serializable]
     public struct DialogMessage
     {
+        public string owner;
+
         [TextArea(3, 5)]
         public string message;
     }

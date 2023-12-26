@@ -116,7 +116,6 @@ namespace TranscendenceStudio.Character
         {
             if (PlayerManager.Instance.IsAttacking)
             {
-                Debug.Log("FlipWeapon cannot happen, the player IsAttacking!");
                 return;
             }
 

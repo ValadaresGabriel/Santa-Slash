@@ -2029,13 +2029,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterLocomotion: {fileID: 6327858122988918755}
-  isAttacking: 0
   playerCurrency: {fileID: 1979017478751412013}
   characterWeaponManager: {fileID: 1105210824317267693}
   weaponAnimatorManager: {fileID: 330827468662875958}
   dealDamageFeedback: {fileID: 2693578684617628938}
   takeDamageFeedback: {fileID: 8079110820913184780}
   walkFeedback: {fileID: 309868762867673423}
+  isAttacking: 0
 --- !u!114 &1979017478751412013
 MonoBehaviour:
   m_ObjectHideFlags: 0

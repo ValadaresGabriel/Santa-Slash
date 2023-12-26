@@ -24,8 +24,6 @@ namespace TranscendenceStudio.Character.DialogSystem
         {
             PlayerInputManager.Instance.NextDialogEvent += NextDialog;
 
-            Debug.Log("Open Dialog");
-
             currentNPCManager = npcManager;
             currentNPC = npcManager.npc;
 
@@ -59,8 +57,6 @@ namespace TranscendenceStudio.Character.DialogSystem
                 Debug.Log("<color=yellow>The NPC does not have dialog!</color>");
             }
 
-            ownerText.SetText(currentNPC.npcName);
-
             if (currentNPC.dialog.hasMet)
             {
                 // Has met dialog
@@ -84,6 +80,8 @@ namespace TranscendenceStudio.Character.DialogSystem
                 FinalizeDialog();
                 return;
             }
+
+            ownerText.SetText(dialogMessage[dialogIndex - 1].owner);
 
             if (isTypingMessage)
             {

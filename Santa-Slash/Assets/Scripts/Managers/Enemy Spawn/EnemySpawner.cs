@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TranscendenceStudio.VFX;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 namespace TranscendenceStudio.Pooling
 {
@@ -11,15 +12,31 @@ namespace TranscendenceStudio.Pooling
         [SerializeField] int enemiesToSpawn = 5;
         [SerializeField] float repeatRate = 50f;
         [SerializeField] Transform[] spawnLocation;
+        [SerializeField] Light2D treeLight;
         private bool playerEnteredArea = false;
+        private bool canTurnOffLight = false;
+
+        private void Update()
+        {
+            if (!canTurnOffLight) return;
+
+            treeLight.intensity -= Time.deltaTime;
+
+            if (treeLight.intensity <= 0)
+            {
+                treeLight.intensity = 0;
+                canTurnOffLight = false;
+            }
+        }
 
         private void SpawnEnemy()
         {
-            int enemyChoice = Random.Range(1, 4);
             GameObject enemyInstance = null;
 
             for (int i = 0; i < enemiesToSpawn; i++)
             {
+                int enemyChoice = Random.Range(1, 4);
+
                 switch (enemyChoice)
                 {
                     case 1:
@@ -41,6 +58,12 @@ namespace TranscendenceStudio.Pooling
 
                 enemyInstance.transform.SetPositionAndRotation(selectedSpawn.position, Quaternion.identity);
             }
+        }
+
+        public void StopSpawning()
+        {
+            CancelInvoke();
+            canTurnOffLight = true;
         }
 
         private void OnTriggerEnter2D(Collider2D other)

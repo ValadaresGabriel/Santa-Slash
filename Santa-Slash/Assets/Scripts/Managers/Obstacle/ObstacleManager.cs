@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TranscendenceStudio.Pooling;
 using TranscendenceStudio.VFX;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace TranscendenceStudio
 {
@@ -14,23 +15,32 @@ namespace TranscendenceStudio
 
     public class ObstacleManager : MonoBehaviour, IHittable
     {
-        [SerializeField] ObstacleType obstacleType = ObstacleType.Wall;
-        [SerializeField] int health = 1;
-        [SerializeField] Collider2D obstacleCollider;
-        [SerializeField] SpriteRenderer spriteRenderer;
-        [SerializeField] int weaponDurabilityDamage = 1;
+        [SerializeField] protected ObstacleType obstacleType = ObstacleType.Wall;
+        [SerializeField] protected int health = 1;
+        [SerializeField] protected Collider2D obstacleCollider;
+        [SerializeField] protected SpriteRenderer spriteRenderer;
+        [SerializeField] protected int weaponDurabilityDamage = 1;
+        [SerializeField] protected ParticleSystem takeDamageParticles;
+        public UnityEvent OnDeath;
 
         public int GetWeaponDurabilityDamage()
         {
             return weaponDurabilityDamage;
         }
 
-        public void Hit(int damage, GameObject sender)
+        public virtual void Hit(int damage, GameObject sender)
         {
             health -= damage;
 
+            if (takeDamageParticles != null)
+            {
+                takeDamageParticles.Play();
+            }
+
             if (health <= 0)
             {
+                OnDeath?.Invoke();
+
                 obstacleCollider.enabled = false;
 
                 Color newColor = Color.black;
