@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 7739776548052685616}
   - component: {fileID: 404174454157549412}
   m_Layer: 0
-  m_Name: cave_ [resources]_1
+  m_Name: Three Luminous cave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
