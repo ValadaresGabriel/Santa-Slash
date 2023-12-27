@@ -275,7 +275,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterLocomotion: {fileID: 2033796953471906902}
-  isAttacking: 0
   enemy: {fileID: 11400000, guid: c12c0b1c707527947b5eccbf019b82cf, type: 2}
   playerLayerMask:
     serializedVersion: 2
@@ -403,6 +402,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyManager: {fileID: 7130411142460280862}
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 4352
   walkAroundCooldown: 4
   canWalkAround: 1
   canAttack: 1

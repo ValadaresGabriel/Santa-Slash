@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8727774121975627248}
   - component: {fileID: 6818866746853811601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: desert conection wall (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2227500310832602562}
   - component: {fileID: 5383748206988838798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: desert vertical wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

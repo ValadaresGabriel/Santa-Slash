@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2798591527002448502}
   - component: {fileID: 9025743446388363741}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dungeonDecoration_1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -707626039
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: 1840966810, guid: dccc56333a4fcdb4bb133562247f0c77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

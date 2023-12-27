@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7607932788778903608}
   - component: {fileID: 1972844816336684970}
   - component: {fileID: 2298815784691260325}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: forest horizontal wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -707626039
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 2062158566, guid: de60b5114229a824982982aede8b4498, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -148,3 +148,7 @@ MonoBehaviour:
   obstacleCollider: {fileID: 1972844816336684970}
   spriteRenderer: {fileID: 7607932788778903608}
   weaponDurabilityDamage: 1
+  takeDamageParticles: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []

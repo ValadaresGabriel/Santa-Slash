@@ -53,7 +53,7 @@ namespace TranscendenceStudio.Character
                 WeaponAbilityDelay -= Time.deltaTime;
             }
 
-            FlipWeapon();
+            SetWeaponRotation();
             SetSpellAreaPosition();
         }
 
@@ -112,7 +112,7 @@ namespace TranscendenceStudio.Character
             }
         }
 
-        private void FlipWeapon()
+        private void SetWeaponRotation()
         {
             if (PlayerManager.Instance.IsAttacking)
             {

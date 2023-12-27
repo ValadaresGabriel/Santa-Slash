@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TranscendenceStudio.Character;
@@ -16,11 +15,30 @@ namespace TranscendenceStudio.AI
         [Header("---- States Settings ----")]
         [Space(5)]
         [Header("Walk Around")]
+        public LayerMask obstacleMask;
+        public List<Vector2> directionsToWalk = new();
         public float walkAroundCooldown = 4;
+        public float radius = 2f;
+        public float agentColliderSize = 0.6f;
         [SerializeField] bool canWalkAround = true;
 
         [Header("Attack")]
         [SerializeField] bool canAttack = true;
+
+        private void Awake()
+        {
+            directionsToWalk.Add(Vector2.up);
+            directionsToWalk.Add(Vector2.up + new Vector2(1f, 0));
+            directionsToWalk.Add(Vector2.up + new Vector2(-1f, 0));
+
+            directionsToWalk.Add(Vector2.down);
+            directionsToWalk.Add(Vector2.down + new Vector2(-1f, 0));
+            directionsToWalk.Add(Vector2.down + new Vector2(1f, 0));
+
+            directionsToWalk.Add(Vector2.right);
+
+            directionsToWalk.Add(Vector2.left);
+        }
 
         private void Start()
         {
@@ -120,7 +138,7 @@ namespace TranscendenceStudio.AI
             canAttack = true;
         }
 
-        private void OnDrawGizmosSelected()
+        private void OnDrawGizmos()
         {
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.position, enemyManager.enemy.chasePlayerArea);

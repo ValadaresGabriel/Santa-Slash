@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9016035678909582136}
   - component: {fileID: 1173242552699313715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: desert conection fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}

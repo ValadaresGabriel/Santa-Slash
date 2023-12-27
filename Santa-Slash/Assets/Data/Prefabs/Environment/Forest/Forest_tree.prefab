@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5544659524831411875}
   - component: {fileID: 5960169244192696031}
   - component: {fileID: 382258666728000707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Forest_tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,3 +166,7 @@ MonoBehaviour:
   obstacleCollider: {fileID: 5544659524831411875}
   spriteRenderer: {fileID: 3295521432265797625}
   weaponDurabilityDamage: 1
+  takeDamageParticles: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []

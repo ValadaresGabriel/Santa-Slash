@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5601661561095537196}
   - component: {fileID: 927287538689185860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: desert vertical complement wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1460470933877742383}
   - component: {fileID: 3745466484090274638}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: desert conection wall (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6869607072874666149}
   - component: {fileID: 8713212126588649668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: desert conection wall (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9148116658602189321}
   - component: {fileID: 5284844383201922658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dungeon door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -707626039
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 2036091126, guid: dccc56333a4fcdb4bb133562247f0c77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
