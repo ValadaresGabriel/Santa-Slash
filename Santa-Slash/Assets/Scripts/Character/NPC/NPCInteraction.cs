@@ -28,33 +28,11 @@ namespace TranscendenceStudio.Character
         {
             base.OnPointerClick(eventData);
 
-            if (!PlayerManager.Instance.IsInInteractionArea)
-            {
-                Debug.Log("Is not in interaction area");
-                return;
-            }
-
-            if (!PlayerManager.Instance.IsMouseOnInteractableObject)
-            {
-                Debug.Log("Mouse is not on NPC");
-                return;
-            }
-
             if (npc == null)
             {
                 Debug.LogError($"The NPC does not have a NPC in the NPC Manager! NPC GameObject: {gameObject.name}");
                 return;
             }
-
-            if (PlayerManager.Instance.IsInteracting)
-            {
-                Debug.LogWarning("The Player is alredy interacting!");
-                return;
-            }
-
-            Debug.Log($"On Pointer Click {name}");
-
-            // UIManager.Instance.shopManager.OpenShop(npc.npcShop.itemsToSell);
 
             // Play NPC's Hi feedback
             npcManager.PlayHiFeedback();

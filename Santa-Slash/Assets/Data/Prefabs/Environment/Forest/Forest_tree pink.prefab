@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3340362401731281209}
   - component: {fileID: 3456942632451242102}
+  - component: {fileID: 7344852387302674249}
   - component: {fileID: 8231301121610948465}
-  - component: {fileID: 4559086505164651364}
   - component: {fileID: 1616613943537975150}
   m_Layer: 0
-  m_Name: Forest_tree Pink
+  m_Name: Forest_tree pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,35 +87,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &8231301121610948465
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6294109253087769049}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!70 &4559086505164651364
-CapsuleCollider2D:
+--- !u!60 &7344852387302674249
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -146,9 +119,57 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0030812025, y: -0.28286576}
-  m_Size: {x: 0.7754724, y: 1.0560436}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.25, y: 1.625}
+    newSize: {x: 0.75, y: 1.625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.3148706, y: -0.24503613}
+      - {x: -0.0525434, y: -0.24812937}
+      - {x: -0.3073094, y: -0.24727058}
+      - {x: -0.384521, y: -0.27354825}
+      - {x: -0.38123345, y: -0.31581426}
+      - {x: -0.375, y: -0.71875}
+      - {x: -0.30829525, y: -0.80972105}
+      - {x: 0.31034613, y: -0.8059886}
+      - {x: 0.375, y: -0.71875}
+      - {x: 0.3808838, y: -0.33519924}
+      - {x: 0.36382258, y: -0.27009857}
+  m_UseDelaunayMesh: 0
+--- !u!50 &8231301121610948465
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6294109253087769049}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &1616613943537975150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +184,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleType: 0
   health: 4
-  obstacleCollider: {fileID: 4559086505164651364}
+  obstacleCollider: {fileID: 0}
   spriteRenderer: {fileID: 3456942632451242102}
   weaponDurabilityDamage: 1
+  takeDamageParticles: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []

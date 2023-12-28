@@ -16,9 +16,14 @@ namespace TranscendenceStudio.UI.Inventory
 
         private void Awake()
         {
-            foreach (Transform item in content)
+            int slotNumber = 1;
+            foreach (Transform inventorySlotsTransform in content)
             {
-                inventorySlots.Add(item.GetComponent<InventorySlot>());
+                if (slotNumber == 10) slotNumber = 0;
+
+                InventorySlot inventorySlot = inventorySlotsTransform.GetComponent<InventorySlot>();
+                inventorySlot.SetSlotNumber(slotNumber++);
+                inventorySlots.Add(inventorySlot);
             }
         }
 
@@ -32,8 +37,8 @@ namespace TranscendenceStudio.UI.Inventory
             PlayerInputManager.Instance.EquipEvent6 += () => EquipItem(6);
             PlayerInputManager.Instance.EquipEvent7 += () => EquipItem(7);
             PlayerInputManager.Instance.EquipEvent8 += () => EquipItem(8);
-            // PlayerInputManager.Instance.EquipEvent9 += () => EquipItem(9);
-            // PlayerInputManager.Instance.EquipEvent0 += () => EquipItem(0);
+            PlayerInputManager.Instance.EquipEvent9 += () => EquipItem(9);
+            PlayerInputManager.Instance.EquipEvent0 += () => EquipItem(0);
         }
 
         public void AddItemToInventory(Item item)

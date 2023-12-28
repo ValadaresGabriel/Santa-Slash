@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3444992488664011806}
   - component: {fileID: 3525549842108064161}
+  - component: {fileID: 8293930192329989390}
   m_Layer: 8
   m_Name: forest_tree orange
   m_TagString: Untagged
@@ -84,3 +85,59 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &8293930192329989390
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7644500485936364254}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.75, y: 1.625}
+    newSize: {x: 0.75, y: 1.625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.26657367, y: -0.2414065}
+      - {x: 0.07217455, y: -0.24256933}
+      - {x: -0.254452, y: -0.24253005}
+      - {x: -0.3839345, y: -0.26839936}
+      - {x: -0.37778378, y: -0.39486492}
+      - {x: -0.375, y: -0.71875}
+      - {x: -0.30665588, y: -0.8092623}
+      - {x: 0.31009674, y: -0.80360126}
+      - {x: 0.375, y: -0.71875}
+      - {x: 0.37731826, y: -0.3661872}
+      - {x: 0.37025297, y: -0.27296025}
+  m_UseDelaunayMesh: 0

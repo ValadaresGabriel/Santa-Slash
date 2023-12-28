@@ -74,7 +74,6 @@ namespace TranscendenceStudio.AI
 
                 if (hit.collider == null)
                 {
-                    Debug.Log($"Direction -> {direction}");
                     return (Vector2)enemy.transform.position + direction;
                 }
             }

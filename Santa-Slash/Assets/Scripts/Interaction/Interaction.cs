@@ -10,7 +10,23 @@ namespace TranscendenceStudio
     {
         public virtual void OnPointerClick(PointerEventData eventData)
         {
-            if (!PlayerManager.Instance.IsInInteractionArea) return;
+            if (!PlayerManager.Instance.IsInInteractionArea)
+            {
+                Debug.Log("Is not in interaction area");
+                return;
+            }
+
+            if (!PlayerManager.Instance.IsMouseOnInteractableObject)
+            {
+                Debug.Log("Mouse is not on Interactable Object");
+                return;
+            }
+
+            if (PlayerManager.Instance.IsInteracting)
+            {
+                Debug.LogWarning("The Player is alredy interacting!");
+                return;
+            }
         }
 
         protected virtual void OnTriggerEnter2D(Collider2D other)

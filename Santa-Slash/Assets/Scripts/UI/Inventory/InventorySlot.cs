@@ -12,6 +12,7 @@ namespace TranscendenceStudio.UI.Inventory
         [SerializeField] Image background;
         [SerializeField] Image itemIcon;
         [SerializeField] TextMeshProUGUI equippedTag;
+        [SerializeField] TextMeshProUGUI slotNumber;
         public Item item;
         public bool isEquipped;
         private Color originalColor;
@@ -46,6 +47,11 @@ namespace TranscendenceStudio.UI.Inventory
             background.color = originalColor;
             // itemIcon.color = new Color32(255, 255, 255, 255);
             equippedTag.SetText("");
+        }
+
+        public void SetSlotNumber(int number)
+        {
+            slotNumber.SetText(number.ToString());
         }
 
         public string GetTooltipTitle()

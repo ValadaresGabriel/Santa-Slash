@@ -5762,8 +5762,8 @@ GameObject:
   - component: {fileID: 101096635916364583}
   - component: {fileID: 7474813465622964326}
   - component: {fileID: 4523524702842490346}
+  - component: {fileID: 6071777127452646888}
   - component: {fileID: 618205439017320682}
-  - component: {fileID: 8334360349716820394}
   - component: {fileID: 4028785921927577425}
   m_Layer: 8
   m_Name: Enemy Spawner
@@ -10691,6 +10691,57 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &6071777127452646888
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4193184107308152914}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.75, y: 1.4375}
+    newSize: {x: 0.75, y: 1.4375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.31110224, y: -0.15761349}
+      - {x: -0.2974998, y: -0.16019133}
+      - {x: -0.3750002, y: -0.2232734}
+      - {x: -0.375, y: -0.71875}
+      - {x: 0.375, y: -0.71875}
+      - {x: 0.37499997, y: -0.22327344}
+  m_UseDelaunayMesh: 0
 --- !u!61 &618205439017320682
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10736,41 +10787,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 23.444324, y: 16.17684}
   m_EdgeRadius: 0
---- !u!70 &8334360349716820394
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4193184107308152914}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.23133068}
-  m_Size: {x: 0.75, y: 0.97483873}
-  m_Direction: 0
 --- !u!114 &4028785921927577425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10785,7 +10801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleType: 1
   health: 30
-  obstacleCollider: {fileID: 8334360349716820394}
+  obstacleCollider: {fileID: 0}
   spriteRenderer: {fileID: 4829168381340027003}
   weaponDurabilityDamage: 5
   takeDamageParticles: {fileID: 849474645939481671}
