@@ -49,7 +49,7 @@ namespace TranscendenceStudio.AI
         {
             if (currentState == null)
             {
-                Debug.Log($"<color=green>Starting {name}'s FSM</color>");
+                // Debug.Log($"<color=green>Starting {name}'s FSM</color>");
 
                 currentState = newState;
 

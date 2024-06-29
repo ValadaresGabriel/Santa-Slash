@@ -184,7 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleType: 0
   health: 4
-  obstacleCollider: {fileID: 0}
+  obstacleCollider: {fileID: 7344852387302674249}
   spriteRenderer: {fileID: 3456942632451242102}
   weaponDurabilityDamage: 1
   takeDamageParticles: {fileID: 0}

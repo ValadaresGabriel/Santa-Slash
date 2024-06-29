@@ -8,8 +8,6 @@ namespace TranscendenceStudio.Character.Coin
     {
         [SerializeField] Rigidbody2D rb;
         [SerializeField] float dropJumpForce = 6;
-        [SerializeField] float minModifier = 3f;
-        [SerializeField] float maxModifier = 6f;
 
         private Vector3 velocity = Vector3.zero;
         private bool isFollowing = false;
@@ -18,7 +16,9 @@ namespace TranscendenceStudio.Character.Coin
         {
             isFollowing = false;
 
-            rb.AddForce(Vector2.up * dropJumpForce);
+            rb.bodyType = RigidbodyType2D.Dynamic;
+
+            rb.AddForce(Vector2.up * dropJumpForce, ForceMode2D.Impulse);
 
             StartCoroutine(AttemptToStartFollowing());
         }
@@ -27,6 +27,8 @@ namespace TranscendenceStudio.Character.Coin
         {
             yield return new WaitForSeconds(0.75f);
 
+            rb.bodyType = RigidbodyType2D.Static;
+
             isFollowing = true;
         }
 
@@ -34,7 +36,10 @@ namespace TranscendenceStudio.Character.Coin
         {
             if (isFollowing)
             {
-                transform.position = Vector3.SmoothDamp(transform.position, PlayerManager.Instance.transform.position, ref velocity, Time.deltaTime * Random.Range(minModifier, maxModifier));
+                Vector3 direction = PlayerManager.Instance.gameObject.transform.position - transform.position;
+                direction.Normalize();
+
+                transform.Translate(Time.deltaTime * 6 * direction);
             }
         }
     }
